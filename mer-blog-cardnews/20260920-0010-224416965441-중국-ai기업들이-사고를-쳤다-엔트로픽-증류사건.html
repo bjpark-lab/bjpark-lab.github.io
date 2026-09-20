@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>중국 AI기업들이 사고를 쳤다. 엔트로픽 증류사건 · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 피드메이커4기(경제)</p>
+      <h1>중국 AI기업들이 사고를 쳤다. 엔트로픽 증류사건</h1>
+      <p class="date">2026.09.20 00:10</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MTlfMjIy/MDAxNzg5Nzk1MDIyNjk0.3ldJ51oQxnR5mN130FlGYo1D90LbTxpJRWSOwVAvyX8g.2XGppw1eHCpds48LZB2y6q5seD741q2JtOJvfirXIlkg.JPEG/162qihch.jpg?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">2026년 9월 10일, 앤트로픽은 중국의 알리바바, 문샷(Kimi), 딥시크 등 주요 AI 기업들이 자사의 모델을 불법으로 증류하여 학습에 활용했다는 보고서를 공개했습니다. 이들은 도난된 신용카드로 생성한 수천 개의 가짜 계정을 통해 대규모 데이터를 추출했으며, 특히 알리바바의 경우 수개월간 1억 5천만 건이 넘는 증류 작업을 수행한 것으로 나타났습니다.
+
+더욱 심각한 문제는 중국 AI 사용자들이 본인의 자료가 앤트로픽 서버로 전송된다는 사실을 모른 채 민감한 정보를 입력했다는 점입니다. 중국 인민해방군 소속 인물은 군사시설 CCTV 영상을 Kimi에 업로드하여 분석을 요청했으며, 이로 인해 보안 시설의 영상 정보가 미국 서버로 유출되었습니다. 또한, 국유기업 엔지니어들이 입력한 내부 소스코드와 실제 접속 자격증명까지 앤트로픽 서버에 저장되면서 보안 취약점이 노출되었습니다.
+
+딥시크의 경우에도 14일 만에 천만 건이 넘는 교신이 발생했으며, 엔지니어들이 국민의 이동 동선과 경찰 기록을 연결해 감시하는 시스템을 개발하는 과정에서 민감 정보들이 고스란히 노출되었습니다. 이 외에도 러시아 정보당국의 자료가 유출되는 등 광범위한 정보 보안 사고가 확인되었습니다. 앤트로픽은 이번 보고서에서 밝힌 내용 외에도 더욱 심각한 사례들이 존재한다고 덧붙였습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">2026년 9월 10일, 엔트로픽이 인텔리전스 보고서를 공개했다. 중국 AI랩( 알리바바(Qwen), 문샷(Kimi), 딥시크등)들이 앤트로픽에 대규모로 불법 증류 공격을 했다는 것이다. 증류는 고성능 AI모델에서 나오는 답변으로 작은 AI모델을 학습시키는 기법인데, 문제는 방법이었다. 불법 암시장에 나온 도둑맞은 신용카드등을 사용해서 가짜 계정을 만들어, 엔트로픽의 답변을 대규모로 추출한 것이다.</p><p class="summary-paragraph">자세한 내용은 예전에 &quot; 엔트로픽과 알리바바의 AI전쟁 &quot;이라는 글에서 정리한 적이 있다. 엔트로픽과 알리바바의 AI 전쟁 : 네이버 블로그 이번에 엔트로픽이 발표한 것은 조금 더 구체적인 내용들이다. 알리바바를 예로 들면, 3,500개 이상의 가짜 계정으로 2026년 5~7월 1억5,100만 건이 넘는 증류작업을 한 것으로 나오고 있다.</p><p class="summary-paragraph">그런데 반전이 있었다. 중국 AI들이 큰 사고를 쳤다. 문샷은 Kimi로 들어온 정상적인 사용자의 요청을 클로드로 넘겨서 처리한 뒤, 클로드의 응답을 자사 모델의 학습에 활용했다. 사용자 입장에서는 화면에 &#x27;Kimi&#x27;가 떠 있으니 중국산 AI와 대화하는 줄 알았지만, 실제로는 미국 앤트로픽 서버를 거쳐 돌아온 것이다.</p><p class="summary-paragraph">중국 인민해방군 소속으로 보이는 사용자는 중국 AI인 Kimi를 쓰는 줄 알고, AI에게 군사시설의 감시영상 분석을 시킨것이다. AI에게 CCTV 자료를 던져주고, 감시대상 인물이 최근 비정상적으로 행동한게 있는지 판단해 달라고 요청했다고 한다. 사용자는 중국 AI인 Kimi에게 자료를 업로드한 것으로 생각했지만, 이 자료들이 엔트로픽에 업로드 된 것이다. 업로드된 자료는 청두에 설치된 수백대의 CCTV로 인민해방군 시설을 비추는 영상들이었다.</p><p class="summary-paragraph">민감한 군사시설과 보안시설 주변의 감시망이 외부에 넘어간 것으로, 방첩 관점에서는 심각한 사고에 해당된다. Kimi를 사용하는 다른 엔지니어는 대형 국유기업의 내부 시스템을 개발하는데 AI의 도움을 받았다. 그 과정에서 중요한 중국 기업들의 내부 소스코드와 유효한 접속 자격증명을 그대로 입력했다. 만료된 계정이 아니라, 실제로 로그인이 되는 아이디와 비밀번호가 미국 서버에 저장된 것이다.</p><p class="summary-paragraph">아이디와 비밀번호를 아니, 이론적으로는 해당 기업들의 시스템에 바로 들어갈 수 있는 상태가 되었다. Kimi 뿐만 아니라 딥시크도 사고를 쳤다. 딥시크는 7월중 14일만에 엔트로픽과 1,210만건 이상의 교신을 발생시켰다. 딥시크를 쓰는 것으로 착각한 중국 기술직원은 개발중인 AI 프로그램의 전반적인 내용이 담긴 문서를 업로드 했다.</p><p class="summary-paragraph">더 심각한 것이 있다. 중국 공안국(경찰) 시스템을 개선하던 엔지니어들은 딥시크를 이용해 국민들을 관찰하는 기능을 만들고 있었다. 주민번호와 CCTV의 안면인식기능으로 파악한 국민들의 이동 동선 및 경찰 기록을 하나로 연결하는 기능이었다고 한다. 경찰이 누군가의 주민번호를 치면, 이 사람이 하루종일 어떻게 움직이고 있는지를 CCTV 안면인식에 포착되는 정보로 알수 있는 것이다.</p><p class="summary-paragraph">경찰기록과도 연결되니, 행동에 대한 허위진술 여부가 쉽게 파악될 수 있다. 엔트로픽이 오픈한 사례만 이정도이고, 공개하지 않았지만 더 심각한 내용들도 있다고 한다. 중국AI를 사용하는 러시아 정보당국 자료도 업로드 되었다고 하니, 두 나라는 어떤 정보가 나갔는지 확인한다고 정신이 없을것 같다.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fblogthumb.pstatic.net%2FMjAyNjA3MTNfMTEw%2FMDAxNzgzODk2MzgyMzcx.qYsmTSkVO-alMe6GDM1tRsSk8ElI2to6PzAb249RPr4g.ccUWB_lq6bvoXkqvgXhwZ844arTqh6JA5LvpSRuuXfIg.JPEG%2Fp9edtu8u.jpg%3Ftype%3Dw2%22&amp;type=ff250_444" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MTlfMTc1/MDAxNzg5NzkzNzUxNTQ2.YfEWhgIAwMWIw0Oc5RkmX1WaJ73BXWpI2xMoJwY4-a8g.I3oKmCWU0mVQELOMmPI_vSi6Lb96ubtZbUtCa9vCM0Yg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MTlfMzMg/MDAxNzg5NzkzOTA0MTIw.5ErhvGvFYzOYM_R3Ro5sjRkctEfCmMdjI1lwxBvPvEcg.d-Axby0SB6XvB9FyxtdcwSel3WoGKgn_74EmaO-SE34g.JPEG/xjzulxbp.jpg?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 불법증류는 그렇다고 치고, 주민번호만 치면 CCTV를 통해 파악된 시민들의 이동동선이 나온다니, 중국은 중국이다.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224416965441" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
