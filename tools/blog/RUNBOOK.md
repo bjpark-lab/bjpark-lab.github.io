@@ -2,7 +2,7 @@
 
 이 문서는 크론이 호출하는 에이전트가 따라야 하는 절차다. 크론 프롬프트는 이 파일을 읽으라고만 지시한다.
 
-레포: `/home/bjpark/projects/currycurry3030.github.io`
+레포: `/home/bjpark/projects/bjpark-lab.github.io`
 발행처: https://bjpark-lab.github.io (GitHub Pages, Chirpy)
 
 ## 절대 규칙
@@ -18,7 +18,7 @@
 ### 1) 주제 선정
 
 ```bash
-cd /home/bjpark/projects/currycurry3030.github.io
+cd /home/bjpark/projects/bjpark-lab.github.io
 python3 tools/blog/next_topic.py --json
 ```
 

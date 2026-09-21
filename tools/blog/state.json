@@ -1,7 +1,11 @@
 {
   "used": {
     "agentops": [
-      "cron-failure-modes"
+      "cron-failure-modes",
+      "skill-library-entropy"
+    ],
+    "data": [
+      "export-parser-contract"
     ]
   }
 }
