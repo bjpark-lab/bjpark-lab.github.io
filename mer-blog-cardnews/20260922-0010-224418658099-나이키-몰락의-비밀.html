@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>나이키 몰락의 비밀 · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 피드메이커4기(경제)</p>
+      <h1>나이키 몰락의 비밀</h1>
+      <p class="date">2026.09.22 00:10</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfMTM5/MDAxNzg5OTU4ODE3MTgx.AbC5Uyz04bTOZYnZT9LbYeuoWO7QNzzDkDUvlBc9DXcg.04ojadcUC3Ht6NVY4mdI-Q_dGYBCaGL9Xq2PPId5YkUg.PNG/image.png?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">나이키가 지속적인 주가 하락으로 시가총액 기준을 충족하지 못하며, 2026년 9월 21일 18년 만에 S&amp;P 100 지수에서 퇴출되었습니다. 나이키의 주가는 2021년 대비 80% 하락했으며, 올해 다우존스 지수 내에서도 최저 수준의 성적을 기록했습니다.
+
+이러한 몰락의 주요 원인으로는 팬데믹 당시 온라인 직거래 중심의 유통 구조로 급격히 전환하며 기존 도매거래처와의 관계를 단절한 전략적 오류가 꼽힙니다. 또한, 제품의 핵심 기술인 미드솔 혁신 주기가 경쟁사보다 늦어지면서 시장 경쟁력을 잃었고, 그사이 온 러닝, 호카, 뉴발란스 등에 시장 점유율을 내주게 되었습니다.
+
+더불어 나이키가 인종차별 항의 운동가인 케퍼닉을 광고 모델로 기용하는 등 포용성 마케팅을 적극 도입한 점도 영향을 미쳤습니다. 이는 단기적으로는 매출 성장을 이끌었으나, 브랜드 이미지를 정치적 논쟁의 중심에 놓으며 일부 고객층의 반감을 샀습니다.
+
+이후 매출 부진에 책임을 지고 존 도나호 CEO가 물러났으며, 2024년 10월 엘리엇 힐이 신임 CEO로 취임했습니다. 현재 나이키는 도매 채널 복구와 제품 중심의 마케팅으로 변화를 꾀하고 있으나, 시장의 평가는 여전히 엇갈리고 있습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">나이키가 S&amp;P100에서 퇴출되어, 상황을 정리해 봅니다. 2026년 9월 21일, 나이키는 S&amp;P 100에서 18년만에 퇴출됨. 나이키등이 빠진 자리는 델, 샌디스크등이 채웠음. 나이키가 S&amp;P 100에서 빠진 이유는 끝없는 주가 하락으로 시가총액이 기준이하로 떨어졌기 때문임.</p><p class="summary-paragraph">2021년에 179달러였던 나이키 주가는 35달러까지 80%가 빠졌음. 올해 주가만 봐도, 마이너스 40%로 다우존스에서 꼴찌 수준임. 나이키가 몰락한 이유는 다양하지만 세가지를 짚어 봄. 2020년 코로나때 나이키는 최고의 수혜주 였음.</p><p class="summary-paragraph">오프라인 매장이 닫히자, 사람들이 Nike.com으로 몰렸고, 온라인에서 소비자와 직거래로 팔다보니 역대급 순이익이 나오게 됨. 당시 CEO였던 존 도나호는 Nike.com이 커지는 것을 보고 결정적인 베팅을 하게 됨. 온라인 채널인 Nike.com과 직영매장에서만 매출의 60%이상을 올린다는 목표를 세우고, 오랜 도매거래처들과 관계를 끊었음. 나이키의 치명적 오류는 &quot; 팬데믹이 소비자 행동을 영구히 바꿔서 오프라인 매장은 완전히 죽었다 &quot;고 믿었던 것임.</p><p class="summary-paragraph">신발은 매장에 직접가서 신어보고 사고 싶어하는 마음이 남아있었던게 문제임. 팬데믹이 끝나자 온라인 매출은 줄어들었고, 도매거래처와 관계를 끊다보니 이들의 진열대에는 다른 상품들이 올라가기 시작함. 나이키가 도매채널을 버리고 온라인위주로 조직개편을 하는 동안 온 러닝, 호카, 뉴발란스등이 시장점유율을 가져가게 됨. 나이키가 온라인 매출확대에 집중하는 과정에서, 제품 개발에 집중하지 못한 것도 문제임.</p><p class="summary-paragraph">신발 바닥은 3층 구조로 되어 있음. 아웃솔은 지면에 닿는 고무층으로 접지력과 내구성을 담당하고, 어퍼는 발등을 감싸는 윗부분임. 아웃솔과 발사이에서 발을 디딜때 충격을 흡수하고, 앞으로 밀어주는 역할을 하는 미드솔이 있음. 러닝화 기술개발은 거의 대부분 미드솔에서 벌어지고, 브랜드마다 미드솔에 자기 이름을 붙이고 있음.</p><p class="summary-paragraph">나이키는 미드솔에 ZoomX, Air Zoom, 아디다스는 Boost, Lightstrike, 아식스 FF Blast의 이름을 붙이고 있음. 경쟁사들은 미드솔을 매년 갈아 엎는데, 나이키는 2년 주기로 교체하고, 그동안에는 색상과 어퍼만 손봐서 출시를 하는 것임. 소비자가 신발이 새롭다고 느끼는 지점이 대부분 미드솔의 변화인데, 나이키는 변화 주기가 느려진 것임. 나이키는 과거 인기상품의 색상과 디자인을 바꾸는 정도로 버티는 상황이 되었고, 소비자들의 관심은 점점 멀어지게 됨.</p><p class="summary-paragraph">어느순간 나이키가 상품이 아니라 신념을 팔기 시작한 것도 영향을 줌. 브랜드가 신념을 팔기 시작하면, 단기적으로는 매출이 오르는 경우가 많지만, 이미지가 훼손되고 안티들이 많아지게 됨. 2016년 미국은 비무장 흑인이 경찰 총에 죽는 사건이 스마트폰, 바디캠 영상등으로 퍼지면서 부글부글 끓고 있었음. 미식축구에서 쿼터백은 팀의 얼굴이자 사령탑으로, 야구로 치면 에이스 투수와 같은 포지션임.</p><p class="summary-paragraph">팀을 수퍼볼까지 올려놓은 슈퍼스타 케퍼닉은 샌프란시스코 49ers의 주전 쿼터백이었음. 스포츠 경기 전에 국가 제창을 할때 관중과 선수들은 가슴에 손을 얹고 일어서게 됨. 케퍼닉은 미국국가가 울려퍼질때, &quot; 인종차별을 하는 나라의 국기에 경의를 표하지 않겠다 &quot;고 벤치에서 일어나지 않았음. 국가 제창을 할때 일어서지 않는 행동의 부정적인 이미지가 커지자, 한쪽 무릎을 끓는 자세로 바꾸게 됨.</p><p class="summary-paragraph">한국인에게는 잘 와닿지 않는 부분이지만, 미국에서 성조기와 국가는 &#x27; 군인의 피와 애국심,미국 자체 &#x27;와 같은 상징임. 일어서지 않고 한쪽 무릎을 꿇는것은 케퍼닉의 의도와 무관하게 국기와 군인, 미국을 모독했다로 인식됨. &#x27; 인종차별과 경찰폭력에 대한 정당한 항의&#x27; 라는 지지층과 &#x27; 나라와 군인을 욕보이는 행위 &#x27;라는 반대층 사이에 격렬한 논쟁이 시작됨. 나이키가 여기에 참전을 함.</p><p class="summary-paragraph">케퍼닉을 광고 모델로 세우고, 광고문구를 다음으로 내세움. &quot;Believe in something. Even if it means sacrificing everything.&quot; (무언가를 믿어라. 그것이 모든 것을 희생하는 일일지라도.) 나이키를 PC(정치적 올바름)의 최전선에 위치하게 만드는 커밍아웃이었음. 케퍼닉 캠페인 직후 Nike 온라인 매출은 전년 같은 기간보다 31% 증가하며 단기적으로는 성공적인 캠페인으로 인정을 받았음.</p><p class="summary-paragraph">이때부터 나이키는 인종·성별·사회적 다양성 등과 관련한 메시지를 브랜드 마케팅에 적극적으로 활용하기 시작함. 업계에서는 이것을 포용성 마케팅으로 부르고 있음. 포용성 마케팅(inclusive marketing)은 정치적 올바름(PC)의 상업화 버젼으로 인식되고 있음. 정치적 올바름은 &quot; 어떤 집단을 어떻게 부르고, 어떻게 보여주느냐가 그 집단의 사회적 위상을 실제로 바꾼다 &quot;는 이론임.</p><p class="summary-paragraph">policeman을 police officer로 바꾸고, 흑인을 Negro·colored에서 Black·African American로 바꾸는 식임. 메이저리그의 클리블랜드 인디언스가 Guardians로 바뀌었듯이 브랜드와 팀명들도 바뀌는 경우가 많았음. 나이키는 마른 백인 대신에 다양한 체형의 인종을 등장 시키는 포용성 마케팅을 시작함. 플러스 사이즈 마케팅이 나이키의 매출에 영향을 미쳤음.</p><p class="summary-paragraph">단순하게 사이즈가 큰 고객을 대상으로 마케팅을 한 정도가 아니라,대형 마네킹을 매장에 세우고 전면적인 광고를 시작한 것임. 플러스 사이즈 마케팅으로 단기적으로는 빅사이즈 옷의 매출이 늘었지만, 일부 고객군이 부정적인 브랜드 이미지를 갖는 이유가 됨. 2024년 10월 도나호CEO가 매출부진에 책임을 지고 퇴임을 했고, 엘리엇 힐이 취임을 함. 신임 CEO는 도매판매채널을 다시 회복하고, 포용성 마케팅보다는 제품 자체를 광고하기 시작함.</p><p class="summary-paragraph">한쪽은 이런 나이키의 변화에 시큰둥하고, 다른 한쪽은 &quot; 매출이 떨어지니 쇼를 하는 것 &quot;이라고 부정적인 시각을 유지하고 있음.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfMTc4/MDAxNzg5OTU5MDM3MzY4.hGpc17hVU86UKGj_aLVVf3AYO8Oa2CB39sXQytPFsjwg.qFaKT8J5fhJuXTmLAeId_fhw4NkCCAoJZ34gwOQb-f4g.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfNDgg/MDAxNzg5OTU5MjE0MzU1.zRQvUzKWalAz_F3RjojE_gl-NWCBJ9ZFZyBnTAPeJL0g.CYnc4v9fSTb3ISTtpsHOU33KyIFZMuVpNg-m-R1Jc3og.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfMjU5/MDAxNzg5OTY2NDc0Mzgx.YKRzYljtLIqXX3zcHnwaTB1dKZD_eFvSBS6fm0THCvEg.A_z-o80QsLBITHNqBN9f0ZdGvjCYp2CvditfyJ2quiIg.PNG/ChatGPT_Image_2026%EB%85%84_9%EC%9B%94_21%EC%9D%BC_%EC%98%A4%ED%9B%84_01_54_15.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfMTU2/MDAxNzg5OTY1OTk2NzE2.EaUreU9s0TUUFtPTmDDSroN07jAE1oXcKPkXikaYtLUg.f5yVYvOCBaagUr8U3GxIDPbJs3HiPMwXXSSv8SUgLGcg.JPEG/YI9juh3HvrgwFNT9hpWTSHU-JUSaF7YU5Yi1KgiUG5KMurMKuFm7m_oEzqG3V0QOpaY0jKjDlws.jpeg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfMjYw/MDAxNzg5OTU5Mzg0OTIy.emWqSQTQuQ58DpV8MApopOgTeHmzAfvjhaD4-Sv0G9gg.LroMQ1nfXn2c20GlVbjvJEl3Xue25TwmMj3KQabKlRMg.JPEG/ghvyzczg.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfMTg3/MDAxNzg5OTYwMTI4MDEz.EL3tvhmscV4RRjMBdlgeI03v1QB57aRLEsev_HdwBWwg.4LkVr6cX_tDyUVuR0OjSWMmq35Ji2AM6psHcHt7vxAQg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfMjAw/MDAxNzg5OTU5NzA2MDY4.2eyHQMnfXkXyJgxjVcrt7_lRBIfi0A52Ow_Pa7GyZqQg.YbQm2whH-F_0klmLXFz8-14apRhw08ejlMrqdtuWjisg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfMjc1/MDAxNzg5OTYwMjg2ODk2.qMsw6gQvXgQYyv9KFSw71SK4GZfT6UYM4WWQs840kgEg.7it_9IesII2SfTIigMAhH8P3rB7l02pRfeRd4u85130g.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfNjEg/MDAxNzg5OTYyMTIxMDI5.6Rnn6h0-9NafKtj3esq235YNUw62FsyQBGHC7CvTupwg.DZpJJ2Qx3HZb2YQngl7GtumIt6zifYdBZDH8lylkDJMg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfMTQ2/MDAxNzg5OTYxMjQ4NDM1.ViU-O3NqkVg5YKfDj5k80wkzI8BHddTyxqpfrTCORoYg.y4Z2HmtzsZC8Ny-WPapzDhHqnvy2XrLwFqxGHUGG52sg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjFfMjc1/MDAxNzg5OTMwMDE3MDA1.jzVnaqUMOVy0FrfBDc2RFjHWNyJqF4m59wROa5wzj-Qg.koH316av4fKvXQ7boP3dI6awpSabuk_01K_u0SOry9wg.PNG/image.png?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 나이키의 마케팅 자체는 문제가 없었음. 미국에서 인구증가는 백인이 아닌 계층에서 주로 일어났고, 비만비율이 높아서 플러스 사이즈 소비자도 상당한 비중이었음. 문제는 제품 자체로 접근하지 않고, 사회적 이슈와 결합한 것임. CEO가 바뀌면서 과거의 제품위주 나이키로 돌아오고 있지만, 양쪽 모두를 만족시키지 못하는 상태가 되고있음. 기업의 이런 마케팅은 단기적으로 화제가 되고 일부 계층의 충성도를 높일 수 있지만, 양쪽으로 극단화가 심해지는 사회에서는 브랜드에 대한 거부감을 키울 위험이 있음. 나이키는 주식 투자 측면에서 장점도 있음. 주가가 너무 빠지다보니, 자연스럽게 배당수익률이 4.4~4.6% 수준으로 올라감. 나이키는 다우지수에서 배당율이 가장 높은 배당주가 되고 있음.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224418658099" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
