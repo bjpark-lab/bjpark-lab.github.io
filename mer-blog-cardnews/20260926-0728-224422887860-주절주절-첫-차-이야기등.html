@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>주절주절...첫 차 이야기등 · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 주절주절</p>
+      <h1>주절주절...첫 차 이야기등</h1>
+      <p class="date">2026.09.26 07:28</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjZfMTQ4/MDAxNzkwMzcyMTg4NzE2.abQcH30R3zAkkECWF9xLM0QJNCJz3CUalNbWBcA_d7gg.pfISPc142h0WOFGAj_rNJ3NOnJdhOcVCnMCeTi9ieFAg.JPEG/3555583_uploaded_1513157.jpg?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">이 글은 작성자가 자신의 첫 차인 그랜저와 관련된 과거의 추억들을 회고하며 시작됩니다. 작성자는 운전면허를 취득하기 전 차를 먼저 구매하여 아내가 운전을 대신했던 경험과, 그 시절 운전 중인 아내 옆에서 화이트 와인을 마시거나 비 오는 날을 즐기며 겪었던 에피소드들을 이야기합니다. 시간이 흘러 직접 운전을 하게 된 작성자는 당시 아내가 느꼈을 심정을 이해하게 되었고, 현재는 아내의 ‘운전대 총량의 법칙’에 따라 주로 자신이 운전을 담당하고 있습니다. 또한, 작성자는 부산에서의 운전 문화에 대한 단상과 아이들과의 과거 일화를 덧붙였습니다. 명절 연휴를 맞아 어머니와 함께 다대씨파크를 방문해 청게와 줄돔 회를 먹은 경험도 공유했습니다. 특히 작성자는 어머니가 선호하는 방식인 ‘막썰기’ 회의 식감과 즐기는 방법에 대해 상세히 설명하며 글을 맺습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">연휴인데 비가 오네요. 차와 관련된 추억등을 주절주절 해 봅니다. 뭐든 첫번째가 기억이 남는 법이다. 나의 첫번째 차는 그랜저였다.</p><p class="summary-paragraph">당시 나는 운전면허가 없었다. 차를 먼저 사 놓고, 운전면허연습장에 등록을 했다. 운전면허가 나올동안 차는 운전면허가 있는 와이프가 운전을 했다. 첫차를 가지고 강릉방향으로 와이프와 여행을 간적이 있다.</p><p class="summary-paragraph">강릉쪽으로 간 이유는 백촌막국수와 고성막국수, 유포리막국수등 막국수 투어를 하기위해서 였던 것 같다. 지금은 터널이 생겼지만, 당시 강원도 강릉으로 넘어가는 길은 커브가 많았는데, 그날은 안개까지 심하게 끼었다. 안개가 멋있게 분위기를 잡자, 나는 차에 쟁여둔 화이트 와인을 한잔 마시고 창밖을 구경하다가 잤다. 와이프는 이렇게 안개로 앞이 안보이고, 길이 어려운데, 와인을 마시고 깊은 잠을 자는 내가 대단하다고 생각했다고 한다.</p><p class="summary-paragraph">지금이라면 다르게 행동했을지 모르지만, 운전면허가 없을때라 개념이 없었던 것 같다. 당시에는 아무말이 없었는데 세월이 지나서 이야기를 하니, 와이프도 뒤 끝이 있는것일까? 와이프 고향쪽을 간적이 있었다. 정읍이다.</p><p class="summary-paragraph">그날은 비가 엄청나게 왔다. 와이프는 앞이 보이지 않게 비가 두드리는데, 분위기가 좋다고 하는 내가 대단했다고 회고한다. 나중에 운전면허를 따고, 그 말이 이해가 되었다. 지금은 내가 운전을 하고 와이프는 운전대를 거의 안잡는다.</p><p class="summary-paragraph">와이프는 운전대 총량의 법칙에 의해 그때 충분히 운전했다는 주장이다. 명절 길이 너무 막힐때 잠깐씩을 제외하고는 내가 운전을 하는 이유다. 처음 운전면허를 따고 아이들을 태우고 주말 아점을 먹으러 간 적이 있다. 아이들은 기어를 중립에 놓고 &quot;차가 왜 안나가지?&quot;라 고 하는 내가 좀 무서웠다고 한다.</p><p class="summary-paragraph">오랜만에 부산에서 운전을 하고 있다. 분명히 깜박이를 넣고 끼어드는데, 전혀 신경쓰지 않고 탱크처럼 밀고 들어오는 차들을 아직 만난다. 부산에서 깜박이는 &quot;끼어들기가 끝나고 누르는 승리의 세러머니 &quot;라는 말이 맞는것 같다. 명절이기는 하지만, 생각보다 식당들이 많이 쉬어서 명절 맛집 투어는 어려울 듯하다.</p><p class="summary-paragraph">첫날, 어머니 단골인 다대씨파크에 모시고 가서 청게와 회를 먹은 정도다. 올해 청게는 생각보다 씨알이 잘았다. 무난한 줄돔으로 골랐는데, 이건 성공이었다. 어머니가 선호하는 막썰기 방식으로 회를 썰어 먹는 것도 나쁘지 않았다.</p><p class="summary-paragraph">막썰기는 생선 근육 섬유가 어지럽게 잘리면서 씹을 때 치아에 저항하는 탄력이 극대화된다. 탄력이 좋으니, 회의 쫄깃한 맛을 선호하는 사람들이 좋아하는 방식이다. 막썰기로 회가 나오면 상추나 깻잎에 얇은 회 여러점을 먹는 방식이 어울리는 것 같다. 숙성없이 바로 먹을때는 포나 막썰기가 나은듯하다.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjZfNzEg/MDAxNzkwMzczMzMwOTYw.ieVV4zaQhvoXgnnSXBaBOrt8pB0_zoiDjqa_GOgx-Hcg.t-L9dtbD5zqMKizak82WdI8zoaXpZC9b1MVIz4rNsgQg.JPEG/IMG_1006.jpeg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjA5MjZfMTgx/MDAxNzkwMzczNDc4MjYy.Z_YPDdmBAHuQvYaAjfAKbxIPHNHy7liTZJaaYN66FKQg.KbaTFC9HwRCR8yh1b4nXjeX-Kh0XOTtOkRSdBrHVJO4g.JPEG/IMG_1003.jpeg?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 분명히 차로 이야기를 시작했는데...흐름이...막국수는 유포리가 내 입에는 제일 잘 맞았다</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224422887860" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
