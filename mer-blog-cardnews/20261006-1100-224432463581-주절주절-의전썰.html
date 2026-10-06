@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>주절주절...의전썰 · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 주절주절</p>
+      <h1>주절주절...의전썰</h1>
+      <p class="date">2026.10.06 11:00</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDZfMTQy/MDAxNzkxMjIxMTE0MDA4.bB_U4kO4QcR8WV1pHQU0zoPshTarnJwiyOmgTKk4rB8g.k_3lORpeyu_dDPQ8Vae5vLMr3O7bBP-QCdgwqMxIzMsg.PNG/image.png?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">이 블로그 글은 다양한 사례를 통해 의전의 중요성과 그 이면에 담긴 의미를 다루고 있습니다. 2025년 9월 3일 중국 전승절 당시, 김정은과 푸틴의 정상회담장에서는 각자의 집무실 실내 온도 설정(23도와 20도)을 고수하려는 경호원들 사이에 몸싸움이 벌어지기도 했습니다. 글쓴이는 중국 방문 당시 비행기 문 앞까지 직접 마중 나와 입국 수속을 대신 처리해 주는 경험을 통해 중국식 의전의 특징을 소개했습니다.
+
+국내 업계 모임에서는 직급과 회사 규모, 나이 중 무엇을 기준으로 상석을 정할지 결정하는 의전의 모호함이 드러나기도 합니다. 글쓴이는 명패 배치 문제로 모임 주최 측에 불쾌함을 느꼈던 경험을 밝히며, 이는 비즈니스 관계에도 영향을 미칠 수 있음을 시사했습니다. 마지막으로 9월 30일 개최된 백악관 AI 회의에서는 주빈의 오른쪽을 상석으로 하는 국제 표준 의전이 적용되었습니다. 특히 글쓴이는 AI 속도조절론을 주장한 앤트로픽의 아모데이를 사진 구도상 잘리는 하석에 배치한 것을 의전적 경고의 일종으로 해석했습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">의전 이라는 주제로 이것저것 주절주절 해봅니다. 김정은 vs 푸틴 2025년 9월 3일, 중국 전승절 행사에서 김정은과 푸틴이 정상회담을 했다. 둘은 같은 차를 타고오는등 화기애애한 모습을 보여줬지만, 회담장의 분위기는 달랐다.</p><p class="summary-paragraph">실내온도 때문이었다. 김정은은 집무실 실내온도를 23도로 유지한다고 한다. 그래서, 북한측 경호원이 벽에 붙은 온도조절기를 작동해서 실내 온도를 23도로 올렸다. 그러자, 러시아 경호원이 에어컨 온도를 20도로 조정하라고 요구했다.</p><p class="summary-paragraph">푸틴 집무실은 실내온도를 20도로 맞춘다고 한다. 북한측 경호원이 모른척 하자, 온도조절기 위치를 빼앗기 위해 경호원들간에 몸싸움이 벌어졌다고 한다. 주먹까지는 아니었지만, 힘으로 밀어낸 것이다. 결국 푸틴측 경호원이 이겼고, 온도는 20도로 조정되었다.</p><p class="summary-paragraph">푸틴측 경호원은 김정은과 푸틴이 도착할때까지 온도조절기 옆에 서있었다고 한다. 이 현장을 취재한 러시아 코메르산트 기자가 &quot;북측 관계자가 조금 아팠을 것이다&quot; 라고 말하는것을 보면 단순한 말싸움은 아니었다. 이런 싸움은 무조건 이겨야 하는게 조직의 논리이다. 중국의전</p><p class="summary-paragraph">회사생활을 하면서, 의전을 많이 경험한다. 의전의 극한은 중국이 아닌가 싶다. 글로벌 회의가 베이징에서 개최되어 간적이 있다. (회의직전, 직찍)</p><p class="summary-paragraph">업무를 마무리하고 가야해서, 혼자서 뒤늦게 출발을 했다. 베이징 공항에 내리면, 회의장소까지 데려다주기위해 마중나오는 사람이 있을 것이라는 연락을 받았다. 당연한 생각이지만, 입국수속을 마치고 출국장을 나서면, 그곳에서 마중나온 사람을 만날 수 있을 것이라고 생각했다. 그런데, 비행기가 도착해서 문을 열자, 젊은 여성과 중년 남성이 비행기 문앞에 대기하고 있었다.</p><p class="summary-paragraph">젊은 여성은 여권을 잠깐 달라고 해서 중년 남성에게 전달하더니, 자기를 따라 오라고 했다. 입국수속은 없었고, 준비된 차가 대기하는 곳까지 걸어나가 차를 타니, 입국확인이 된 여권을 돌려줬다. 숙소 컨디션은 좋았지만, 미세먼지로 창밖이 제대로 보이지 않던 기억이 난다. 이것이 &quot; 중국 스타일 의전이구나 &quot; 하고 느낀 날 이었다.</p><p class="summary-paragraph">업계 모임 새로 바뀌는 제도나 시스템등을 설명해주는 업계 모임자리가 가끔 생긴다. 회사에 따라서 부장~임원급이 참석을 하게 된다. 이런 자리가 있어서 시청쪽으로 넘어간 적이 있다.</p><p class="summary-paragraph">테이블이 ㄷ자형으로 배치되어 있고, 각자 자리에 회사,직급,이름이 적힌 명패가 놓여 있었다. ㄷ자형 배치에서는 아래와 같은 순서로 좌석 순위가 정해진다. 일반적으로 좌석 순위는 직급이 최우선이다. 상무 &gt; 이사 &gt; 부장 순으로 상석이 정해지는게 보통이다.</p><p class="summary-paragraph">그런데 애매한 일이 생긴다. 회사의 규모에 따라서 의전이 달라지는 일이 생기는 것이다. 예를들면 &quot; 자산 10조원짜리 기업의 부장과 자산 2천억짜리 기업의 이사중 누구를 상석에 배치하는 것이 맞느냐 &quot;는것이다. 대기업 부장이 중소기업 이사보다 나이까지 많은 경우가 많아서 더 애매해 진다.</p><p class="summary-paragraph">그래서, 직급만 보지않고, 회사와 거래규모 및 중요도로 좌석을 배치하기도 한다. 한국에서는 나이도 중요하다. 직급이 동등할때는 고연령자를 우대하는게 보통이다. 그런데, 그 날 내 명패는 17위 자리에 놓여 있었다. .</p><p class="summary-paragraph">일단 직급으로는 밀리지 않았다. 당시에 나는 이사였고, 참석자중에서는 부장도 있었기 때문이다. 회사 크기나 거래규모로 봐도, 참석자들중에 Top 3 안에는 모두 들어갔다. &quot;이게 무슨 상황이지? &quot;하는 생각이 들었다.</p><p class="summary-paragraph">대략 주변 참석자들을 둘러보니 답을 찾을 수 있었다. 직급이나 회사와 무관하게 나이순으로 좌석 순위를 정한 것이었다. 특별히 표시내지 않고 모임을 마쳤다. 하지만, 이날 이후 이 회사는 나와 거래하기 힘들어졌다.</p><p class="summary-paragraph">억까를 하지는 않았지만, 같은 값이면 이 회사가 제안하는 프로젝트를 선택하지 않았던 것같다. 백악관 AI 회의(9월 30일) 트럼프가 AI관련 업계 CEO들을 백악관으로 초대해서 회의를 개최했다. 회의자리는 두줄이었는데, 트럼프 기준으로 왼편에는 일론 머스크, 오른편에 젠슨황이 앉아 있었다.</p><p class="summary-paragraph">국제 표준 의전에서는 주빈(주최자, 트럼프)의 오른쪽을 가장 높은 상석으로 친다. 트럼프 본인 기준 우측인 젠슨 황이 서열 1위, 좌측 일론 머스크가 서열 2위, 메타의 마크 저커버그가 서열 3위 식으로 배치되었다. 트럼프 맞은 편에는 JD 밴스 부통령과 마이크 존슨 하원의장등 정부와 의회인사들이 앉는 배치라, 앞자리 보다는 양옆이 중요하다. 전체 사진으로 보면 더 흥미롭다.</p><p class="summary-paragraph">서열 4위는 알파벳(순다르 피차이), 5위 브로드컴 순이다. 마이크론(산제이 메흐로트라), 오픈AI(그렉 브록만), MS(사티아 나델라), AMD(리사 수), IBM(아르빈드 크리슈나), 팔란티어(알렉스 카프), 팰로앨토(니케시 아로라), 아마존(제프 베이조스)등이 보인다. 오픈AI는 샘 올트먼 CEO가 아니라 그랙 브록만 사장이 참석해서 상석에 배치되지 못한 것 같다. 그런데, 공식 사진 치고는 사진 구도가 재미있다.</p><p class="summary-paragraph">한쪽은 여유가 있는데, 한쪽은 참석자가 잘려있다 (화살표). 조금 더 왼쪽으로 구도를 바꾸면 전체 참석인원이 다 들어가는데 한명이 잘리는 구도가 나온 것이다. 반쯤 짤린 참석자가 앤트로픽 아모데이다. AI 속도조절론을 주장한 아모데이를 전체 좌석중 가장 하석에 배치하면서, 의전으로 경고하려는 모습같아 재미있는 장면이었다.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://imgnews.pstatic.net/image/020/2025/09/04/0003658699_002_20250904125108898.png?type=w860" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDRfMTkw/MDAxNzkxMDQ2NjMwNzQ5.Hmnoi1fQnTD5im1Lo6bLJMO4Dz7Tx1IoStYWtgbCvo8g.NteFAfkyuMJNYobXJB4Gz9BeE7BLoBB7WO7uwRx6ABAg.JPEG/3472337188713968141.jpeg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDZfMjUz/MDAxNzkxMjE5Njg0OTY4.rd_bEio5KMlV5OllOTufcwoygKUrbVsQlKu4yAm22Z0g.TDy1A7Vi8MKxGa_DyaHGwveGSrvVU85TZNP8H0TdxEYg.JPEG/1515009.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDRfMSAg/MDAxNzkxMDQ2NzE3MjI2.rhYaBcu4v5-JLMlXX6O2yEcn3lCzsDVsNtaJeQhrHckg.STLPSBBsmKZVWFPTIk_E0OmY6DrdCKt0D4os572CBSMg.JPEG/3472337165688588044.jpeg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDRfMjEx/MDAxNzkxMDQ2ODA2ODQw.hZjLqjiHzpdyh3oeZBuaghGFnXdR5uMThHItNyJCKH8g.xoUwYCtjazsvMdmnNSUTA459Gfn6yOoSOABv4mapQcMg.JPEG/3472337165689125900.jpeg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDJfNjgg/MDAxNzkwOTE4Njc5MzAy.MSvwDW5pLsYUqN4bZpGH7ufiMKmZAPTPSTdmWYp01SMg.aWp3Yh_jILp-tTm4rLxCreu1B1p0ZEK0v4oTSmVPchAg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDZfMjcx/MDAxNzkxMjE3OTI0NDky.8PdJZ_M5xVzQFDZxhLgpp4VGqLbinbKK7030ToKLQIkg.ZFO6_xz0Tb8-4Nu4nNpQKZTcahNqWrcF9FVCOeY86uUg.JPEG/wyurhUtLJZwmgViYAMllTyHsJJEH6Te3N4E9ikRE0Q5EMktSa_93CE5PBqdqjAAciKGglj0AgLN.jpeg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDZfMTI3/MDAxNzkxMjE4NjA5NjQ5.lpA2QTWFxAw14HK1ua9wEbO6GVZ3QRXxuU4ZN9PIc90g.Hn1Irkx5BhUiMPngFlVQy259pSkk7KrtEoyuWEdaaF0g.JPEG/JzAMa2Xy-eIn46bOAkEFms-uEbyEy58jo6-UbJa-cDB_25OI5ElHk936oktxnq31jic_zS3cohE.jpeg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDZfMjgx/MDAxNzkxMjE4ODUyMjQx.QrfRuaWLELufcpXyJhaYodR2CDE7o74yR0d5bEWU9w4g.rT8l4F1N48KHuTQeJ3SUaEnl3Qe1coOuJ7Bn-Ig8uSkg.PNG/image.png?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 앤트로픽의 CEO 아모데이가 의전상 하석에 배치되었고, 사진까지 짤렸다. 이런 상황은 참고할 필요가 있다. 의전도 자세히 보면 재미있는 장면을 찾을 수 있다. 역시 나는 뒤끝이 좀 있다.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224432463581" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
