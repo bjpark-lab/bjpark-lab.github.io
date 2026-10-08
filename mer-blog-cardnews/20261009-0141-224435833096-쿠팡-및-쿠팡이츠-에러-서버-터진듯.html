@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>쿠팡 및 쿠팡이츠 에러, 서버 터진듯 · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 주절주절</p>
+      <h1>쿠팡 및 쿠팡이츠 에러, 서버 터진듯</h1>
+      <p class="date">2026.10.09 01:41</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDlfMjM4/MDAxNzkxNDc2NDcxMTA1.HchEQGb8IbxyKcTFqPWdKgiTdvMXz-MxTPRsKD8ylyEg.n2xvAn9tQK1hIEl69sxN2shsrFdbSQbD-WwrcE-GkhUg.PNG/image.png?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">쿠팡과 쿠팡이츠 서비스에서 동시에 장애가 발생하여 사용자들이 이용에 불편을 겪고 있습니다. 두 서비스가 같은 계정 인증 시스템을 공유하고 있다는 점으로 미루어 볼 때, 공통 인증 서버에 오류가 발생한 것으로 추정됩니다. 장바구니 데이터 등은 정상적으로 조회되는 것으로 보아 개인정보나 주문 데이터 자체가 손실된 상황은 아닌 것으로 보입니다.
+
+이번 장애로 인해 심야 배송 분류 작업이 중단되어 새벽 배송에 차질이 생길 가능성이 있으며, 쿠팡이츠 배달원들에게는 배달 중인 음식을 자체 폐기하라는 지침이 전달되었습니다. 특히 연휴 시작과 맞물린 야식 배달 피크타임에 서비스가 멈춰 배달원과 자영업자들의 피해가 클 것으로 예상됩니다. 과거 사례를 비추어 볼 때 인증 서버 복구에는 일정 시간이 소요될 전망입니다. 전문가들은 반복적인 로그인 시도가 계정 잠금으로 이어질 수 있으므로, 시스템이 정상화될 때까지 무리한 접속을 자제하고 기다리는 것을 권장하고 있습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">쿠팡 서버가 터진 것 같음. 쿠팡만 터진게 아니라 쿠팡이츠도 같이 터짐. 쿠팡과 쿠팡이츠가 동시에 터졌다는 것은 공통 로그인(인증) 시스템 장애가 원인으로 생각됨. 쿠팡과 쿠팡이츠는 같은 쿠팡 계정으로 로그인을 함.</p><p class="summary-paragraph">결제나 검색처럼 따로 도는 기능에 문제라면 쿠팡이나 쿠팡이츠 한쪽만 멈추는데, 이번에는 쿠팡과 쿠팡이츠 모두 장애가 나온 것임. 이미 로그인된 상태인데도, 로그인이 유효한지 서버에서 확인받지 못하면, 앱은 &quot; 로그아웃됐다 &quot;고 판단해서 로그인 화면을 띄우게 됨. 지금 상황이 그럼. 장바구니는 잡히는 것을 보면, 주문 데이터는 살아있는 것 같음.</p><p class="summary-paragraph">주문이나 장바구니 같은 데이터 서버는 정상이고, 이 사람이 누구인지 확인하는 인증 단계만 문제가 생겨서 막힌 상태로 보임. 개인정보나 주문데이터가 날아간 상황은 아닌것 같다는 말임. 쿠팡을 아파트로 비유하면, 출입카드 인증서버에 문제가 생겨서 출입카드를 찍어도 현관문이 열리지 않는 상황과 비슷함. 쿠팡과 쿠팡이츠는 같은 단지의 다른 동인데, 출입카드 인증서버를 같이 쓰기 때문에 두 앱이 동시에 막힌 것 같음.</p><p class="summary-paragraph">과거 사례를 보면, 인증서버 문제는 구글이 50분, MS가 5시간 정도에 복구를 했음. 자고 일어나면 복구가 되어있을 것 같음. 연휴 시작이라 야식배달 피크타임인데, 쿠팡 이츠로 야식 배달이 중단된 것은 타격이 꽤 클 것 같음. 배달하시는 분들이나 자영업자 분들도 배달중단등 곤란한 일들이 많이 생기고 있는 상황으로 보임.</p><p class="summary-paragraph">시스템이 멈추다보니, 쿠팡 물류센터 심야배송 분류작업등도 모두 올스톱이라, 내일 새벽배송이 어려울 수 있음. 쿠파이츠의 배달원들에게는 지금 배달중인 음식들을 자체 폐기하라는 메시지가 갔다고 함. 이럴때 주의할 점은 로그인을 계속 시도하지 않는 것임. 로그인 실패가 계속 반복되면, 계정잠금을 당할 수 있음.</p><p class="summary-paragraph">그냥 기다리는게 답임.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDlfNTIg/MDAxNzkxNDc2NTU0MzAz.2isInbeHCZbFy5U62v2dqVRodj1TcXhyzI4tgTxY0HAg.U758VEDBVCy9PpYmotKZ58Wyhn_faFNBb6rVyFxOOqsg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDlfMTcw/MDAxNzkxNDc3MDA5MzI1.UwUYcYjspVCU_5_uxBR8fdeORXLN_qKZo5UqeCpa_fog.LT7mOnlUhZOTrZyQAqSsPp-LM4c_GFgUYOluMjbrIPQg.JPEG/0A12426E-65B9-4750-91C5-CEBD1DE95407.JPG?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDlfMzQg/MDAxNzkxNDc3NTM3NzM2.upSuTdCyjJuAPHAtYljc4jFjEeumEHrvmuUnnLlqRncg.t0YHPjVfLe7Fu0o37MmET7yY4AZuI_cn5n2DalI-e7Yg.PNG/zyu1drvq.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDlfMjE3/MDAxNzkxNDc3OTIzOTA5.ZR07GmTJfrth5D3K6Egbw86ooHqt_JMETRAuV1jxiVUg.roFEmN-XjxQwF2yxlWnbrTgB4hMFbsHCt39RTiRghZUg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMDlfMjky/MDAxNzkxNDgwMjIxNTYy.nZgRtAvDYRUbQbe7PMoNMu8t0l-Nop8_vsSjPq_eccwg.2ngMW4eojcrrutUFjolvbpe1wU7WPW1vSsRUm4eMLYcg.PNG/image.png?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 대략 12시부터 터진것 같은데, 새벽 1시 40분까지는 복구를 못하고 있음. 네이버쇼핑이 있어서 그나마 다행임.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224435833096" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
