@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>오픈AI 매출 쇼크의 비밀 · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 피드메이커4기(경제)</p>
+      <h1>오픈AI 매출 쇼크의 비밀</h1>
+      <p class="date">2026.10.10 07:30</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMTBfMTkx/MDAxNzkxNTc2NDcxNDU4.KNyTvuqyv63_sUvEMEodtqHJ-4zusH3QELObhDcqepMg.ReFz6cc5NUrpthq-T4VmrV5ZddNg5o_NmlXapM4mhIEg.PNG/image.png?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">10월 8일 파이낸셜타임스(FT)가 오픈AI의 연환산 매출이 500억 달러 수준이라고 보도하자, 시장이 예상했던 700억 달러보다 낮다는 인식으로 인해 코어위브, 오라클, 엔비디아 등 관련 기업의 주가가 하락했습니다. 그러나 이는 기업의 문제라기보다 오픈AI와 앤트로픽 간의 서로 다른 회계처리 방식에서 기인한 차이로 분석됩니다.
+
+앤트로픽은 판매액 전체를 매출로 잡는 총액 방식을 사용하는 반면, 오픈AI는 판매액에서 클라우드 사업자 수수료를 제외하고 매출을 잡는 순액 방식을 취하고 있습니다. 이러한 매출 인식 차이는 미국 회계기준상 판매의 주체와 중개인의 판단에 따른 것으로, 마치 쿠팡의 로켓배송과 마켓플레이스 간의 매출 처리 차이와 유사한 맥락입니다.
+
+AI 기업 가치는 매출 배수(PSR)를 통해 산정되는 경우가 많아 매출 수치는 기업 가치 평가에 큰 영향을 미칩니다. 실제 오픈AI의 700억 달러 매출 추정치는 투자자들이 앤트로픽과 동일하게 총액 기준으로 계산했던 수치였으나, 오픈AI가 순액 기준으로 500억 달러를 언급하며 시장의 혼란이 발생했습니다. 
+
+또한 블룸버그가 보도한 2026년말 700억 달러 달성 예상치 역시 특정 시점의 매출을 12배로 곱하는 연환산 매출(ARR) 방식을 따르고 있습니다. 이는 구독형 모델에서 흔히 쓰이는 지표이나, 매출이 좋은 특정 시점을 기준으로 할 경우 실제보다 수치가 부풀려질 수 있다는 한계가 있습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">가벼운 내용입니다. 10월 8일, FT는 오픈AI의 연환산 매출이 500억달러 정도라는 보도를 함. 500억달러라는 숫자가 시장이 알고있던 700억달러보다 30%가깝게 낮은 숫자였음. 오픈AI는 비상장이라 영향이 없었지만, 연관이 있는 코어위브 -7.77%, 오라클 -5.48%, 엔비디아 -2.94%등의 주가하락이 나왔음.</p><p class="summary-paragraph">숫자만 보면, 오픈AI에 문제가 생긴것 같지만, 회계처리 방식의 차이가 원인으로 보임. 오픈AI와 앤트로픽은 매출을 회계처리 하는 방식이 다름. 앤트로픽은 그로스(총액)로 매출을 잡고, 오픈AI는 넷(순액)으로 매출을 잡고 있음. 고객이 클라우드 마켓플레이스에서 AI서비스를 100달러어치 샀다고 가정을 해봄.</p><p class="summary-paragraph">앤트로픽은 100달러 전체를 매출로 잡고, 클라우드 사업자가 떼어간 30달러는 비용으로 처리함. 총액방식 회계처리를 한것임. 반면에, 오픈AI는 100달러에서 클라우드 사업자에게 떼어준 30달러를 공제하고, 70달러를 매출로 잡고 있음. 순액방식 회계처리를 한 것임.</p><p class="summary-paragraph">이익은 둘 다 70달러로 같은데, 매출에서 차이가 나는 것임. AI기업에게는 매출이 중요함. AI기업의 가치가 대부분 매출 배수(PSR)로 매겨지고 있기 때문임. 매출 배수 30배를 단순계산하면, 700억달러와 500억달러의 차이 200억달러는 기업가치 6,000억달러 차이로 벌어지게 됨.</p><p class="summary-paragraph">두 회사의 회계처리가 다른 것은 미국 회계기준에서 &#x27; 본인과 중개인의 판단(principal vs agent) &#x27; 문제임. 내가 물건의 주인으로 판매를 하면 총액, 남의 물건을 팔아주고 수수료를 받으면 순액으로 잡게 되어 있음. 쿠팡의 로켓배송(직매입)과 마켓플레이스(오픈마켓)의 차이와 비슷함. 쿠팡의 로켓배송은 쿠팡이 물건을 사들여 창고에 쌓아두고 직접 판매를 하고 있음.</p><p class="summary-paragraph">재고 위험도 쿠팡이 지고, 고객응대도 쿠팡이 하며, 판매액 전체도 쿠팡의 매출로 잡히게 됨. 마켓플레이스는 판매자가 자기 물건을 쿠팡에 올려서 파는 방식임. 쿠팡은 일종의 중개인으로 자리만 빌려주고, 거래 수수료를 받으니, 판매액이 아니라 수수료만 매출로 잡게 됨. 거래의 주인인지, 중개인 인지를 구분하는 회계기준은 크게 세가지 지표로 판단 함.</p><p class="summary-paragraph">재고 위험을 누가 지는지 2) 가격을 누가 정하는지 3)물건이 잘못되었을때 손님에게 책임을 지는 사람이 누군지 이것을 AI기업에 대입하면 애매해 지게 됨. 기업고객이 아마존 클라우드(AWS)에서 앤트로픽의 클로드를 100달러어치 구매했다고 가정을 함. 클로드라는 물건을 만들고, 성능을 책임지는 것은 앤트로픽임.</p><p class="summary-paragraph">고객과 계약을 하고 돈을 받는 창구는 아마존임. 앤트로픽은 클로드가 자기것이고 아마존을 판매 창구로 봐서, 100달러 전체를 매출로 잡고 아마존이 가져가는 것은 비용으로 잡음. 반면에, 오픈AI의 클라우드는 주로 MS Azure를 통해 팔리는데, Azure는 MS 데이터센터에서 돌려서 파는 MS 상품임. 오픈AI는 기술을 빌려주고 로열티를 받는 쪽에 가깝다고 해석해서 자기 몫만 매출로 잡고 있음.</p><p class="summary-paragraph">쿠팡처럼 물건이 눈에 보이면 간단한데, AI처럼 만드는 회사와 파는 창구가 뒤섞이면 둘 다 말이 되는 회색지대가 생기는 것임. 오픈AI의 700억달러 매출은 오픈AI가 발표한 것이 아니라 투자자들이 자체적으로 계산한 숫자였음. 앤트로픽과 같은 총액기준으로 계산을 하니 700억달러 매출이 나온것임. 투자자들은 자체계산으로 700억달러를 생각하고 있었는데, 오픈AI가 순액방식으로 매출 500억달러를 언급하자 놀라게 된 것임.</p><p class="summary-paragraph">FT와 다르게 블룸버그는 오픈AI의 연환산 매출이 2026년말 700억달러에 도달할 것으로 예상된다는 기사를 냄. 이것도 기사내용에 함정이 있음. 연환산 매출(ARR, Annual Recurring Revenue)은 넷플릭스 같은 구독형 서비스에 쓰던 지표임. 매달 같은 금액이 꼬박꼬박 들어오는 구독 사업이면 &quot; 이번 달 매출 × 12 &quot;가 연간 매출의 꽤 정확한 예측치가 됨.</p><p class="summary-paragraph">ARR의 함정은 특정 시점의 스냅샷이라는 점임. 가장 숫자가 좋은 달에 12를 곱하면, 연환산 매출은 실제보다 크게 부풀수 있음. 오픈AI는 연말로 갈 수록 매출이 잘 나올것으로 보고, 이것을 연환산매출로 환산해서 700억달러 도달을 이야기 하는 정도임.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMTBfMjE0/MDAxNzkxNTc2MDk4OTc1.QIn-wGqJVgLcuUZFbKqcI9KC78OAgrqVJlHd_PD9AYsg.P8B1dszg5m9IYYKiuOOosiJh-nmOwR8qSK4es2NpD5Eg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMTBfNDAg/MDAxNzkxNTc2MzgyMjIw.LTHmnms4BAL4NWveN76XLZAb-TKF1Vad4Svt4UZQudwg._SaIATR-w_Df31XfrN6hflUHwzTn7ebnNF56-P6Gxtkg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMTBfMTM3/MDAxNzkxNTg1NDg3MjI5.XOYYz2emK8n2DsxJyT6cqErmih3Ga1UHCbjayxOim04g.Se60OmGTQ7Rul02k11z7l0ZKkVA12DAjhJa06UvSTHAg.JPEG/1515667.jpg?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 회계자료는 생각보다 많은 해석의 여지가 있고, 특히 비상장사는 외부에서 검증할 수 있는 자료가 부족함. 회계처리 기준을 먼저 맞추지 않으면 apples-to-apples 비교를 못할 수 있음. 같은 거래라도 오픈AI에 비해서 앤트로픽 매출이 크게 잡히고 있음.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224436787721" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
