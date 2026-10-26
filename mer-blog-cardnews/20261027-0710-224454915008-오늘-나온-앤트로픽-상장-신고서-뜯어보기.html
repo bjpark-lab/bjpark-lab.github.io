@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>오늘 나온 앤트로픽 상장 신고서 뜯어보기 · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 피드메이커4기(경제)</p>
+      <h1>오늘 나온 앤트로픽 상장 신고서 뜯어보기</h1>
+      <p class="date">2026.10.27 07:10</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjdfMTk5/MDAxNzkzMDQ2MDQ0MDY3.VfqhlfWhUIAJwqHUV-JQddnKnp_KnS9S--7CZ15g5YQg.zXvpuGAdQah_Ip-yk_nuNVUPZDtg6G_Qw6J7Flg6Z6cg.PNG/IPO_%EB%A1%9C%EB%93%9C%EC%87%BC_%EC%84%B1%EC%9E%A5_%EC%A0%84%EB%9E%B5_%EB%B0%9C%ED%91%9C_%ED%98%84%EC%9E%A5.png?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">앤트로픽이 제출한 상장 신고서에 따르면, 해당 기업은 11월 중순 로드쇼를 시작으로 11월 19일에서 20일경 상장을 목표로 하고 있습니다. 앤트로픽의 매출은 2024년 3.86억 달러에서 2026년 상반기 162.9억 달러로 급성장했으며, 이는 연간 10만 달러 이상을 지출하는 대형 고객사가 크게 증가한 영향입니다. 회계상 순손실 규모는 커지고 있으나, 이는 전환사채 등 주식 전환 증권의 가치 상승으로 인한 비현금성 손실이 반영된 결과이며, 2026년 2분기에는 영업이익 9.74억 달러를 기록하며 흑자 전환에 성공했습니다.
+
+그러나 앤트로픽은 향후 10년간 구글, AWS, MS 등 주요 클라우드 업체와 스페이스X 등을 대상으로 7,500억 달러 규모에 달하는 대규모 인프라 비용 계약을 체결했거나 협상 중입니다. 이는 현재의 매출 증가세가 지속되어야 감당할 수 있는 규모로, 향후 지출 속도가 더욱 빨라질 전망입니다. 지배구조 측면에서는 공동창업자 7명이 클래스 F 주식 1주를 통해 의결권의 50.1%를 보유함으로써 경영권과 자본 투자자를 분리하는 구조를 갖추었습니다.
+
+마지막으로 앤트로픽은 상장 신고서를 통해 잠재적 위험 요소를 직접 진단했습니다. 주요 고객사의 장기 계약 부재로 인한 수익 불안정성과 고정비 지출 간의 불일치가 핵심 위험으로 지적되었습니다. 또한, 정부와의 관계에서 국방부로부터 공급망 위험 기업으로 지정되어 소송을 진행 중이며, 정부 측과의 관계 개선 노력에도 불구하고 여전히 정치적 불확실성이 존재하는 것으로 나타났습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">앤트로픽 상장 신고서가 나와서 주요 내용을 체크해 봅니다. 앤트로픽은 비상장사라서 세부적인 기업내용을 뜯어볼 수 없었음. 상장을 추진하는 과정에서, 10월 26일 정식 신고서가 나오며, 세부적인 기업내용을 어느정도 알 수 있게 됨. 기업은 공식 로드쇼(기관투자 대상 기업설명회) 최소 15일전에 관련 서류를 공개해야 함.</p><p class="summary-paragraph">10월 26일에 서류를 공개했으니, 11월 10일부터 로드쇼가 가능하다는 일정이 나옴. 블룸버그등은 11월 10일에 로드쇼를 시작해서, 11월 18일경 공모가를 결정하고, 11월 19~20일 상장을 예상하고 있음. 신고서에서 가장 주목받는 숫자는 매출 성장 속도임. 2024년 3.86억달러였던 매출이 2025년 46억달러로 늘어났고, 2026년 상반기에는 162.9억달러로 성장하고 있음.</p><p class="summary-paragraph">연간 10만달러 이상을 지출하는 대형 고객이 2025년 9월말 950곳에서 2026년 9월말 1만1,900곳으로 늘어난 것이 주요 원인임. 순손실도 볼 필요가 있음. 2026년 상반기 앤트로픽의 순손실은 807억달러로 2025년 연간 순손실 420억달러의 두 배 수준임. 순손실의 내용을 뜯어보면, 순손실 807억달러중에 723억달러가 비현금성 손실임.</p><p class="summary-paragraph">앤트로픽은 나중에 주식으로 바꿔주는 증권(전환사채등)으로 자금조달을 많이 해왔음. 회계상 이 증권들은 부채로 잡히는데, 회사 가치가 오르면, 이 증권들이 받게 될 주식의 가치도 함께 오르게 됨. 회사 가치가 오르면 회사가 나중에 내줘야하는 주식의 가치가 높아지고, 그 증가분이 손실로 기록되는 것임. 회사가 잘 될수록 장부상 손실이 커지는 구조임.</p><p class="summary-paragraph">실제 영업체력을 보려면, 영업이익을 봐야 함. 신고서에는 여섯개 분기가 기록되어 있는데, 2026년 2분기에 9억7400만달러의 영업이익으로 흑자 전환에 처음 성공함. 6천억달러가 넘는 고정비가 숙제임. 앤트로픽은 2026년 상반기에만 90억 달러를 썼는데, 2025년 연간 지출 73억달러를 6개월만에 초과한 수준임.</p><p class="summary-paragraph">고정비 지출이 많지만, 매출이 비용보다 빨리 늘어서 2분기에 영업흑자를 낼 수 있었음. 앞으로 지출이 빠른 속도로 늘어날 예정임. 향후 10년간 나갈 구속력 있는 계약이 구글 클라우드 1,110억달러, AWS 1,100억달러, MS 310억달러등이 확인됨. 브로드컴을 통한 칩 임차계약 1,600억달러와 소형 클라우드 업체 계약을 더하면, 미래 인프라 비용은 6000억달러를 넘어가고 있음.</p><p class="summary-paragraph">이번 신고서에서 새로 드러난 것은 스페이스X와의 컴퓨트 계약규모임. 2026년 5~10월사이 앤트로픽은 2029년까지 1,205억달러를 지불하고 스페이스X에게서 컴퓨트를 확보 함. 약속된 용량이 모두 공급되면 앤트로픽은 스페이스X에게 매달 31억달러를 지불해야 함. 현재 협상중인 계약도 1,500억달러 정도가 있어서, 최대 7,500억달러를 10년내 지불해야 하는 규모임.</p><p class="summary-paragraph">식당을 10년 계약으로 임차했다고 가정해 봄. 2026년 1~6월에 지불한 월세 합계가 90억달러임. 7,500억달러는 남은 계약기간 동안에 내야 할 월세의 총액임. 아직 돈이 나간것은 아니지만, 계약서에 사인을 했으니 중간에 취소할 수 없고, 월세는 계속 높아지는 구조임.</p><p class="summary-paragraph">지금 지출속도는 상반기에 90억달러니 1년이면 180억달러임. 약정을 했거나 진행중인 7500억달러를 10년으로 나누면 연간 750억달러 내외가 됨. 매출이 빠르게 늘어나야 월세를 감당할 수 있다는 의미임. 이번에 일반 투자자에게 내놓는 주식은 클래스 A임.</p><p class="summary-paragraph">클래스 F 1주가 별도로 발행되는데, 공동창업자 7명이 클래스 F 1주로 앤트로픽 의결권 50.1%를 가져가는 구조임. 공동 창업자들은 상장시점의 보유주식 2%만 가지고 있으면 지위가 유지되니, 98%까지 팔아도 의결권을 유지할 수 있음. 창업자들은 후계자를 비공개로 지명할 수 있어서, 유고등의 문제가 생겨도 미리 지정해 둔 후계자가 권한을 이어받는 구조임. 돈을 대는 사람(일반 주주)과 회사를 경영하는 사람(창업자)을 분리해 둔 구조임.</p><p class="summary-paragraph">상장신고서에서 앤트로픽은 회사의 위험을 스스로 진단하고 있음. 대형 고객중 상당비중이 구속력있는 장기 계약을 맺지않은 상태를 주요 위험으로 언급함. 고정비 지출은 취소할 수 없는데, 일부 대형고객은 사용량을 줄이거나 중단할 수 있는 비대칭을 핵심 위험으로 보고 있음. 정부와의 관계도 위험에 포함되어 있음.</p><p class="summary-paragraph">국방장관이 앤트로픽을 공급망 위험으로 지정했고, 앤트로픽은 이것을 뒤집기 위해 국방부를 상대로 소송중인 상황을 공개함. 공급망 위험기업으로 지정된 이유는 완전 자율무기 개발과 미국인 대량 감시에 모델 사용을 허용하지 않은것 때문이라고 함. 2026년 9월 2일, 러트닉 상무장관이 앤트로픽을 &quot; 다시 올바른 편에 섰다 &quot;고 언급하면서, 관계가 개선된 것으로 보는 시각도 있음. 하지만, 9월 30일 백악관에서 열린 AI회의에서, 앤트로픽의 자리를 구석에 배치되면서 뒤끝이 아직 남아있다는 시각도 존재함.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjdfMjE0/MDAxNzkzMDQ2MjIzODQw.TRuE4TIbiWDwl3lu-WGGxO40ByQeHNU28tgH3bPORP0g.k_GyJpL87bOEiFVnd8QdyIxVU8tFL7DLTg0WpgrlkSUg.PNG/Gemini_Generated_Image_mu9jn2mu9jn2mu9j.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjdfMzQg/MDAxNzkzMDQ2NDY5NDIw.a0jv_WmSdVPZCd_PbRyuVoqpUuMqUSM7fukzY_KAzJIg.KgCZiCJXk2zCQFC5Xe-2YyuBqDeoYLDzzKNAg9JU1Yog.PNG/Gemini_Generated_Image_4dvqk74dvqk74dvq.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjdfMjI2/MDAxNzkzMDQ2NTQ4OTg3.IkcsihyX1NcWdvhZC9CiI__Xm92MZfCndN8Wgc5HiPsg.KV9_f_5cub0vlJZutQfFDKlyFK9vDOmXcvV8XG5bg9Eg.JPEG/1506534.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjdfMTYz/MDAxNzkzMDQ2Njc5Mjg0.Ny--_D2E_daRD4l9gVGr7RnLIFcpguKhGKaev4SHF9sg.wuXo2J6DScvAGWD0_1XCnj154pCbxeKaS4qZtpfCIcEg.JPEG/7282287_uploaded_12537278.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjdfMjI5/MDAxNzkzMDQ2ODMwMjcw.uf9bbCxC4z_f0TWhQo0tH54guRNKQZFvr_UTUazzxjEg.jNLO0ixE3YViCpl__p8AeAbphzCUHm5am2lilrxQ4sEg.JPEG/szqe9cgq.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://postfiles.pstatic.net/MjAyNjEwMDZfMjgx/MDAxNzkxMjE4ODUyMjQx.QrfRuaWLELufcpXyJhaYodR2CDE7o74yR0d5bEWU9w4g.rT8l4F1N48KHuTQeJ3SUaEnl3Qe1coOuJ7Bn-Ig8uSkg.PNG/image.png?type=w966" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 이번 앤트로픽의 상장 신고서는 보고 싶은 사람이 원하는대로 볼 수 있는 내용이었음. 앤트로픽에 긍정적인 사람은 빠른 매출 증가율에 주목할 것이고, 부정적으로 보는 사람은 고정비 부담에 신경이 쓰일것임. 스페이스X나 앤트로픽등을 보면 창업자가 의결권을 가져가는 구조가 많아지는 느낌임.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224454915008" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
