@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>사칭채널 차단 및 공지사항 업데이트 · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 건강/의학/맛집/일상/역사등</p>
+      <h1>사칭채널 차단 및 공지사항 업데이트</h1>
+      <p class="date">2026.11.01 17:48</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjdfMTk4/MDAxNzkzMDc5NzU0MjI0.o9LP0H_Dihr54Mgbk_ymPtyQgkX7ix-ni8DoJN4V1Sgg.40_FuRUyTOjaxUDySESlfG1z0fqhTZ7_xcBMPos8ZQ8g.PNG/image.png?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">해당 블로그 운영자는 최근 자신의 블로그에 반복적으로 댓글을 달고 삭제하는 방식으로 증거를 인멸하는 다수의 사칭 채널을 발견했습니다. 운영자가 확인한 사칭 채널은 최소 13개이며, 이들은 운영자의 대표 이미지를 도용하거나 댓글을 달고 지우는 등 교묘한 수법을 사용하고 있습니다. 운영자는 발견된 사칭 채널들을 네이버에 신고하고 차단 조치를 취했습니다.
+
+운영자는 현재 블로그 외에 인스타그램, 페이스북, X, 텔레그램, 유튜브 등 별도의 채널을 운영하지 않습니다. 만약 운영자의 글을 활용해 타 채널을 운영할 경우, 매출의 10% 이상을 아동권리보장원의 &#x27;디딤씨앗통장&#x27;에 기부하고 증빙하는 조건 하에만 허용하고 있습니다. 따라서 이러한 조건을 제시하지 않는 채널은 모두 사칭이므로 주의가 필요합니다.
+
+한편, 운영자는 &#x27;메르를 통해 엿보는 세상공부&#x27;와 같은 정식 제휴 채널을 통해 저작권료 명목으로 기부를 실천하고 있습니다. 이렇게 기부된 금액은 보호시설 퇴소 청년들의 학자금이나 주거 지원을 위해 사용되며, 현재까지 총 4,910만 원가량의 누적 기부금이 적립되었습니다. 운영자는 블로그에 사칭 댓글이 보일 경우 &#x27;잡았다&#x27;는 내용의 대댓글을 남겨주면 사칭 채널 신고 및 차단에 도움이 된다고 당부했습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">사칭채널 차단 사칭채널이 블로그에 아래와 같은 댓글을 며칠째 달고 있다. 수십개를 한꺼번에 올렸다가, 시간이 지나면 삭제를 해서 증거를 없애고 있다. 네이버 블로그 상단에 블로거 이름으로 검색을 할 수 있는 곳이 있다.</p><p class="summary-paragraph">메르로 검색했더니, 사칭 채널을 만들어 놓은게 한두개가 아니다. 잠깐 확인한 사칭채널만 13개다. 사칭채널로 보는 이유는 나와 같은 대표 이미지를 사용했기 때문이다. 아래는 내 대표이미지다.</p><p class="summary-paragraph">사칭채널의 대표이미지도 동일하다. 밑줄을 긋지않은 아이디는 단순하게 메르를 같이 사용하는 곳 같고, 밑줄을 그은쪽이 사칭채널로 의심되는 곳이다. 특이한 것은 아래 우측의 메르다. 댓글을 쓰고는 잠시후 삭제하는 것을 봤기때문에 사칭채널은 맞는데 대표 이미지를 다른 것을 사용하고 있다.</p><p class="summary-paragraph">이것도 진화라고 봐야하나 싶다. 일단 확인된 사칭채널들은 싸악 네이버에 신고하고, 차단을 했다. 신고는 했지만, 네이버가 조치를 해줄지는 모르겠다. 현재 블로그 외에는 글을 올리는 곳이 없다.</p><p class="summary-paragraph">인스타, 페이스북, X, 텔레그램, 유튜브 모두 안한다. 출처를 밝히고 내 글로 유튜브등을 만들경우, 저작권료 개념으로 매출의 10%를 디딤씨앗통장에 기부하는 조건으로 허용하는 정도다. 위와 같이 유도하는 것은 사칭채널이니, 입장할 필요가 없다. 그리고, 블로그에 이런 댓글이 보이면, 밑에 &quot; 잡았다 &quot; 정도로 대댓글을 달아주면 도움이 된다.</p><p class="summary-paragraph">대댓글이 있으면, 지워도 흔적이 남기때문에, 차단을 하고 신고할 수 있기 때문이다. 공지사항 업데이트 네이버 프리미엄 콘텐츠에 &quot; 메르를 통해 엿보는 세상공부 &quot;라는 메세공 채널이 있다. 메세공은 내가 매일 올리는 블로그글을 주식 투자 관점에서 뜯어보고, 추가적인 투자포인트 등을 올리는 채널이다.</p><p class="summary-paragraph">일반적인 산업과 기업분석도 많이 올라가고 있어서, 내 글만 가지고 운용하는 채널은 아니다. 나는 내 글의 저작권료 개념으로 메세공 매출의 10%이상을 기부하게 하고 증빙을 받고있다. 매출액의 10%이상 기부조건인데, &quot; 메세공의 자발적인 &#x27;1+1 기부&#x27;가 추가되어서 매출의 20%이상이 기부&quot; 되고 있다. 8~10월 기부금액은 340만원이었고, 2026년 1~10월 누적으로는 메세공을 통해서 1,501만원이 기부되었다.</p><p class="summary-paragraph">메세공 이외에도 몇군데에서 기부가 진행되고 있다. 스몰인사이트 리서치라는 곳에서 100만원씩 2번이 기부되었고, 유튜브 &quot;메르의 세상읽기&quot; 100만원, 기타 7만4천원이 기부되고 있다. 내 글을 활용해서 유튜브등을 만들때, 저작권료 개념으로 매출의 10%를 기부하고 증빙을 내게 보내는 조건으로 허용하고 있다. 현재까지 누적으로는 4,910만원정도가 기부된것 같다.</p><p class="summary-paragraph">기부처는 아동권리보장원의 &quot; 디딤 씨앗통장 &quot;이다. 디딤 씨앗통장은 인당 5만 원을 후원하면, 정부 지원금 10만 원이 합쳐져서 매달 15만 원이 적립된다. 적립금은 18세가 되어 고아원 등 보호시설을 나가야 할 때, 학자금이나 원룸 보증금 등의 용도로 지원된다. 디딤 씨앗통장은 노무현 정부 시절에 시작되어, 여야가 바뀌는 동안에도 15년 가까이 유지되고 있는 제도다.</p><p class="summary-paragraph">난이도 극한의 한국 사회에 진입하는 청년들을 소중히 여겨야 한다는 생각이 기부처 선정 사유다. 현재 블로그 외에는 직접 글을 올리는 곳이 없다. 다른 곳에서 내가 발견되면, 나를 사칭하는 인물이든지, 아니면 내 글을 퍼간 정도로 보면 될 것 같다.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjdfMjMg/MDAxNzkzMDc5ODY1Njcy.__XdXVg5G0qRzm0HDJ8wc-u36hYGBGX9LErL-xxEVPQg.SJjQy79vxhyOY4IxKa2LSNJ36Dxzx0IoaRXjQxY13lUg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjdfMjE4/MDAxNzkzMDgwMTAwMjQw.BUmRt4r36ov1mV_Ikbe2oL9pqvXI6qQAOqT3n5RX-ngg.gvXN5JYgl5aJmTOljb2ddocnpFL8suHOzBCptAZykKMg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjVfMjEz/MDAxNzkyODY3MzcyNzM2.JkbdPUqiT8OsrJ5Pw0LneJKVEpfLDQNnijVc3P27qvog.d2Uq9jknceix_x56YnXm281ceexq9rydEGNG42VzVoog.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjVfMjA2/MDAxNzkyODY3NDU0Njg2.3JHf9x6S9pdbq6jUWHLUUa5RNu8ws6cweo73E4lk6Kgg.vqaq1QjddqM5XM_C1tUR42IwKmRJfsNEeXZjXBwzPvwg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjVfMjcw/MDAxNzkyODY3ODY3ODk1.JvKmsHcuK7HGveY9WxtWzmftNuwTsZIAAu5MZZBXHhUg.bHtI1b-MIoIJdupTnF7tpMJTcPYiuKBLYr8E4mMETIYg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjVfNTkg/MDAxNzkyODY3NTY0MzUy.GeN-QSCQt80Uqy3ApgJZW5lmM8zsdnIsm8Dadg0GVFQg.oeSFqLgkvkOxyLgI7P2x_cNvXkS2Vt2jtzVSHeyMpV8g.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjEwMjVfMTQ2/MDAxNzkyODY3NTE5MDU0.M_cDj4nI18Pa0G9GfVPIHdoVJW_7Aww_ynNCl31Jxokg.H843DfimOYnx-2TLL49STFZh52QamIuEHPXvGuyc94sg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDFfMjAw/MDAxNzkzNTA3NzAwOTkx.XJBl4XTwrzoQ9aTvYWuOzg-7G5E6XAnZJg_yKbV2DTkg.rPGw5k09E10wdmpOUqKSAklJKtiUTeQnS3fN_8Rx054g.PNG/D800BBB9-DD8D-422C-9379-49D188ED422C.PNG?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDFfMzkg/MDAxNzkzNTA3NjU5MzQz.SkftKWO-irFn73qg4jOX4k24FMnX2gd_FvXQ4pGCtl8g.29sFMLMkseRxnY0rr4YtCAkVMgB9is4nk0a2Srzi7Qwg.PNG/C29FCD09-EC35-45B1-A416-9D65211458C4.PNG?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDFfMTky/MDAxNzkzNTA3MDc4MDgw.HCdbr3_BapV-LL2tKkMxLbpLQ1-VYIKpy6qRVuFGpjsg.cXPFnmhKpk-3h_aC3B-6OC-0TqCHYW_hrEifNBLJC9Mg.PNG/405C0F90-ECA7-4E79-9D31-B063E1BD0458.PNG?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://postfiles.pstatic.net/MjAyNjA4MTZfMjk2/MDAxNzg2ODI2OTQ2MDk2.DgfzCXKxDlNQJEW3U26zTgyg8o8AmIbFtE8XOVP-o7Qg.XuVn3MAGog1ZwlrBC6jS_o3cgf6ACNwvmUsxcISCg4sg.JPEG/TalkMedia_i_b67f0d4c4e5f.jpg.jpg?type=w966" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://postfiles.pstatic.net/MjAyNjA4MTZfMTY4/MDAxNzg2ODMyMzY4NjE2.4JOrKJxfRZsYzFmv21FtwPHCL2tw66yPylG5CG30Wj8g.-mf1acNHzJhmONb58fcOga8mcnR6GRhuHbp9TYo--hgg.PNG/image.png?type=w966" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://g-cbox.pstatic.net/MjAyNjA1MjRfMjQ5/MDAxNzc5NjAyODA4NjA4.zbGA4gjssUdoPPybf3fBVuGtxsFOvlKY9zcDt9PH84Eg.22JVu63SP2ezSKJLGCetnrotE4uIq1umD1V7Q6yWlcog.PNG/%EB%82%A9%EB%B6%80%EB%82%B4%EC%97%AD%EC%84%9C20260424.png?type=m250_375" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDFfMjI2/MDAxNzkzNTA3MzE0MTYx.Cxge7TtdNW8bjNG-P6zoHmfg6jWzTTym6vL2eMwiV3Ig.4K4mIzjzupTOxfv_H0leEYB1bV3n3NC4T8ttcFu0_pEg.PNG/txdmoger.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDFfMjEw/MDAxNzkzNTA3OTM4MjQ4.IIqplYGAFAxiJmIPpind5kT_f88_1r-euHWUJzmrATQg.rmZNG6CHGPlO9J636hir5O_u34nnJ5A2HhlpxB9Uk70g.JPEG/14D448D0-4304-4635-BCDF-5DCEB74EDB13.JPG?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 다들 열심히(?) 산다.
+
+한줄 코멘트. 메세공과 유튜브에서 나오는 수입은 현재까지 1원도 개인적으로 받지 않고 있다. 내게 오는 저작권료는 모두 직접 기부하게 하고, 위에 보듯이 기부증빙만 받고있다. 지금까지 이런방법으로 4,910만원이 기부되고 있다. 메세공은 한달에 9,900원을 내고 나도 유료 구독하는 중이다. 홍보같지만 내돈내산이고, 구독료 가치는 하는 것 같다.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224461050884" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
