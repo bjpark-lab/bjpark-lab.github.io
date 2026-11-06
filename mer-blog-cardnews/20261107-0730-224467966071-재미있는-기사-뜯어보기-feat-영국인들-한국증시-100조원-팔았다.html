@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>재미있는 기사 뜯어보기(feat 영국인들, 한국증시 100조원 팔았다) · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 피드메이커4기(경제)</p>
+      <h1>재미있는 기사 뜯어보기(feat 영국인들, 한국증시 100조원 팔았다)</h1>
+      <p class="date">2026.11.07 07:30</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fpimg.mk.co.kr%2Fnews%2Fcms%2F202611%2F06%2Fnews-p.v1.20240701.28b96d60b597404ea8d21b9956e20030_R.jpg%22&amp;type=ff500_300" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">최근 영국인 투자자들이 9개월간 한국 증시에서 97조 원 이상의 주식을 매도한 현상이 화제가 되었습니다. 일각에서는 이를 영국의 상속세 개편에 따른 연금 인출 증가와 연관 지어 분석했습니다. 영국은 내년 4월부터 미사용 확정기여형 개인연금(DC)을 상속세 과세 대상에 포함할 예정인데, 이로 인해 연금 가입자들이 상속 대신 생활 자금으로 인출할 유인이 커졌기 때문입니다.
+
+그러나 이러한 대규모 매도세를 단순한 연금 인출 현상으로만 해석하기에는 무리가 있다는 지적이 나옵니다. 연금 인출 증가분과 한국 증시의 영국계 자금 비중을 고려할 때, 97조 원이라는 거액을 모두 연금 인출로 설명하기에는 수치상 차이가 크기 때문입니다.
+
+전문가들은 금융감독원의 국적별 순매수 통계가 &#x27;투자자 등록지&#x27;를 기준으로 작성된다는 점에 주목해야 한다고 설명합니다. 런던에는 미국계 헤지펀드나 글로벌 투자은행(IB)의 거점이 많아, 이들이 거래하는 자금은 실제 주체와 상관없이 통계상 영국계로 분류됩니다. 따라서 이번 대규모 순매도는 영국 개인의 연금 인출보다는, 글로벌 레버리지 투자 자금의 청산 과정에서 나타난 현상으로 해석하는 것이 적절합니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">오늘 매일경제에서 재미있는 기사를 하나 봤다. 영국인들, 9달동안 한국 증시 100조 팔았다…“세금 아끼려고” [오늘 나온 보고서] - 매일경제 영국인들이 9달동안 한국 증시 100조를 팔았다는 기사인데, 매도 이유를 세금때문으로 해석을 했다. 아래가 기사 본문중 일부다.</p><p class="summary-paragraph">&quot;영국의 상속세 개편이 한국 증시 외국인 순매도를 키웠다는 분석이 나왔다. 6일 염동찬 한국투자증권 연구원은 ‘외국인 자금 동향과 영국계 매도: 영국 상속세 개정의 나비효과’ 보고서에서 “올해 외국인 매도에서 눈에 띄는 현상은 영국계 자금의 순매도”라며 “영국계는 올해 1~9월 97조원을 순매도했는데, 이 중 76조원을 6~9월 4개월 동안 순매도했다”고 설명했다. 그는 영국의 상속세 과세 대상의 확대가 이 같은 결과를 불러일으켰다고 분석했다. 영국에서는 원래 연금 수령자가 사망하면 미사용 연금에 세금을 부과하지 않았으나, 내년 4월부터는 과세할 예정이다. 염 연구원은 “해당 법안은 올해 3월에 확정되었고, 세부 절차는 5월에 공개됐다”며 “연금 가입자가 연금을 상속 목적으로 남겨두기보다 인출해 생활 자금으로 활용할 유인이 커졌다”고 지적했다.&quot;</p><p class="summary-paragraph">영국에서 저런 제도 변경이 있었던 것은 사실이다. 2027년 4월 6일부터 대부분의 미사용 연금이 상속세 산정 대상에 들어가게 된다. 지금까지 영국에서는 연금(확정기여형 개인연금,DC)이 상속세를 피하는 통로로 이용되고 있었다. 영국 DC 연금은 은퇴할 때 적립금을 쓰는 방법이 두 가지다.</p><p class="summary-paragraph">매달 받다가 죽으면 끝나는 방식(한국 국민연금과 비슷)과, 필요할 때 꺼내 쓰는 방식(한국 IRP와 비슷)이다. 필요할 때 꺼내쓰는 방식을 이용하면, 죽을때 남아있는 잔액이 상속인에게 상속세 없이 넘어간다. 영국인들은 DC개인연금을 다음과 같이 활용하기 시작했다. 노후 생활비는 예금이나 주식같은 다른 자산부터 꺼내쓰고, DC개인연금은 손대지 않고 최대한 불리는 것이다.</p><p class="summary-paragraph">사망을 하면 연금이 상속세 없이 자녀에게 넘어가고, 75세 전에 사망하면 소득세까지 없기 때문이었다. 연금이 노후 생활비 계좌가 아니라 상속세 없는 상속 계좌로 쓰이는 경우가 많자, 영국 정부는 이것을 막는 방법을 도입했다. 사망시점에 남아있는 연금 잔액을 집,예금, 주식등과 함께 상속재산에 합산시키기로 한 것이다. 영국의 상속세율은 40% 단일세율이다.</p><p class="summary-paragraph">1억원의 연금중 상속세로 최고 4천만원을 낸다. 남은 6천만원을 인출할때는 다시 최고세율 45%의 소득세 2700만원을 추가로 내게 된다. 1억원을 물려줘도 최악의 경우 자녀 손에는 3300만원만 넘어가게 되는 것이다. DC연금을 상속재산에 합치겠다고 하자, 연금을 인출해서 생활비로 써버리는 경향이 생겼다.</p><p class="summary-paragraph">영국 연기금이 한국증시에도 투자하고 있으니, 고객의 연금인출금을 내주기 위해 일부 빼내가는 사례가 생겼을 수 있다. 문제는 97.5조원이라는 숫자다. 금융감독원의 2026년 국적별 순매수대금 상하위 국가를 보면, 영국이 97.5조원으로 순매도를 가장 많이 한 나라로 나온다. 숫자는 틀린것이 아닌것이다.</p><p class="summary-paragraph">문제는 해석이다. 영국의 연금 인출이 실제로 늘어난 것이 숫자로 확인된다. 2025-26년 연금 인출액은 912억 파운드로 2024-25년 709억 파운드보다 203억 파운드(40조원)가 늘었다. 40조원에 영국 연금 포트폴리오의 한국 비중 1~2%를 적용하면 4,000억~8,000억원이 나온다.</p><p class="summary-paragraph">이 돈으로 97.5조원을 설명할 수 없는 것이다. 기사에 나온 연구원이 놓친것은 금감원의 국적 분류 기준으로 보인다. 금감원은 국적을 &quot; 투자자 등록지 기준 &quot;으로 하고있다. 런던은 미국계 헤지펀드와 글로벌IB들의 레버리지 투자자금들이 몰리는 곳이다.</p><p class="summary-paragraph">미국 대형 투자은행들은 유럽이나 아시아 고객과의 거래를 대부분 런던 법인을 통해서 처리한다. 모건스탠리는 런던의 Morgan Stanley &amp; Co. International, 골드만삭스는 Goldman Sachs International을 활용한다. 이들 법인이 하는 일은 크게 두 가지다. 헤지펀드에게 돈과 주식을 빌려주고 매매를 대행하는 일종의 헤지펀드 전용 증권사 역할을 한다.</p><p class="summary-paragraph">헤지펀드가 주식을 직접 사지 않고도 수익을 얻을 수 있게 파생계약을 맺어준다. 회사 간판은 미국 은행이고, 고객도 미국 헤지펀드인데, 한국 거래소에 찍히는 명의는 영국 법인이 되는 것이다. &quot;미국 헤지펀드 A가 SK하이닉스에 레버리지로 100억원을 베팅한다&quot; 고 가정해 보자. A는 모건스탠리 런던 법인과 SK하이닉스 100억원어치 스왑(TRS) 계약을 맺는다.</p><p class="summary-paragraph">증거금으로 25억원을 넣는다면, 4배 레버리지가 된다. 모건스탠리 런던은 주가변동 위험을 자기가 지지않기 위해서, 한국 시장에서 SK하이닉스 100억원어치를 매수한다. 매수자는 모건스탠리 런던 명의이므로 &quot; 영국계 순매수 100억원 &quot;으로 잡히게 되는 것이다. 주가가 오르면 차익은 헤지펀드 A에게 가고, 모건스탠리는 수수료와 이자를 받는다.</p><p class="summary-paragraph">그런데, 은행이 &quot; 메모리 쪽 위험이 너무 크다 &quot;며 한도를 줄이거나 증거금을 더 요구하면 상황이 바뀐다. A가 포지션을 줄이면 모건스탠리 런던이 보유 주식을 한국 시장에 팔게 된다. 통계에는 &quot; 영국계 순매도 100억원 &quot;으로 찍히는 것이다. &quot;영국계 97.5조원&quot; 을 영국 노인들의 연금 인출로 해석하면 안되고, 글로벌 레버리지 자금의 청산으로 해석해야 하는것이다.</p><p class="summary-paragraph">PS) 한국은 이미 IRP나 연금저축 잔액이 상속재산에 포함되어 상속세가 매겨지고 있다. 영국이 한국 방식으로 바뀌는 셈이다.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfMTY4/MDAxNzk0MDAxMDc4OTUw.X2s8q5J_nTXKUNU1nLOi--lO6CC5jc2lI22ECv_YTBEg.IHruduh27f-i5506nnsM_x7CmvgHBTacTWtOmH5o2EYg.JPEG/fuumkdpa.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfMTI4/MDAxNzk0MDAxMzkyODAz.vCUVXgRvyCCKbKk9KDuF23mvGgLJZk1ivzU3znIuN40g.TwjKfKdPWKOiekHOG_MK0nrZmU9njnGfH7WrEkTBrU4g.JPEG/alvhqsxa.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDZfMjI0/MDAxNzkzOTQ1MTkwODYw.7V8nlZYBZ3nC4uColFHBNzZveI-5TzBxqM7l_ggDfjMg.j_cGOTiQ3O--kg-pzIpeVa1VcCFPCLniEHhJKS89GnIg.JPEG/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_6-11-2026_15445_www.mk.co.kr.jpeg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfMTk2/MDAxNzk0MDAxNjY4Njgz.CoKusRwlrcZAilXUKWCHbd9-Bi49VMFZDDgUJmehJSkg.9rMS-R6lKVJuQpt2UxvWq843wuydAndoGznn7QxBxm8g.JPEG/v6jm7wb0.JPG?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. AI는 틀리는 답을 정답인것처럼 답하는 경우가 많아서, 그대로 사용하다가는 잘못된 해석이 나오기 쉬워진다. AI등을 활용한 분석이 쉬워지면서, 분석보다 해석이 점점 더 중요해지고 있다. 신문기사의 해석도 그대로 믿으면 안된다. &quot; 영국인들이 한국증시에 100조원을 팔았다 &quot;는 기사는 해석상 허점이 있는 것 같다.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224467966071" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
