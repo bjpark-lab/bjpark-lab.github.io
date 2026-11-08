@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>TSMC가 D램을 만든다고? · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 피드메이커4기(경제)</p>
+      <h1>TSMC가 D램을 만든다고?</h1>
+      <p class="date">2026.11.09 00:10</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfNjUg/MDAxNzk0MDUyNDQ4Mzg3.7H_adNKOVC-EeNykmiALJNnYUww2oe4kodRmvMJNVbkg.uB7PNUbm0yKD4rM-ZNpoMo0Bq9lTk13mCWqzGBPpHVcg.PNG/image.png?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">최근 엔비디아의 요청으로 TSMC가 3D D램 생산을 검토하기 시작했다는 보도가 나왔습니다. 과거 TSMC는 뱅가드 인터내셔널 세미컨더(VIS)를 통해 D램 사업에 진출했으나, 기술력 부족과 아시아 외환위기, IT 버블 붕괴 등을 겪으며 2004년 D램 생산을 중단하고 파운드리 사업에 집중해 왔습니다. 이후 삼성전자, SK하이닉스, 마이크론이 주도하는 메모리 시장에서 대규모 치킨게임이 벌어지며 대만 기업들이 타격을 입자, TSMC는 파운드리 전문 기업으로서의 입지를 더욱 굳혔습니다.
+
+현재 TSMC가 추진하는 3D D램은 기존 평면 구조의 한계를 넘어 낸드플래시처럼 층을 쌓아 용량을 늘리는 방식입니다. 다만, 전하를 담는 커패시터를 수직으로 쌓아야 하는 기술적 난제와 열관리 문제로 인해 삼성전자와 SK하이닉스도 상용화에 어려움을 겪고 있습니다. 전문가들은 이들이 2030년을 전후로 상용화를 목표로 하고 있어, 당장의 메모리 공급난을 해결할 대안이 되기는 어렵다고 보고 있습니다.
+
+엔비디아가 이러한 시도를 하는 배경에는 D램 공급처를 다변화하려는 의도가 깔려 있습니다. 하지만 TSMC 입장에서 메모리 사업 진출은 &#x27;고객과 경쟁하지 않는다&#x27;는 핵심 경영 원칙과 충돌하며, 변동성이 큰 메모리 산업의 특성상 파운드리의 안정적인 수익 모델을 위협할 수 있다는 우려도 공존합니다. 현재 TSMC는 검토 단계에 있으며 실제 공장 착공 등 구체적인 움직임은 아직 시작되지 않은 상태입니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">엔비디아가 TSMC에 &quot; 메모리도 만들어 달라 &quot;고 요청했고, &quot;TSMC가 3D D램 생산을 검토하기 시작했다&quot; 는 보도가 나와 정리해 봅니다. TSMC가 메모리를 하겠다고 나선것이 처음은 아님. 1994년 12월, 모리스 창은 신주과학단지에 뱅가드 인터내셔널 세미컨덕터(VIS)를 설립함. 모리스 창은 당시 대표적인 D램 회사였던 TI(텍사스인스트루먼트)에서 25년동안 일해서 부사장까지 오른 인물임.</p><p class="summary-paragraph">대만 정부의 영입으로 대만 공업기술연구원(ITRI) 원장을 지낸 뒤, 1987년 TSMC를 설립한 대만 반도체의 아버지임. 모리스창은 TSMC와 VIS 회장을 겸임하게 됨. VIS는 대만 정부의 D램 국산화 프로젝트를 D램 회사로 분사한 기업으로 TSMC와 정부 국가발전기금등이 주요 주주가 됨. VIS가 설립된 1994년은 PC붐으로 D램이 없어서 못 팔던 초호황기 였음.</p><p class="summary-paragraph">공장이 완공되어 물량이 나올 무렵, 다른 D램 회사들의 증설 물량도 한꺼번에 쏟아진 것이 문제였음. 1997년에는 아시아 외환위기까지 겹쳤고, D램 업계는 140억달러 매출에 56억달러를 손실보는 재앙적 상황에 처하게 됨. VIS는 자체 개발한 D램 공정의 수율을 잡지 못했고, 물량도 월 4만장을 찍어내는 수준이라 기술과 규모가 모두 부족한 기업이었음. D램은 많은 물량을 가장 싸게 만드는 2~3개 회사만 살아남는 게임인데, VIS는 두가지를 모두 충족하지 못했던 것임.</p><p class="summary-paragraph">VIS는 2000년에 잠깐 흑자를 냈지만, IT버블이 꺼지면서 다시 적자로 돌아서게 됨. 2004년 2월, VIS는 TSMC의 넘치는 파운드리 물량을 받는 파운드리 전환계획을 발표했고, D램 생산을 완전히 중단하게 됨. 2009년 3월에 대만정부는 망해가는 대만 D램 기업들을 통합하는 TMC 설립을 추진함. 일본 엘피다가 주요 D램 기업들의 생산능력을 흡수했고, 정부 지원금도 국회 승인이 나지않으면서 TMC 설립계획은 실패함.</p><p class="summary-paragraph">너도 나도 증설을 하는 바람에 D램 공급이 수요를 초과하자, 한국의 삼성전자와 SK하이닉스도 고생을 많이 함. D램 업체들은 2007년 4분기부터 원가보다 싼 값에 제품을 팔았고, 2008년 4분기부터는 재료비도 건지지 못하는 가격을 받았음. 재료비도 건지지 못하는 가격으로 판다는 것은 공장을 돌리면 돌릴수록 손해라는 말임. 삼성전자와 SK하이닉스는 적자상태에서 생산을 멈추지 않았고, 경쟁자가 쓰러질때까지 버티는 치킨게임에 들어가게 됨.</p><p class="summary-paragraph">2008년 4분기 하이닉스의 영업이익률은 마이너스 52%였고, 연간으로는 6조 8180억원 매출에 -4조3840억원의 순손실을 냄. 하이닉스는 채권단의 유동성 지원과 구조조정으로 버티다가, 2012년 SK가 인수해서 현재의 SK하이닉스가 되었음. 삼성전자 반도체부문도 2008년 4분기 -6,900억원, 2009년 1분기 -6,700억원의 영업적자를 내게 됨. 하이닉스와 다른 점은 휴대폰,TV,LCD사업부등이 돈을 벌고 있어서, 2008년에 5조 7000억원의 영업이익을 낼 수 있었음.</p><p class="summary-paragraph">2009년 1월, 독일의 키몬다가 파산보호를 신청함. 키몬다 파산으로 공급이 줄어들고, D램 가격이 제조원가 이상으로 올라가면서, 치킨게임이 끝나게 됨. 2011년에 2차 치킨게임이 다시 시작되었고, 이번에는 일본 정부의 지원으로 버티던 일본 엘피다가 2012년 파산을 함. 일본 엘피다를 마이크론이 인수하면서 대만 D램 기업들 상당수가 마이크론 손에 넘어가게 된 것임.</p><p class="summary-paragraph">대만 TSMC는 이때의 경험으로 재고와 가격 부담을 고객사에 넘길 수 있는 파운드리 모델에 집중하게 됨. &quot; 대만은 파운드리, 한국은 메모리 &quot;라는 분업이 굳어졌던 시기였음. 2026년 11월 6일, TSMC가 3D D램이라는 첨단 메모리 생산계획을 엔비디아 요청으로 짜기 시작했다는 보도가 로이터에서 나왔음. 현재 D램은 칩안의 저장칸을 바닥에 펼쳐 놓은 단층 주택과 비슷함.</p><p class="summary-paragraph">D램이 기판 표면 면적을 차지하다보니, 용량을 늘리는 방법은 D램 선폭을 줄이는 미세화 뿐이었음. TSMC가 개발하겠다는 3D D램은 아파트와 비슷함. 낸드플래시는 이미 200층 넘게도 쌓고 있으니, D램도 위로 쌓아 보자는 시도임. SK하이닉스는 2024년 5층 3D D램 수율 56%를 공개했지만, 상용화하려면 32층이상을 쌓아야 하고 동작이 불안정하다고 밝힘.</p><p class="summary-paragraph">삼성전자는 2024년에 16층까지 쌓는데 성공했다고 하지만, 아직 가능성을 확인하는 단계고 2030년 상용화가 목표임. 낸드는 쉽게 쌓는데 D램이 어려운 이유는 D램의 전하를 담는 커패시터 때문임. 안정성을 해치지 않고 커패시터를 수직으로 쌓기가 힘들어서 업계에서는 이것을 &#x27; 커패시터 장벽 &#x27;이라고 부르고 있음. 층을 올릴수록 열관리와 누설 문제가 커져서 삼성전자와 SK하이닉스 개발중이고 아직 상용화에 성공한 기업은 없는 상황임.</p><p class="summary-paragraph">TSMC가 가장 잘 하는 기술중 하나가 웨이퍼를 정밀하게 붙이는 것임. TSMC는 2025년에 수직형 D램 구조와 제조 방법 특허를 등록함. 이 프로젝트를 쉬궈진 부사장이 이끌고 있는데, 쉬궈진은 마이크론 출신이고, 첨단 패키징 부사장을 맡고 있음. 기존 D램 경쟁에서는 TSMC가 삼성전자와 SK하이닉스의 수십 년 노하우를 따라잡기 어려움.</p><p class="summary-paragraph">아무도 양산해 본 적 없는 3D D램을, 잘하는 기술을 활용해서 도전해 보겠다는 생각으로 보임. 아직 공장착공등이 시작된 상황은 아니고, 검토단계 수준으로 알려지고 있음. 엔비디아가 노리는 것은 D램 공급처의 다변화임. 한국 2사와 마이크론이 과점하고 있는 D램 시장에 TSMC를 끌여들여서 경쟁을 붙이겠다는 것임.</p><p class="summary-paragraph">TSMC가 도전에 성공한다고 해도 시간은 꽤 걸릴것임. 업계 선두인 삼성과 하이닉스도 3D D램 양산 목표가 2030년 전후라서, 3D D램이 지금의 메모리 품귀를 풀어줄 카드는 아님. TSMC 입장에서 개발에 성공만 하면 엔비디아라는 확실한 수요처가 있으니, 도전해볼만한 가치는 있다고 생각할 것 같음. TSMC는 파운드리에서 벌어들이고 있는 자금은 충분한 상황임.</p><p class="summary-paragraph">TSMC의 철학과 정면으로 충돌하는 지점이 문제가 될 수 있음. 삼성전자, SK하이닉스와 마이크론은 모두 TSMC의 베이스 다이 고객이자 패키징 파트너들임. 이들과 경쟁을 시작하면 &quot; 고객과 경쟁하지 않는다 &quot;는 TSMC의 핵심 원칙이 흔들리게 됨. 선주문 후생산이라는 TSMC의 사업모델과도 충돌하게 됨.</p><p class="summary-paragraph">파운드리 마진은 안정적인데, 메모리는 호황때 큰 돈을 벌다가 불황때 엄청난 적자를 각오해야 하는 사업이기 때문임. TSMC가 엔비디아의 요청에 응하지 않을 가능성도 있는 상황임.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfMjA1/MDAxNzk0MDUwMDgxODMz.ljtAMq5ePXWZN_T-tK_43vsf-A-qyYsfCG06zZN2W4Mg.klr0ZaqoYVLq8KNrrwDmignHceFm-YlPmi6Cshv6b7Ig.JPEG/j9zibdup.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfMTMz/MDAxNzk0MDUwMzIwMDU1.nwZvpUxbuSvdmdq9Wx2tEM2zZOLmc-MXynQvIUmOlAwg.h5qZaw7XO9MC3nHnG0Dj5bUdKLGj3FmhhtpeHnB4gA0g.JPEG/2hiqz8lx.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfMjcw/MDAxNzk0MDUwNTAzNjA4.GI5ugNr__Iy4G6P1lwREy89uZTtV-5P8iUsrXZ-9eH4g._RpX_MGjzKijuffh1wl4NQf6F_M6ouPsMcJJzmW_z6Ug.PNG/%EB%8F%84%EC%8B%9C%EC%9D%98_%EC%A7%88%EC%A3%BC__%EB%B9%88%ED%8B%B0%EC%A7%80_%EC%B9%B4_%EB%8C%80%EA%B2%B0.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfNTMg/MDAxNzk0MDUwNTg2Mzkw.STaMoQYhq-CvDouy7A06Li1ZtlFhQqpw0u--B3E-AIQg.AclbVdmhkTeIxfsk5UfiSeDvopZVbDTM3hK1xtPBp88g.JPEG/mxqvdjeg.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfMTcg/MDAxNzk0MDUwNjQ5OTMw.F1x_jyYXdnBg6SJf_wcYXcZZpc8dv3DN_2olOyrX1-Ig.udPUi4xmMUx7fV8Jtqzz_N_Jcn1ou99cEXj_jSN7kDAg.JPEG/bdkiaxf6.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfMTQ0/MDAxNzk0MDUwNzA4ODk1.5L270FMPTbyDc3ukjmGVVjolSiyCqQ_0zaTWijm8-4Mg.JF-n-PG_9g1462iFkNH1z9FWpQFQA1KxE5RzWVpBR3kg.JPEG/bnfzo1kt.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfNjkg/MDAxNzk0MDUwNzg1MjI2.EYxiOEfrGWXrAwGTuiOO_rbpDfDqgtNmH753__We-L4g.nQgGPe9qXnKWPZU8FfVAfCQXDRvbQt9ANjJZG8hBMAAg.JPEG/w1smx38x.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMDdfMzAw/MDAxNzk0MDUyNzExNjcx.eMRALtTC4gAhH8vFDWtGljVLVCDDVI0AKlZdhZwUqzog.p2nwThLBG0J-i-JWmKPMCe5EMLwqyr6XeH0MP188HPQg.PNG/image.png?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 메모리 주가의 프리미엄은 &quot; 공급이 쉽게 안늘어난다 &quot;는 믿음이 기초임. 세계 최강의 제조사가 D램회사에 합류한다면 메모리사에 좋은 소식은 아님. TSMC가 &quot; 파운드리에 집중하겠다 &quot;고 나오길 바라고 있을 것임. 2027년 1월중순에 열리는 4분기 TSMC 실적 컨퍼런스 콜을 지켜볼 필요가 있음. 메모리 관련 질문이 반드시 나올텐데, 웨이저자 회장의 답변 내용이 첫번째 시그널이 될 것 같음.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224468565262" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
