@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>주절주절....젠슨 황이 없어도 엔비디아가 돌아갈까? · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 주절주절</p>
+      <h1>주절주절....젠슨 황이 없어도 엔비디아가 돌아갈까?</h1>
+      <p class="date">2026.11.10 07:40</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fblogthumb.pstatic.net%2FMjAyNTEwMjVfMTAw%2FMDAxNzYxMzQ4NDk3NjE3.7GrCEqbGosp1CObdVZ5yk6-swe7FAILrReWI0OC4Xssg.9-a6706hsEBhUW8heO9jKgtYTAZwf6UfJgIMbNbi3sQg.JPEG%2F1465388.jpg%3Ftype%3Dw2%22&amp;type=ff500_300" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">이 글은 작성자가 과거 직장에서 경험한 &#x27;Top 5 risk&#x27; 관리 사례와 엔비디아의 &#x27;T5T(Top 5 Things)&#x27; 운영 방식을 비교하며 조직 내 정보 전달 구조의 중요성을 설명합니다. 작성자는 과거 업무에서 손실 범위를 일정하게 유지하기 위해 팀장들이 선별한 위험 요소를 관리했으나, 중간 관리자의 필터링으로 인해 정작 중요한 위험을 놓치는 한계를 경험했습니다. 반면 엔비디아의 젠슨 황은 모든 직원이 보내는 짧은 업무 보고 메일인 T5T를 통해 중간 단계를 거치지 않고 현장의 약한 신호를 직접 파악합니다. 이를 통해 엔비디아는 관리직의 왜곡을 방지하고, 머신러닝 분야로의 조기 투자와 같이 현장의 흐름을 빠르게 경영에 반영할 수 있었습니다. 또한 엔비디아는 사업부 체계 대신 젠슨 황이 팀을 직접 관리하는 구조를 택하여 조직 내 칸막이를 없애고 전사적 자원을 효율적으로 배분하고 있습니다. 글은 이러한 효율적인 의사결정 방식이 젠슨 황이라는 리더 개인의 역량과 밀접하게 연관되어 있다는 점을 시사합니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">INTP의 직장 생활 썰...승진 누락과 골프등 : 네이버 블로그 과거 승진누락과 골프등을 주제로 위 직장생활썰을 적은 적이 있고, 내용중에는 Top 5 risk 관리가 있었다. &quot;당시에 매달 하는 일이 있었다. 내가 맡고 있는 업무 중에서 Top 5 risk를 정하는 것이다.</p><p class="summary-paragraph">월말에 열리는 월간업무회의에서 7명의 팀장들이 가지고 온 팀 단위 Top 3 risk 중에서 Top 5 risk를 추리게 된다.&quot; Top 5 risk를 정하는 이유가 있었다. 당시 나는 위험관리 목표를 480억 내외에서 밴드로 받았다. 밴드로 받았다는 말은 범위로 받았다는 말이다.</p><p class="summary-paragraph">480억이라면, 대략 430~530억원 정도의 범위가 나온다. 내가 맡고있는 조직이 평가를 잘 받으려면, 관리하는 포트폴리오에서 1년에 손실이 430~530억원내에서 나와야한다는 말이다. 한건당 평균 티켓사이즈가 300억원 정도인데, 만약 1년간 손실건이 하나도 생기지 않았다는 가정을 해보자. 1년에 손실이 최소한 430억원은 생겨야 하는데, 손실건이 생기지 않으면, 밴드를 아래로 초과해서 저평가가 나온다.</p><p class="summary-paragraph">반대로 손실건 2건이 생겼다고 가정해보자. 평균 티켓사이즈가 300억원인데, 손실이 2건 생기면 600억원으로 밴드를 위로 초과해 저평가가 나온다. 손실이 너무 적지도, 너무 많지도 않고, 밴드안에서 놀게 포트폴리오를 관리해야하는 것이다. 이렇게 목표를 받는 이유가 있다.</p><p class="summary-paragraph">손실이 너무 적다는 것은 &quot;보수적으로 의사결정을 했다&quot;는 말이 된다. 너무 보수적으로 운용을 해서, 기회이익을 날리는 위험을 막기 위해서 손실이 너무 적어도 저평가를 받게 구조가 되어있는 것이다. 목표를 밴드로 받으면 바빠진다. 찝찝하다 싶은 것들을 찾아서, 터지기전에 계속 손절을 해야하는 것이다.</p><p class="summary-paragraph">300억짜리 큰 손실을 한번에 보는게 아니라, 몇십억짜리 손실을 계속 내면서 찝찝한 자산들을 1년내내 처내게 된다. 뜬금없이 오늘 이런 이야기를 하는 이유는 엔비디아의 의사구조 때문이다. 엔비디아의 직원들은 한달에 두번 자기 팀장을 수신처로 하고, 팀원들과 젠슨 황을 참조처로 해서 T5T를 보낸다고 알려졌다. T5T는 &#x27;Top 5 Things&#x27;라는 이름의 짧은 이메일을 말한다.</p><p class="summary-paragraph">T5T에 들어가는 내용은 지금 하고 있는 업무나 현장에서 관찰한 것중에서 가장 중요해 보이는 5가지다. 긴 보고서는 아니고, 아이템당 두세줄 정도라, T5T 는 아주 짧은 메일이다. 젠슨 황이 T5T를 시작한 계기는 &quot; 정식 보고서를 받을 때쯤이면 이미 거의 쓸모가 없는 정보다&quot; 라는 생각을 가지고 있기 때문이다. 한국 회사들의 주간 업무보고를 생각해 보자.</p><p class="summary-paragraph">사원들이 쓴 업무보고는 팀장,실장, 본부장을 거치면서 다듬어지고, 불리한 내용은 빠지게 된다. CEO의 이메일이나 책상에 본부장의 주간 업무보고가 도달할 쯤에는 원래 내용과 다른 문서가 되어 있는 경우가 많다. T5T는 관리직들의 중간 필터를 제거하게 된다. 젠슨 황은 &quot; 강한 신호를 잡는 건 쉽다. 나는 약한 신호일 때 잡고 싶다 .&quot;라고 T5T의 가치를 설명하고 있다.</p><p class="summary-paragraph">젠슨 황은 매일 아침 100통이상의 T5T 이메일을 읽고, 주말밤에는 스카치 위스키를 마시면서 더 많은 T5T를 읽는다고 한다. 읽기만 하는게 아니라 답장도 자주 한다. 답장을 하는 경우가 많다보니, T5T에 내부적인 룰도 생겼다고 한다. 금요일 밤에는 T5T를 보내지 않는 것이다.</p><p class="summary-paragraph">젠슨 황이 바로 답장을 해버리면, 주말이 날아가기 때문이다. 일,월,화에 T5T가 집중적으로 발신되고, 젠슨 황은 이것을 주중에 계속 읽는 것이다. 젠슨 황은 T5T의 성과로 머신러닝 사례를 언급한 적이 있다. 머신러닝 이야기가 직원들의 T5T에 반복해서 등장했고, 관련부문에 투자해야 한다고 판단하는 계기가 됐다는 것이다.</p><p class="summary-paragraph">임원들은 몰랐지만, 현장에서는 이미 알고 있던 흐름이 CEO에게 바로 도달한 것이다. 당시 나의 Top 5 risk는 팀장들이 한 번 걸러서 가져온 Top 3 중에서 골랐다. 그런데 팀장 선에서 &#x27;이건 보고할 정도는 아니다&#x27;라고 빠진 찝찝한 건들이 나중에 터지곤 했다. T5T는 이 팀장 필터마저 없앤 구조다.</p><p class="summary-paragraph">엔비디아는 사업부와 디비전이 없다. 재무,영업,운영,법무등을 젠슨 황이 직접 관할한다. 삼성전자를 예로 들면 DS(반도체)와 DX(완제품) 부문으로 나뉘고, 그 아래에 메모리사업부, 파운드리사업부 같은 사업부가 있다. 사업부장은 자기 사업부의 매출과 이익을 책임지는 &#x27;작은 사장&#x27;이고, CEO는 사업부장들을 관리하고 자원을 나눠주는 역할을 한다.</p><p class="summary-paragraph">그 사이에 COO나 부문장 같은 중간 관리자가 한 단계 더 끼는 경우도 많다. 엔비디아는 젠슨 황이 부문장과 사업부장 역할을 모두 하는 구조로 돌아간다. 칩 설계팀, 시스템팀, 소프트웨어팀등 팀으로 돌아가고, 젠슨 황은 일종의 스텝인 36명의 직보임원들과 팀들을 직접 관리하는 것이다. 젠슨 황은 부문과 사업부가 없는 장점을 다음과 같이 설명한다.</p><p class="summary-paragraph">사업부가 있으면 칸막이가 생기는데, 사업부가 없으면 회사 전체 인력과 자원을 한쪽으로 순식간에 몰아줄 수 있다는 것이다. 후임이 젠슨 황과 같은 방식을 사용할 수 없다면, 지금과 다른 엔비디아를 볼 수도 있는 것이다.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTBfMzcg/MDAxNzk0MjYyODI3MjA5.aw9y61jrPLZYkXeIsw0t-tdsfxUXy4VjSZaeJNzKEQUg.2S0ECYoIMYo7TNyMLg0FGTvVL9aYyCHoEFGPa7UoDrAg.JPEG/9pujbcik.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTBfNiAg/MDAxNzk0MjYyOTAyNTY4.Aq5Am1bcZK7OqqKXtIh-XvilgcOj7oy9YN4rWWg-sy4g.b6X3p35y9DuyBhSlJqK1p3TBpkEaE9svO3BQn_3xW2sg.JPEG/shmi3s0g.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTBfODIg/MDAxNzk0MjYzOTQ3MDU0.XqNtlitTLl7I8MS2jPE0M7h48zvdHK7PAS1rjo3KwBUg.Nvpeg-uzD8WH0bN-Kg_FML-KUQrR3xBbKYfzGuWyrzYg.JPEG/ljt8m7fi.jpg?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 젠슨 황의 퇴진 이슈가 일반적인 회사의 CEO 교체와 다른 이유가 있다. 후임이 젠슨 황처럼 하루 수백 통을 읽고 답하며 수십 건의 안건을 직접 판정할 수 없다면, 엔비디아는 결국 사업부나 중간 관리 계층을 새로 만들어야 한다. 황이 30년 동안 피해 온 &#x27;보통 대기업&#x27;으로 돌아가는 셈이다.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224471158038" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
