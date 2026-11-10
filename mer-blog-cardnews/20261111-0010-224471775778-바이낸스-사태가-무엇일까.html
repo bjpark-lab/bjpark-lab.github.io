@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>바이낸스 사태가 무엇일까? · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 경제/주식/국제정세/사회</p>
+      <h1>바이낸스 사태가 무엇일까?</h1>
+      <p class="date">2026.11.11 00:10</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTBfMjA0/MDAxNzk0MjkxNDE4MjU1.RH2iNyQqoJGBL9stEeUC_f_9Qpc4zOFaAMfmzXVRV9Ag.PaUJozaIJ8bshhx2o4oZDXJjKKybab85D_st7lIoNqQg.JPEG/ww9xaxpt.jpg?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">원문 추출 요약 · Gemini 설정 필요 또는 요청 실패</p>
+        <p class="summary-paragraph">어느정도 사태가 마무리된 것 같아서, 경과를 정리해 봅니다.</p><p class="summary-paragraph">2009년, 정찰국과 작전부, 대외정보조사부가 합쳐져서 정찰총국이 만들어짐.</p><p class="summary-paragraph">저렴한 비용으로 해커 수천명을 굴릴 수 있고, 증거가 잡혀도 부인하기가 쉬움.</p><p class="summary-paragraph">뭐든 최고 권력자가 신경을 쓰면, 역량이 빠르게 오르기 마련임.</p><p class="summary-paragraph">정찰총국의 사이버 부문은 설립이후 17년동안 목표가 세 번 바뀐것으로 알려짐.</p><p class="summary-paragraph">방글라데시 중앙은행에서 8,100만달러를 탈취하는데 성공한 것임 .</p><p class="summary-paragraph">은행은 송금을 취소할 수 있지만, 코인은 쉽게 되돌릴 방법이 없기 때문임.</p><p class="summary-paragraph">고교 2년, 대학 2년으로 4년만에 조기 졸업을 시키는것임.</p><p class="summary-paragraph">이중 가장 큰 건이 며칠전에 터졌음.</p><p class="summary-paragraph">이번 해킹에 블록체인 자체가 뚫린 것은 아님.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">어느정도 사태가 마무리된 것 같아서, 경과를 정리해 봅니다. 북한의 대남 공작은 당과 군에 흩어져 있었음. 무장침투와 테러는 군 소속인 정찰국, 간첩은 노동당 작전부, 해외정보 수집 및 포섭등은 노동당 대외정보조사부가 담당임. 청와대 습격이나 아웅산 테러는 정찰국, 간첩 침투는 작전부, KAL기 폭파는 대외정보조사부가 수행한 것으로 나오는 이유임.</p><p class="summary-paragraph">2009년, 정찰국과 작전부, 대외정보조사부가 합쳐져서 정찰총국이 만들어짐. 조직상으로는 인민군 총참모부 아래에 있지만, 실제는 최고지도자에게 직접 보고하는 체계로 중간 결재라인이 짧다는 특징이 있음. 평가기관들은 3조직을 합친 목적중 하나로 사이버(해킹) 역량 강화를 꼽고 있음. 북한 입장에서 해킹은 두 가지 점에서 완벽한 무기임.</p><p class="summary-paragraph">저렴한 비용으로 해커 수천명을 굴릴 수 있고, 증거가 잡혀도 부인하기가 쉬움. 총을 쏘면 탄피가 남지만, 해킹은 여러나라의 서버를 거쳐서 진행되기 때문에 &quot;우리가 안 했다&quot;고 버틸 수 있는 것임. 김정은은 집권 초부터 사이버 역량을 핵·미사일과 나란한 위치에 놓았음. &quot; 사이버전은 핵·미사일과 함께 인민군대의 무자비한 타격 능력을 담보하는 만능의 보검&quot; 이라는 것임.</p><p class="summary-paragraph">뭐든 최고 권력자가 신경을 쓰면, 역량이 빠르게 오르기 마련임. 한국이라면 서울대 의대를 가야할 인재들이 정찰총국으로 모여서, 집중적으로 해커로 키워졌다고 함. 정찰총국 안에는 간첩 양성(1국), 암살·폭파·납치(2국), 공작 장비 개발(3국), 대남·해외 정보 수집(5국) 등이 있는 것으로 알려짐. 해킹은 121국과 110연구소에서 하고 있다고 함.</p><p class="summary-paragraph">정찰총국의 사이버 부문은 설립이후 17년동안 목표가 세 번 바뀐것으로 알려짐. 설립초기인 2009~2013년에는 한국 전산망 마비를 목표로 디도스 공격등을 시도하였음. 2014~2016년에는 기밀탈취에 주력해서, 한수원 도면 유출, 국방망 해킹등이 일어남. 2016년, 돈 맛을 보게 됨.</p><p class="summary-paragraph">방글라데시 중앙은행에서 8,100만달러를 탈취하는데 성공한 것임 . 국제 송금망을 뚫어 돈을 빼낸 첫 대형 사례였고, 이때부터 정찰총국 해킹의 목적이 &#x27; 교란&#x27; 에서 &#x27; 외화 벌이 &#x27;로 바뀐것으로 알려짐. 2017년부터 본격화된 것은 코인 사냥임. 2019년 업비트, 2022년 로닌 브리지, 2024년 일본 DMM, 2025년 바이비트, 2026년 바이낸스등의 범인을 정찰총국으로 봄.</p><p class="summary-paragraph">은행은 송금을 취소할 수 있지만, 코인은 쉽게 되돌릴 방법이 없기 때문임. 북한 전국의 수학과 컴퓨터 영재들은 평양 금성 1,2중학교의 컴퓨터영재반으로 모이게 됨. 영재들이 중학교를 졸업하면, 2년간 컴퓨터 집중교육을 받음. 2년 집중교육이후 김일성종합대학, 평양컴퓨터기술대학등 주요 대학 관련학과에 입학하는데, 우수인력은 2년만에 졸업을 시킴.</p><p class="summary-paragraph">고교 2년, 대학 2년으로 4년만에 조기 졸업을 시키는것임. 이들중에서도 성적 우수자들은 정찰총국에 배치되고, 나머지 인력들은 군의 해킹 전문부대등에 배치되고 있다고 알려짐. 우리 군은 북한 사이버 인력을 2024년 기준 8,400명으로 보고 있고, 이들중 최고 엘리트가 정찰총국 소속이 되는 것임. TRM랩스는 북한이 2017년 이후 100여건의 해킹으로 128억 달러어치 가상자산을 훔쳤고, 2026년에만 74억 달러라고 봄.</p><p class="summary-paragraph">이중 가장 큰 건이 며칠전에 터졌음. 한국시간 2026년 10월 30일 새벽 5시쯤 세계 최대 암호화폐 거래소인 바이낸스에서 20분만에 63억달러가 빠져나간 것임. 이전 최고기록은 2025년 2월의 바이비트 14.6억달러 해킹이었는데, 가상자산 역사상 최대 기록을 이번에 갈아치웠음. 비트코인 18,270개를 비롯해서, 이더리움 수십만개, 테더,서클같은 스테이블 코인등과 잡코인들이 동시에 빠져나간 것임.</p><p class="summary-paragraph">이번 해킹에 블록체인 자체가 뚫린 것은 아님. 해커들은 9월에 바이낸스 소프트웨어 엔지니어에게 이직 제안을 하고 온라인 면접을 여러 차례 진행함. 이들은 면접 과정에서 악성코드가 숨어 있는 &quot; 기술 과제 &quot;를 내려받게 함. 기술 과제를 내려받은 해당 엔지니어의 업무용 컴퓨터로 내부에 접근했고, 정상 승인 절차를 건너뛰고 출금 명령을 내리게 된 것임.</p><p class="summary-paragraph">공격 직전에는 리허설도 진행함. 자기들 계정으로 몇 달러씩 옮겨보며 해킹 프로그램이 제대로 도는지 시험했고, 실행시에도 소액을 송금한 뒤 큰돈을 옮김. 스테이블 코인인 서클 8억달러와 테더 15억달러등 30억달러는 계좌동결로 묶였지만, 63억달러중 33억달러를 가져가는데 성공함. 암호화폐의 동결이 시작된 것은 해킹시작 1시간 뒤였는데, 한시간만에 33억달러를 빼가는데 성공한 것임.</p><p class="summary-paragraph">스테이블코인에는 &quot; 특정 주소를 얼리기 &quot; 기능이 들어 있음. 테더나 서클같은 스테이블 코인 발행사가 주소를 찍으면 그 주소의 USDT는 움직이지 못하고 동결됨. 비트코인과 이더리움에는 발행사가 없어서, 누구도 특정 주소를 막을 권한이 없고, 그 성질이 해커를 도운 셈임. 해커들도 이것을 정확히 알고 있었음.</p><p class="summary-paragraph">탈취 직후 스테이블코인 등 약 3억 2500만 달러로 이더리움 12만 2300개를 13% 비싸게 사들임. 스테이블 코인을 담보로 이더리움을 빌리기도 함. 스테이블 코인은 동결되었지만, 그것을 담보로 빌린 이더리움을 가지고 간 것임. 비트코인 18,270개는 한 개도 막지 못했음.</p><p class="summary-paragraph">&#x27;탈중앙&#x27;을 내세우는 서비스쪽에서도 멈춘 곳이 있었음. 아비트럼은 보안위원회 권한으로 이더리움 8425개를 묶었고, 에이브 등 디파이도 수상한 계정을 막았음. 탈중앙을 표방하는 서비스에도 비상 스위치가 숨어 있다는 게 이번에 드러남. 동결권은 검열권이기도 함.</p><p class="summary-paragraph">해커의 돈을 얼릴 수 있는 회사는 정부 요청이나 자기 판단으로 내 돈도 얼릴 수 있다는 것이 주목받고 있음. FBI는 해킹 이틀만에 북한 소행이라고 공식 발표했고, 정찰총국 산하 110호 연구소를 범인으로 지목함. 110호 연구소에도 여러 팀들이 있는데, 가상자산 탈취 전문부대인 트레이더트레이터를 지목한 것임. 이들의 특기는 &quot; 코드가 아니라 사람을 터는 것 &quot;임.</p><p class="summary-paragraph">이들의 소행으로 알려지고 있는 일본 DMM 3억달러, 바이비트 14.6억달러등을 보면 모두 사람을 터는 방식임. FBI가 범인을 북한 소행으로 특정한 결정적 단서는 &quot; 돈이 섞인 것 &quot; 이었음. 이번에 바이낸스에서 훔친 돈과 한달 전 비트겟에서 훔친 돈이 여러 체인을 거쳐서 하나의 주소로 합쳐졌다고 함. 두 사건의 지갑을 같은 사람이 관리하고 있다는 뜻임.</p><p class="summary-paragraph">북한의 김여정은 FBI의 발표가 &quot; 터무니없는 수사 &quot;라고 반박했고, 미국의 트럼프는 &quot; 북한인지 아직 모른다 &quot;는 입장임. 이번에 탈취된 코인들은 30초마다 새로운 지갑이 만들어지며 잘게 쪼개는 과정이 진행되고 있다고 함. 2만개가 넘는 지갑으로 돈이 쪼개지고, 솔라나,USDC,이더리움,토르체인,비트코인 순서로 택갈이가 계속되고 있다고 함. 이중에서 핵심은 토르체인임.</p><p class="summary-paragraph">토르체인은 회원가입 없이 서로 다른 블록체인의 코인을 바꿔주는 서비스로 해킹 직후 토르체인 수수료 수입이 2,229% 급증함. 바이낸스는 이번 손실 전액을 회사가 부담하고 사태를 수습함. PS) 미국 제인 스트리트 미국 수학영재들이 가장 가고싶어하는 회사는? .. : 네이버블로그</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTBfMjI0/MDAxNzk0MjkzMDg5NTU3._16jyNloezXRFbsKGwd5dbGjU0FWmDT4qUN665bWsM4g.SiKe2J2iSaLC6sdUKHKdJEwhUNnYIaEfy_STbCdI1q8g.JPEG/sm7pq3h2.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTBfMjMx/MDAxNzk0MjkzMjM3NjAx.i2psuK2MxLjW6WmlxZIOHV0fDmomgEat5tFPujLl-QMg.yq_XmTboVXJWVcK0U9SkckR7oi6DZT2BoNnzx-cskKcg.JPEG/229234_uploaded_9466228.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTBfNCAg/MDAxNzk0MjkzNDk4Mzcy.BtT4Z4CIWuYwgnzPLR9lo3Qa8U20veHeWxBJ-zr11ygg.Y8iz9R9K_NCIk5vydSISJ5W-UA9vjt7B1POAnLcJ9ssg.JPEG/vov7letp.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTBfMjkx/MDAxNzk0MjkxNDk3MzU4.isAFDpjLe1Ik1fT1UNGzWlUavnTqFdMG7ssXQxnchk4g.3fsqcB6X3G8kjbMHU_0pvDmDhUKdwj5OI4zh0_aGipkg.JPEG/1487588.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTBfMTMx/MDAxNzk0MjkzNjQ5NDY1.UR_OvXWuSTirU5XFZR0PgpKOXGCqAYmqny5C-Q6kSnMg.nZLYU1iKPLAJZwly4w5TW8VuZ61WBkT_pba6vUenQ4sg.JPEG/ge0y00vz.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTBfMTEz/MDAxNzk0MjkxNDU5MjM4.e-JpoPDnXwVqECrW0fFrhEG4g3qcOku7Vbx8TwPUttcg.wy4t0FMw_xqO-qd7NFHcCu-SZ8dwNxGYG8sgVpkbKZkg.JPEG/zuphxfbr.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fblogthumb.pstatic.net%2FMjAyNjA1MTVfMTcz%2FMDAxNzc4ODI2NzcxOTU2.vAj24ceMuizvmTEH5zAQzVtNaaBUAsmO5yxv4EkqZdMg.fFVgSo-EImjWjPqddQzZgtUALCbDsMplAOZOg5L_otUg.PNG%2FGemini_Generated_Image_96l0re96l0re96l0.png%3Ftype%3Dw2%22&amp;type=ff500_300" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 천재가 나오면, 중국에서는 공대에 가고, 한국은 의대를 가는데, 북한은 해커가 되는 것 같음. 미국은 제인 스트리트를 갈듯.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224471775778" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
