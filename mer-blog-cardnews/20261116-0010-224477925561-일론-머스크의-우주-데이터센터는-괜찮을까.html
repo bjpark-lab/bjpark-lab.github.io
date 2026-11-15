@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>일론 머스크의 우주 데이터센터는 괜찮을까? · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 피드메이커4기(경제)</p>
+      <h1>일론 머스크의 우주 데이터센터는 괜찮을까?</h1>
+      <p class="date">2026.11.16 00:10</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfNzIg/MDAxNzk0NzMzMDg3NzYz.Ah7eLzRQg227vHFCVJ3jyxfCzWJBHRmmlDzxzW69nxMg.BIFt6QYk5SEzB4mpc8bjLhYEHt1d8qkc8Rbxy8ZAuR4g.PNG/image.png?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">최근 미국에서는 전기요금 상승과 자원 부족, 주민 반대 등으로 인해 데이터센터 건설을 반대하는 목소리가 커지고 있습니다. 특히 텍사스주는 데이터센터 전력망 연결 승인이 중단되고 관련 세금 감면법이 논란이 되는 등 이러한 변화를 상징적으로 보여줍니다.
+
+이러한 지상 인프라의 한계에 대안으로 주목받는 것이 우주 데이터센터입니다. 스페이스X는 태양광 패널과 방열판으로 구성된 AI1 위성을 통해 궤도상에서 엔비디아의 서버랙을 운영하려는 계획을 추진 중입니다. 우주 데이터센터는 지상과 달리 냉각수나 입지 문제로부터 자유로우며, 최근 스타십 우주선의 성공적인 회수와 자율 로봇의 우주 조립 임무 성공은 이러한 구상을 현실화할 가능성을 높이고 있습니다.
+
+일론 머스크는 장기적으로 위성 100만 기를 활용해 테라와트급 컴퓨팅 인프라를 구축하고, 달의 낮은 중력을 이용한 매스 드라이버로 발사 비용을 절감하겠다는 거대한 목표를 가지고 있습니다. 다만 우주 데이터센터는 유지보수 비용이 높고 여전히 기술적·경제적 과제가 남아 있어, 실제 구현에는 다소 시간이 걸릴 것으로 보입니다. 현재는 2027년 첫 발사와 2028년 유의미한 규모 달성을 목표로 단계적인 계획들이 실행되고 있습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">관심있게 지켜보는 부문이라, 진행상황 업데이트 해 봅니다. 미국에서 데이터센터를 반대하는 목소리가 점점 커지고 있음. 전기요금이 오르고, 물이 부족해지며, 집 근처에 거대한 송전탑이 들어서기 때문임. 상징적인 곳이 텍사스임.</p><p class="summary-paragraph">미국에서 계획 중인 데이터센터 용량의 25%가 텍사스에 몰려 있음. 2026년 8월 3일 공화당의 애벗 텍사스 주지사가 데이터센터의 신규 전력망 연결 승인을 멈췄음. 작년만 해도 텍사스를 “ AI의 진원지 ”라 부르며 기업을 유치하던 사람이 이런 행동을 함. 공화당 주지사가 이런 행동을 했다는 것은 그만큼 여론이 나쁘다는 것임.</p><p class="summary-paragraph">공화당 주지사는 선거에 졌고, 민주당 히노호사가 당선됨. 히노호사의 공약은 신규 데이터센터의 승인 중단이고, 유세에서 데이터센터 세금감면법을 불태우는 퍼포먼스를 함. 중간선거의 공화당 패배에 데이터센터 문제가 꽤 영향을 미친것으로 평가되고 있음. 선거 다음날, 일론 머스크는 X에 &quot; 이제 우주 데이터센터가 꽤 매력적으로 보이네 &quot;라는 글을 올림.</p><p class="summary-paragraph">우주는 땅값도, 전력망 연결 대기 줄도, 냉각수도, 주민 반대도, 인허가도 없기 때문임. 우주 데이터센터는 스페이스X가 연방통신위원회에 위성 배치 승인을 받으려고 낸 문서에서 윤곽이 드러남. 일론 머스크가 만들려는 우주 데이터센터는 &#x27; 스타마인드(Starmind) &#x27;이고, 1세대 위성 이름은 ‘AI1 ’임. AI1 위성은 전기를 만드는 태양광 패널과 연산할 때 나오는 열을 식히는 방열판으로 구성됨.</p><p class="summary-paragraph">우주에는 공기나 물이 없어서 지구처럼 선풍기나 에어컨, 냉각탑등을 쓸 수 없음. 열을 적외선으로 내보내는 수밖에 없어서 방열판이 필요함. 처음 공개된 AI1 위성은 태양광 패널과 방열판(110㎡)을 모두 펼치면 70m로, 보잉 747-8의 날개폭(68.4m)보다 넓음. 전력은 최대 150kW로, 국제우주정거장(ISS)의 발전용량(120kW)을 넘는 수준으로 제시됨.</p><p class="summary-paragraph">한달만에 AI1위성의 전력이 최대 250kW로 수정됨. 200kW의 전기를 먹는 엔비디아의 차세대 서버랙인 ‘ NVL72 루빈 &#x27;을 통째로 싣기 위해서임. AI1 위성 1개의 무게는 방열판등을 모두 합쳐도 2톤 수준임. 스타십은 한번에 150톤까지 우주로 올릴 수 있음.</p><p class="summary-paragraph">무게만 따지면 스타십에 2톤 위성 75기를 실을 수 있지만, 부피가 문제임. 패널과 방열판을 아무리 얇게 접어도 1회 발사에 30기 정도를 올리는게 한계라고 보고있음. 부피때문에 한번에 30개 정도 밖에 올릴 수 없다면, 무게를 아낄 이유가 줄어듦. 가볍지만 3배나 비싼 페로브스카이트 태양광 패널 대신에 무겁지만 싼 실리콘 패널을 써도 되는 것임.</p><p class="summary-paragraph">두번째 숙제는 발사비용임. 발사비용이 너무 비싸면 우주 데이터센터의 가성비가 너무 떨어지게 됨. 스페이스X는 2026년 11월 15일 새벽에 큰 성공을 하나 함. 스타십 우주선 Ship 42가 발사탑의 젓가락 팔에 잡혀서 회수가 된 것임.</p><p class="summary-paragraph">궤도에서 돌아온 우주선을 발사탑이 붙잡은 것은 인류 최초임. 지금까지는 발사 부스터를 젓가락 팔로 회수하는 정도였지만, 이번에는 우주선을 회수한 것임. 아래 이동장면을 보면 생각보다 클것임 우주선 회수에 성공하면서, 일론 머스크가 예고한 kg당 발사비용 200달러에 조금 더 가까워지게 됨. 일론 머스크는 2026년 8월 엔비디아와 계약을 맺고, 우주용으로 최적화된 베라루빈 NVL72를 궤도에 올리겠다고 선언함.</p><p class="summary-paragraph">2027년 4분기에 첫번째 발사를 하고, 2028년에 의미있는 규모에 도달하겠다는 계획임. 우주용 랙의 코드명은 &#x27; 케셀(Kessel )&#x27;임. 냉장고처럼 세워두던 48U 랙을 피자 상자처럼 납작하게 눕혀서 위성에 넣는다고 함. 위성 1기에 랙 1개로 맞춰서, 우주 궤도에서 별도로 조립할 필요가 없어짐.</p><p class="summary-paragraph">2027년에 올라갈 1세대 위성은 추론 전용이고, 학습기능은 지상에서 수행한다는 계획임. 2026년 10월, 구글도 냉장고 크기의 시제품 위성 &#x27; 선캐처 &#x27;를 쏘아올렸음. TPU 4개, 전력은 1kW로 스페이스X의 AI1에 비하면 실험단계이고, 스페이스X의 팰컨9(아래 사진 좌측)이 이것을 우주로 보내줌. 중국도 12기의 AI위성을 띄워서 테스트하는 중이고, 2,800기까지 위성 숫자를 늘릴 계획임.</p><p class="summary-paragraph">우주 데이터센터는 고장이 나도 고칠 사람이 없어서 유지보수 비용이 지상의 10~100배일 수 있다는 지적이 나옴. 일론 머스크는 고장이 나는 위성이 생기면, 해당 위성을 제외하고 나머지로 돌리는 소프트웨어로 해결하겠다고 답함. AI1은 &quot;위성 1기에 랙 1개&quot;라서 조립이 필요 없지만, 머스크의 최종 목표인 거대한 구조물을 만들려면 우주에서 조립할 필요가 있음. 2026년 11월 5일, DARPA(미국 국방고등연구계획국)가 등장함.</p><p class="summary-paragraph">DARPA는 칼텍 연구진과 함께 만든 자율 로봇 ASTRA가 &quot; 지구 궤도에서 조립 임무에 성공했다 &quot;고 발표한 것임. 자율 로봇이 조립한 것은 지름 1.4m짜리 원형 안테나의 일부임. 배구 네트처럼 만든 막을 우산살 역할을 하는 막대 여러개에 끼우고 연결해서, 펼치는 작업을 지구 궤도에서 실행한 것임. 인간이 아닌 존재가 우주에서 무언가를 조립한 첫 기록임.</p><p class="summary-paragraph">길이 108m짜리 우주정거장 ISS는 우주 비행사들이 1998년부터 2011년까지 13년에 걸쳐서 조립 함. (출처, NASA) 안전 문제로 한번에 2명씩만 나가서 작업하는등으로 13년이 걸린 것임. 로봇은 안전부담이 적어서 수백대를 동시에 투입할 수 있고, 24시간 일할수 있음.</p><p class="summary-paragraph">칼텍의 연구진은 이번 자율로봇의 목표가 &quot; 우주 태양광 발전소의 초대형 전지판을 조립하는 것&quot; 이라고 발언함. 작은 부품을 스타십으로 잔뜩 올리고, 로봇이 궤도에서 이어 붙이면, 부피 문제도 풀릴 수 있는것임. 일론 머스크의 1차 계획은 위성 10만기로 우주에 12GW의 컴퓨팅 인프라를 까는 것임. 1차 계획만 달성해도 지구상모든 데이터센터 용량(55GW)의 1/5이 넘어감.</p><p class="summary-paragraph">머스크는 위성수도 100만기로 늘리고, 위성 1기당 전력도 1MW이상으로 키워서 기가와트가 아니라 테라와트급을 올리겠다고 함. 머스크의 2차 계획에는 달이 등장함. 달에 공장을 세워서 태양전지와 위성 구조물을 만들고, 낮은 중력을 이용해서 &#x27; 매스 드라이버 &#x27;로 쏘아 올리겠다는 계획임. 매스 드라이버는 거대한 투석기임.</p><p class="summary-paragraph">수km짜리 레일 위에 화물을 올려서, 강력한 전자기장으로 가속해 우주로 날려보내는 장치임. 항공모함이 전투기를 사출하는 방식과 비슷함. 매스 드라이버는 연료를 실을 필요가 없어서 발사비용이 극단적으로 싸질수 있음. 지구에서는 공기저항과 강한 중력 때문에 불가능하지만, 공기가 없고 중력이 지구의 1/6인 달에서는 가능한 방식임.</p><p class="summary-paragraph">머스크는 &quot; 달 위의 매스 드라이버를 볼 때까지 살고 싶다 &quot;고 말하고 있음. 머스크가 이정도로 말한다는 것은 머스크가 살아있을때는 보기 힘든 장기 계획임. 머스크는 목표를 달성할때 마다 성과급을 받는 보상안을 스페이스X와 체결하고 있음. 2026년 3월에 새로 수립된 보상안에는 &quot; 연 100테라와트 규모 지구 밖 데이터센터 완성 &quot;이 성과 조건으로 들어가 있음.</p><p class="summary-paragraph">한 줄 코멘트. 머스크는 무게를 줄이려고 비싼 신소재를 쓰는 대신에, 지구에서 흔히 쓰는 무겁고 싼 부품을 우주로 던져 올리는 것을 선택함. 스타쉽이 있어서 가능한 방식임. 오늘 새벽 스타십 우주선 회수에 처음 성공했고, DARPA의 로봇은 우주에서 조립에 성공함. 남은 것은 스타십의 발사비용이 kg당 200달러대에 도달하느냐임. 머스크 타임이 있음. 발표한 일정보다 늦게 실현되는 것을 말함. 이번에도 머스크 타임이 될 가능성이 높아보임. 그래도 하나씩 실현되는 것을 보는 재미가 있을 것 같음.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfMTQg/MDAxNzk0NzMzMzAxNzg5.MRpxKMa02PaByz_F77-TmbgJ0G_p0PKj00D5H38N8mYg.O2VGxRrIv9lPndSYBruynKF-4P0fPGziv_f_J8EzkWAg.JPEG/1tiymiol.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://postfiles.pstatic.net/MjAyNjA2MjJfOTQg/MDAxNzgyMDgzMjc0Mjg4.YbfQaO7SiW_MPQqZebBPQzBYZNcNdzb3nyEWLG_43Tkg.Eb_Stbixv3q4bdCrTSOJd4Le1gWWfTjN0HxDmQfQL6wg.PNG/Gemini_Generated_Image_9s73ep9s73ep9s73.png?type=w966" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://postfiles.pstatic.net/MjAyNjA2MTFfMTU3/MDAxNzgxMTMxMjcyNTY4.wTAeGkhb1Y-ORmmQN6M30IQUeG5a_-aXkj3Dzto0di8g.crnvKtTr4hb2XrvHuP8zVCLReMhWGMGPz3x9kGxBAjUg.PNG/image.png?type=w966" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfNDQg/MDAxNzk0NzMzNTQ2MzQw.effNG3EsMDEJSq10WXDGolSDtpk8KNBkZct449fIZGUg.6qu8izAWHzXiO27H38GGJhrjdqNRb95SctD2OeMgIC8g.PNG/sy2tvnps.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfMTM3/MDAxNzk0NzI0NzEzNDg3.l2RWktCnyJnmXv5YLQGCt0V5o5QeoaR7KoGdxg5iVNAg.5SM6x2Hl_GjReyYU8urGM7VrwrAbKDkR0iCkeOu2eMog.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfNjIg/MDAxNzk0NzQxMzA2NzU2.0BZSvzBnHvU8Fv-H3lhY3Tmvl27zL6CudF4orIYQG9kg.hkGPZeBtsiCwqzE93Dl9LMUE5eYcUEE6UgRCJL9bkOUg.JPEG/IMG_1649.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfMTIz/MDAxNzk0NzMzNjgxOTc4.MMZ9wkzqYML5OISn60QXSMugPiaIwc94qVIl1BeKUUAg.Pdyqg0VK5hA8sZbKDy_78pPTal58gauy6b09jeR41J4g.JPEG/1514130.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfMTcy/MDAxNzk0NzIzNTQ4MzQy.ltBfB4KE1fMW5vBtwwK_cu59i18i2xJ-d8VnCetKMOEg.D5NGtAFgqtL3yAZaSso1ze5pFggahlycYSBCvb-kXssg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://postfiles.pstatic.net/MjAyNjA2MjJfMjk5/MDAxNzgyMTE2MTAyNzE4.gy44Z0RcDSHUutH9cSHwpjgyutGnLdwu2kxYlLCoSyAg.AFIDleiaZ5E0hojZwrGhJ8wa1by_Ddh0O2yMnI0Z718g.PNG/Gemini_Generated_Image_1loblk1loblk1lob.png?type=w966" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfMjI0/MDAxNzk0NzIzNjE5MTk5.Z325gR7dNtY9RKiKXyPfs8aWeLEhpD7-7Qw8MtqDhvMg.hEFXrEiF00mDG_o9mAC-eIWf5RGRVdMp4hqCeyV-Dokg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfMjM0/MDAxNzk0NzIzNjY0OTcw.Xv90l-gGZ2P27lw-C5e4Sbc2CxSZOoaKGqaTXWfGxAkg.cFOWxh-uXdEH6mGJ0oLRpmZUYrjpSBzuBvSMHnhrNd0g.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfMjgg/MDAxNzk0NzI1MDY2NzM4.r5-Q47lBYlyz0DW-jRL1fX2znN0x66gFYVrCMq5CSjwg.37aU7fh8VIL7pYQNSuq9A7BBgXadsDKKR6FNAvnchCQg.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfMTE3/MDAxNzk0NzM0MTM4NDM2.aeGalWM9r2BxRYZUgrPCq6CiaNBX7ZqPs9nvSLqpaeEg.S3P-KsneOEJBoTyPsu53_IN17RNgwjtTypPmypB3rFcg.JPEG/r5h1hkpb.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://postfiles.pstatic.net/MjAyNjA2MjJfMzgg/MDAxNzgyMTE2OTYzNzM2.v9cJpXgFN67qCFXOQbo27sh61eUHpi6DLqpdzopq_ygg.TvAbcEJBbQL95s2LN4OVuUYWbojYCKXPhFeJYc_YLGkg.PNG/image.png?type=w966" alt="원문 이미지"></figure></section>
+    
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224477925561" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
