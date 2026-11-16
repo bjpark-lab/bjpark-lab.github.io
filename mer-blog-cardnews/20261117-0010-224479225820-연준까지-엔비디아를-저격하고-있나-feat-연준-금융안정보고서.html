@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>연준까지 엔비디아를 저격하고 있나? (feat 연준 금융안정보고서) · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 피드메이커4기(경제)</p>
+      <h1>연준까지 엔비디아를 저격하고 있나? (feat 연준 금융안정보고서)</h1>
+      <p class="date">2026.11.17 00:10</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTZfNDkg/MDAxNzk0ODA4MzM5OTQz.32bfCmBE9VAvr5N84BOFiJDjzuFCq_xpU37NQbxP_YUg.PT4iJYz0Cmn5D19jiJ4zODSUANRGjMsgNg4VG9JvBAQg.PNG/image.png?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">연준은 최대 고용과 물가 안정이라는 기존 임무 외에도, 금융시스템의 붕괴가 경제 전반에 미치는 영향을 고려하여 &#x27;금융안정&#x27;을 사실상의 세 번째 임무로 수행하고 있습니다. 2018년 첫 보고서에서는 레버리지론, CLO, 그리고 투기등급으로의 강등 위험이 있는 BBB등급 회사채를 주요 위험 요소로 지목했으며, 이는 2020년 코로나 사태 당시 실제로 현실화되었습니다.
+
+2026년 11월에 발표된 연준의 최신 금융안정 보고서는 현재 금융시스템의 가장 큰 위험 요인으로 AI 인프라 금융을 지목했습니다. 금융권 실무자들의 87%가 AI를 시스템 리스크로 꼽았으며, 이는 젠슨 황의 퇴진 충격 이전부터 감지된 우려였습니다.
+
+보고서는 특히 컴퓨팅 관련 기업들의 부채 급증과 더불어, 재무제표에 명확히 드러나지 않는 리스, GPU 잔존가치 보증 등 대규모 약정 규모를 경고했습니다. 연준은 이러한 기업 간 상호 연결된 &#x27;순환금융&#x27; 구조가 실제 위험을 증폭시킬 수 있다고 보았습니다. 특히 과거 90년대 말 광케이블 과잉투자가 닷컴 버블로 이어졌던 사례와 AI 인프라 투자 현상을 비교하며, 사모금융을 포함한 잠재적 부채가 시스템의 취약점이 될 수 있음을 강조했습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">연준의 보고서가 하나 나와서 정리해 봅니다. 연준이 법으로 부여받은 임무는 &quot; 최대 고용 &quot;과 &quot; 물가 안정 &quot; 두 가지임. 2008년 금융위기 때 연준이 배운 게 있었음. 금융시스템이 무너지면 고용과 물가가 같이 무너진다는 것임.</p><p class="summary-paragraph">금융안정이 연준의 사실상 &#x27; 세 번째 임무 &#x27;가 됨. 연준의 금융안정관련 첫 보고서는 2018년 11월 28일에 나왔음. 금융위기 10년 만에 첫 보고서가 나온 것임. 첫 보고서의 주제는 기업부채 였고, 투자자들이 위험한 회사채를 점점 더 많이 사들이는게 역사적으로 높은 수준이라고 짚었음.</p><p class="summary-paragraph">개별 상품으로는 레버리지론과 CLO를 언급함. 레버리지론(Leveraged Loan)은 부채가 많거나 투자부적격인 기업에 나가는 대출을 말함 주담대로 보면, DSR이 기준을 초과하거나, 신용등급이 기준에 미달하는 사람에게 대출을 해주는 것과 비슷함. 은행도 레버리지 대출이 위험하다는 것을 알고 있었음.</p><p class="summary-paragraph">이 대출을 자기 장부에 두지 않고, 여러 레버리지 대출들을 모아서 재구성한뒤에 펀드와 연기금, 해외 기관투자자에게 판매함. CLO(Collateralized Loan Obligation, 대출채권담보부증권)가 그것임. 레버리지론 수백 개를 한 바구니에 담고, 그 바구니에서 나오는 이자를 받을 권리를 위험도별로 잘라서 파는 구조임. 대출들을 모아서, 선순위, 중후순위(메자닌), 에쿼티로 나눴다고 보면 됨.</p><p class="summary-paragraph">연준이 레버리지론, CLO와 함께 거론한 것이 BBB등급의 회사채 였음. 2018년 2분기에 BBB급 채권이 전체 회사채의 35%인 2.25조달러로 역대 최고수준에 근접했다고 분석함. BBB는 투자적격채권의 최 하단으로, BBB에서 한등급만 낮아지면 투자부적격인 BB등급(정크)이 되는 절벽 끝 채권임. 연준이 걱정하는 시나리오는 침체가 와서 BBB채권들이 대거 투자부적격인 정크(BB)로 강등되는 것임.</p><p class="summary-paragraph">은행이나 보험회사등 대형투자자들은 투자적격 채권만 보유할 수 있거나, BB등급 비중을 제한하는 기준을 가지고 있는게 보통임. BBB가 BB등급으로 낮아지면, 대형 투자자들이 회사채를 한꺼번에 팔아야 하고, 이것이 금융시장을 흔들 수 있다는 것임. BBB에서 정크로 떨어진 채권을 &#x27;추락천사(fallen angel) &#x27;라고 부르는 이유임. 연준은 은행의 경우 CLO를 가지고 있지만, 선순위(AAA)를 가지고 있어서 위험이 낮다고 판단함.</p><p class="summary-paragraph">기업들이 무너져도 손실은 선순위를 가지고 있는 은행이 아니라, 중후순위와 에쿼티를 가지고 있는 투자자들에게 갈 것으로 본 것임. 은행의 자본도 탄탄하니, 금융위험에 대한 종합판정을 &quot; 중간 수준 &quot;으로 진단하게 됨. 2020년 3월, 코로나 충격으로 이 걱정이 실제 시험대에 올랐음. BBB 기업들이 무더기로 강등되는 추락천사 공포가 현실이 된 것임.</p><p class="summary-paragraph">연준은 사상 처음 회사채를 사들이는 기구를 만들었고, 매입 대상에는 정크로 떨어진 추락천사 채권을 포함시켜 줌. 연준이 직접 시장을 받쳐주면서 CLO 구조가 붕괴하는 사태까지는 가지 않았던 것임. 2026년 11월 13일, 연준의 금융안정 보고서가 나왔음. 이번에 연준이 주목한 것은 AI 인프라 금융임.</p><p class="summary-paragraph">빅테크가 리스와 보증등으로 신용도 낮은 데이터센터 사업자와 SPV(페이퍼컴퍼니)를 받쳐주는 구조를 주목한 것임. 연준은 충격(shock)과 취약성(vulnerability)을 구분함. 충격은 &quot; 본질적으로 예측하기 어렵다 &quot;고 보기 때문에 &quot; 언제 무슨 사건이 터질지 &quot;는 맞히려 하지 않음. &quot; 사건이 터졌을 때 충격을 키울 약한 고리가 어디에 쌓였는지 &quot;를 점검함.</p><p class="summary-paragraph">지진 예보가 아니라 건물의 내진수준을 점검하는 것임. 연준은 금융사 실무자들에게 &quot; 12~18개월안에 금융시스템을 흔들 위험을 뭐로 보느냐 &quot;를 물어서 순위를 매김. 2025년 11월에는 30%가 금융시스템을 흔들 위험으로 AI를 선택했고, 26년 5월 50%, 이번에는 87%로 압도적 1위를 차지함. 이번 보고서는 2026년 10월 28일까지 정보가 반영되어 있어서, 젠슨 황의 퇴진 충격 이전 데이터임.</p><p class="summary-paragraph">젠슨 황 쇼크 이전부터, 미국 금융사 실무자들은 금융시스템을 흔들 위험으로 AI를 지적하고 있었던 것임. 금융사 실무자들이 AI를 걱정한 이유는 크게 세가지 였음. AI 실제수익이 기대에 미치지 못해 주가가 무너질 위험과 AI모델이 사이버 공격을 할 위험, 순환금융이 손실을 키울 수 있는 위험임. 연준은 그때 그때 뜨거운 주제를 Box라는 이름으로 깊게 분석함.</p><p class="summary-paragraph">이번 보고서의 박스(Box 2.2)도 AI부채 분석이었음. 컴퓨팅 관련 회사채 발행액이 2023년 1,300억달러에서 6,800억달러로 늘어난 것을 가장 먼저 주목하였음. 집계에 잘 잡히지 않는 사모금융을 포함하면 실제 부채규모는 훨씬 클 것으로 추정하고 있음. 계약만 체결된 리스가 1조달러이상 남아있고, GPU 잔존가치 보증등 기타 약정이 2조달러 이상 숨어있는 부분도 주목함.</p><p class="summary-paragraph">연준은 아마존,알파벳,메타,MS,오라클의 행동을 1995년부터 시작된 통신망 투자 붐과 비교함. 90년대 말 광케이블 과잉투자가 닷컴 버블 붕괴로 끝난 것을 감안하면, 가벼운 비교가 아님. 연준은 순환금융 같은 기업간 상호연결때문에 실제 위험이 재무제표상 부채보다 훨씬 클 수 있다고 경고함. 출처 블룸버그</p><p class="summary-paragraph">AI 컴퓨팅 관련 부채가 1.1조달러 이상인데, 7개사가 장부 밖에 걸어둔 약정만 3조달러가 넘는다고 봄. GPU 제조사가 GPU의 잔존가치를 보증해 주는 경우가 많고, 지분투자까지 하면서 &quot; 순환금융 &quot;이라는 구조를 만든다는 것임. 연준은 이런 순환금융이 기업과 대출시장, 사모 대출자, SPV(페이퍼컴퍼니)등을 연결하면서 취약성을 만든다고 지적하고 있음. 연준이 엔비디아라고 말하지 않고 &#x27;GPU 제조사 &#x27;라고 언급했지만, 누가봐도 엔비디아를 저격한 것임.</p><p class="summary-paragraph">ps) 닷컴 버블에 대해서는 개인적인 경험을 바탕으로 가볍게 정리한 글이 있음. 닷컴 버블, 어느 선배에 대한 기억 (feat.. : 네이버블로그</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTZfMjY5/MDAxNzk0ODA4NTMzMzc0.lERVZEX-TUwVVfKMKB3us4xuB5l31WIdcNVe8wGhWCgg.wfvXkzqHFow1ZUuCBkr7lcZONmTNh3YeRVbMVkz1tSMg.JPEG/rejpkutn.jpeg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTZfMjQy/MDAxNzk0ODA4NjMwNjc4.H5G-V_6g1s1O7S1VlHPB7hzPTnb_YSmv9QSJw0ex25Eg.2O8qzszqblA0zbobrPM4uvmpTuGQh6808l31bwMlkQYg.JPEG/3555583_uploaded_1474908.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTZfMjUy/MDAxNzk0ODA4NzA0MDQ0.uKcvDVC6WP0Qh93nWw_zyb3YPRwJnFdicuJV4XgdtTgg.Nt6Z9-cSpIzcGEresyuUsctFAMfdqKHeGUAHzdsOMRYg.JPEG/2185523.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTZfMjQ5/MDAxNzk0ODA4ODU1Mzcw.IfMwLIRVsRHxR4igLpy2JTczs0ncz-Ng7GLjXZW6T_cg.wlFQi9f-9ZikJQ1a-R0AIgtFBHAIkgY8UhXJ4kphIv8g.JPEG/1484378.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTZfNzMg/MDAxNzk0ODA4OTc0MzAw.yv6-qBm036BR6XwbQLTMP786fl6ifNHr_icr6gEiVnYg.iNpZ9QD7A6Sb4DlDW-g2Ic7lTqya-UdEPrg6YUYRmjkg.JPEG/3384640_uploaded_6920286.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTZfOSAg/MDAxNzk0ODA5MTUwODgz.pKcQFzIOHa-9lTPV7XncuEqnFSsW_5UaCioWe-Ybud0g.t8q7PLDvWnwIuUaQhWBEl6K9U7V_tzuMjREttP7Hl5Yg.JPEG/pcn6tcrr.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTZfMTAw/MDAxNzk0ODA5Mjc3OTQ1.rHn_1ywcdzohcDohxmrDbF87jOu5ugJDCgS2X6T-v8Eg.LnLVCyFTcLTVm9NmVr11XPcUrcbCnsp8c21ri1YJQMog.JPEG/3555583_uploaded_1471619.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTZfNzcg/MDAxNzk0ODExNTMxMDMz.dYYQFFmFhTlKW-tzrsQlQBBNLdc90W_f2e_BSKcvTG4g.br3EWPm5lSrZvTKz41YAdyZRQ9txJ-27AkPpuV6Owtgg.JPEG/1470103.jpg?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTZfMTUx/MDAxNzk0ODEwMDk5NTE2.O7HtMg57TeLmpU41ghzOhNN49NHdmkL5xbxRgLdb50sg.ri4zfMKpHyt-1zWZ_uICrXxBG6np4mH4fCCyQqLAck8g.PNG/image.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fblogthumb.pstatic.net%2FMjAyNTEyMTNfMjUz%2FMDAxNzY1NTkwMjA3NzAw.UPd0jhslomBPL6PlAtArSnY47D-LQZUj4rcIgSIV2Hsg.YtevKhNWdrnqjjv6-p9NuOI8UA7umXA3PbeQa7lew9cg.JPEG%2Fkelrik6e.jpg%3Ftype%3Dw2%22&amp;type=ff500_300" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 연준이 엔비디아가 실질적으로 주도하는 순환금융에 대해서 &quot;면밀한 모니터링이 필요하다&quot; 고 경고하고 있음. 이번 경고로 안심되는 점도 있음. 쇼크는 모르는 곳에서 불시에 터질때 크게 받게 됨. 연준이 대놓고 지적한 이상, 어느정도 대비는 염두에 두고 있다고 볼 수 있음. 면피용일수도 있음.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224479225820" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
