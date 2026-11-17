@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>주식시장이 달라진 비밀 · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 주절주절</p>
+      <h1>주식시장이 달라진 비밀</h1>
+      <p class="date">2026.11.17 08:18</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTdfMjA4/MDAxNzk0ODY5NjQzNDQ3.cYF90IreveBfgvVgS2SnBqOrUIhyqC1khJkklTsyFJIg.dsmm2Z3SgsTJqRpNC7Jgn-COBVvqyyBhD1atfbIFbdIg.JPEG/lrbb3kno.jpg?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">과거의 주식 투자는 기업 실적을 분석해 우량주를 고르는 방식이 주류였으나, 최근 미국 펀드시장에서는 시가총액 비중대로 기계적으로 매수하는 &#x27;패시브 투자&#x27;가 절반 이상의 비중을 차지하고 있습니다. 패시브 투자는 폴 새뮤얼슨이 제안하고 존 보글이 1976년 인덱스펀드를 출시하며 본격화되었으며, 워런 버핏이 헤지펀드와의 수익률 내기에서 승리하며 그 우수성이 증명되었습니다. 실제로 최근 10년간 미국 대형주 액티브 펀드 중 패시브 펀드 수익률을 상회한 곳은 13%에 불과하며, 매우 낮은 수수료 또한 패시브 펀드의 성장을 가속화했습니다.
+
+그러나 패시브 펀드의 비중이 커지면서 시장에는 부작용에 대한 우려도 제기되고 있습니다. 학계에서는 패시브 자금이 가격과 무관하게 시가총액이 큰 종목을 반복 매수하는 현상을 &#x27;비탄력적 시장 가설&#x27;로 설명하며, 이로 인해 자금이 시가총액 상위 종목인 M7 등으로 과도하게 쏠리는 결과를 낳고 있다고 분석합니다. 또한 지수 편입 속도가 빨라지면서 대형주를 사기 위해 다른 종목을 매도해야 하는 상황이 발생하기도 합니다. 일각에서는 이러한 패시브 투자가 자본을 유망한 기업에 배분하는 시장 본연의 기능을 수행하지 못하고, 이미 규모가 큰 기업에 자금을 집중시킨다는 비판을 제기하고 있습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">개인적인 생각 비중이 높아서 주절주절 카테고리로 올립니다. 주식을 산다는 건 원래 &#x27; 이 회사가 앞으로 돈을 잘 벌 것 &#x27;이라는 판단에 돈을 거는 일이었음. 실적등을 분석해서, 좋아보이는 주식을 골라 담는 것임. 요즘 미국 펀드자금의 절반 이상은 이런 판단을 하지 않음.</p><p class="summary-paragraph">시가총액이 큰 순서대로 비율에 맞춰서 기계적으로 사는 것임. 인덱스펀드와 ETF, 이른바 &#x27; 패시브 &#x27; 투자가 그것임. 패시브를 본격적으로 거론한 사람은 노벨경제학상 수상자 폴 새뮤얼슨이었음. 1974년 논문에서 대부분의 펀드매니저가 시장을 못 이기니, 시장 전체를 사는 펀드를 제안함.</p><p class="summary-paragraph">이것을 실행한 사람이 뱅가드 창업자인 존 보글임. 존 보글이라고 하니, 갑자기 라면이 먹고싶네 존 보글은 1976년 8월, S&amp;P500 지수를 그대로 따라서 사는 개인투자자용 인덱스펀드를 처음 내놓게 됨. 1억5천만달러를 모집하려 했는데, 1,130만달러 밖에 모이지 않자, 월가는 &#x27; 보글의 바보짓(Bogle’s Folly) &#x27;이라고 비웃었음.</p><p class="summary-paragraph">이때 네임드 홍보대사가 출현함. 워런 버핏이었음. 2007년 워런 버핏은 헤지펀드 운용사와 100만달러짜리 내기를 함. 앞으로 10년을 보면, S&amp;P500 인덱스펀드가 헤지펀드가 고른 펀드들보다 수익률이 낫다는 데 돈을 건 것임.</p><p class="summary-paragraph">결과는 버핏의 압승이었음. 2008년부터 2017년까지 인덱스펀드는 126%가 올랐고, 헤지펀드가 고른 5개 펀드는 36%상승에 그쳤음. 2025년말기준, 미국의 패시브 펀드 자산은 19조 4천억달러로 펀드시장의 55%를 차지하고 있음. 패시브 펀드가 빠르게 커진것은 성적표에서 차이가 났기 때문임 .</p><p class="summary-paragraph">최근 10년 동안 펀드매니저가 고르는 미국 대형주 액티브 펀드 중 패시브 펀드를 이긴 펀드는 13%뿐이었음. 펀드매니저 10명 중 9명 가까이가 그냥 지수를 산 것보다 못한 결과를 낸 것임. 수수료 차이도 큼. 액티브 펀드는 연 1% 안팎을 떼가는데, S&amp;P500 ETF는 0.03% 수준임.</p><p class="summary-paragraph">패시브 펀드 비중이 빠르게 높아진 이유임. 패시브 펀드가 너무 커지다보니 슬슬 부작용도 나오고 있음. 하버드의 가베이와 시카고대 코이옌이 이런 현상을 가지고 &#x27;비탄력적 시장 가설 &#x27;을 내 놓음. 주식시장에 &quot; 1달러가 새로 들어가면, 시장 전체 시가총액이 5달러 오른다&quot; 는 분석결과를 내 놓은 것임.</p><p class="summary-paragraph">경매장에 &#x27; 가격이 얼마든 상관없이 무조건 사겠다 &#x27;는 손님이 늘어나는 것과 비슷함. 자금이 집중되는 문제도 있음. 패시브는 대부분 &#x27; 시가총액 &#x27;으로 매입규모를 정하기 때문에 시가총액이 큰 회사일수록 패시브 자금이 더 많이 매수를 하게 됨. 이게 반복되면 눈덩이가 됨.</p><p class="summary-paragraph">시총이 높은 종목에 많은 돈이 들어가니 주가가 오르고, 주가가 오르니 비중이 커지고, 비중이 커지니 더 많은 돈이 들어가게 됨. M7은 1960년에 개봉한 미국 서부영화 황야의 7인(The Magnificent Seven)에서 이름을 가져옴. 엔비디아, 애플, MS, 알파벳(구글), 아마존, 메타, 테슬라가 M7임. 매그니피센트7(M7) 쏠림의 숨은 엔진으로 패시브가 자주 지목되는 이유임.</p><p class="summary-paragraph">앤트로픽과 같은 초대형 상장이 있으면, 패시브 자금은 가격이 비싸든 싸든 대량으로 사야 함. 지수에 편입되는 속도도 빨라짐. 올해초까지 나스닥100은 신규 상장 종목을 최소 석 달을 기다린 뒤에야 편입했었음. 2026년 3월부터 상장 후 15거래일만 지나면 편입이 가능해졌고, 스페이스X가 첫번째 혜택을 받게됨.</p><p class="summary-paragraph">초대형주 편입이 시작되면, 그 돈을 마련하려고 다른 종목은 팔아야 하는 경우가 생기게 됨. 자금이 대형주로 쏠리는 것임. 시장의 본래 기능은 &#x27; 자본을 좋은 기업에 배분하는 일 &#x27;임. 패시브는 그 일을 하지 않고, 이미 큰 기업에 돈을 더 얹을 뿐이라는 지적이 나오는 이유임.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTdfMTUx/MDAxNzk0ODcxNjE2NjI2.n_PKC6lvP8M6sziDPjllpx5DXMoMdwV4MtcOp1Z1yYMg._iNJItxY3w2kL9M8SBRZiFHHXe3h-T3g8TVwVEZtIXIg.PNG/%EA%B5%B0%EC%9A%A9_%EC%9E%A5%EB%B9%84_%EC%9C%84_%EC%8B%A0%EB%9D%BC%EB%A9%B4%EA%B3%BC_%EC%B4%88%EC%BD%94%EC%8A%A4%ED%8B%B1.png?type=w800" alt="원문 이미지"></figure><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTdfMTYz/MDAxNzk0ODcwMTYzOTE1.orCb0xwRPfiyxUI3-rjXnVaHfcGIk3PhL0OhOJSWCUwg.ABjxCEFNGcof1Bw9XIK8xpMjZKExtAz7ZZK-cmFXkr8g.PNG/%EB%88%88%EB%8D%A9%EC%9D%B4%EC%9D%98_%EC%A7%88%EC%A3%BC,_%EA%B2%A8%EC%9A%B8_%EC%96%B8%EB%8D%95.png?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 코스피도 ETF의 거래대금 비중이 60%를 넘어감. 패시브 비중이 높아지면서, 더 크게 오르고, 더 크게 빠지며, 시총이 큰 종목에 돈이 몰리는 구조가 됨. 시총 큰 종목 위주로 국장이 움직이는 배경이기도 함. 물리더라도 시총 큰 종목에 물리는게 낫다는 말임.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224480068255" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
