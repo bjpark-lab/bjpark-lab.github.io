@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1729">
+<meta name="description" content="혼즈 핀다운 엔트리: 4번의 코너 다운스크린, 2번의 탑 컷, 1번의 패스를 단계별로 보는 인터랙티브 농구 전술판">
+<title>Horns Pin-Down Entry | Basketball Playbook</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1729;--panel:#13243b;--line:#2d435e;--ink:#f2f7ff;--muted:#b4c4d9;--blue:#65b7ff;--gold:#ffc777;--green:#78ddc7}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 14% 4%,#163456 0,transparent 34%),var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","Noto Sans KR",sans-serif;line-height:1.56}
+a{color:var(--blue);text-underline-offset:3px}.wrap{max-width:1180px;margin:auto;padding:24px clamp(15px,3.2vw,36px) 50px}
+header{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:38px}.brand{font-size:13px;font-weight:750;letter-spacing:.14em;color:#c6e1ff}.site-link{font-size:13px;color:var(--muted);text-decoration:none}.site-link:hover{text-decoration:underline}
+.eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;margin:0 0 8px}h1{font-size:clamp(30px,4.5vw,58px);letter-spacing:-.045em;line-height:1.14;margin:0}.lead{color:var(--muted);max-width:790px;margin:15px 0 26px;font-size:clamp(15px,1.7vw,18px)}
+.layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(290px,.9fr);gap:20px;align-items:start}
+.board-card,.info-card{border:1px solid var(--line);border-radius:22px;background:var(--panel);box-shadow:0 18px 50px #0002;overflow:hidden}
+.board-head{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:17px 18px 10px}.board-head strong{font-size:15px}.board-head span{font-size:12px;color:var(--muted)}
+.court-wrap{padding:0 14px}.court{display:block;width:100%;height:auto;border-radius:14px;background:#f3dfbc}
+.court .wood{stroke:#dfc59c;stroke-width:1}.court .court-line{stroke:#a4835c;stroke-width:3;fill:none}.court .paint{fill:#dfb77e;fill-opacity:.18}
+.player circle{fill:#1c75b9;stroke:#fff;stroke-width:3}.player[data-n="4"] circle{fill:#255686}.player text{fill:white;font-size:24px;font-weight:800;text-anchor:middle;pointer-events:none}.player{transition:transform .5s ease}
+.trace{fill:none;stroke:#187fc6;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:12 9;marker-end:url(#move-tip)}.trace.pass{stroke:#d97725;stroke-width:6;stroke-dasharray:10 8;marker-end:url(#pass-tip)}
+.trace,.screen-mark,.screen-label{opacity:0;transition:opacity .24s ease}.shown{opacity:1}.screen-mark{stroke:#be403c;stroke-width:8;stroke-linecap:round}.screen-label{fill:#a42d24;font-size:18px;font-weight:850;text-anchor:middle}
+.ball{fill:#ec972d;stroke:white;stroke-width:2.5;transition:cx .5s ease,cy .5s ease}
+.legend{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;padding:14px 8px 18px;color:var(--muted);font-size:12px}.legend b{color:var(--ink)}.legend .blue{color:#65b7ff}.legend .orange{color:#ffc777}.legend .red{color:#ff8880}
+.panel{display:flex;flex-direction:column;gap:18px}.info-card{padding:22px}.caption{color:var(--green);font-size:12px;letter-spacing:.15em;font-weight:800}.current-title{font-size:clamp(21px,2.6vw,30px);margin:8px 0 9px;line-height:1.24}.current-description{min-height:80px;color:var(--muted);margin:0;font-size:15px}
+.step-buttons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:17px 0}.step-buttons button{font-size:12px;padding:12px 4px;border:1px solid var(--line);border-radius:11px;color:#d5e1ed;background:#172c46;cursor:pointer}.step-buttons button.selected{background:#eaf3ff;border-color:#eaf3ff;color:#12304e;font-weight:800}.step-buttons button:focus-visible,.action:focus-visible,.toggle:focus-visible{outline:3px solid #ffc777;outline-offset:2px}
+.actions{display:flex;flex-wrap:wrap;gap:8px}.action,.toggle{font:inherit;border:1px solid #44617d;border-radius:10px;background:#223a55;color:var(--ink);padding:10px 15px;cursor:pointer;font-weight:700;font-size:14px}.action:hover,.toggle:hover{border-color:#9acaff}.action.primary{background:#2a86ce;border-color:#2a86ce}.action:disabled{opacity:.4;cursor:not-allowed}.toggles{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.tip{font-size:13px;color:var(--muted);margin:12px 0 0}.info-card h2{font-size:18px;margin:0 0 12px}.options{margin:0;padding-left:18px;color:var(--muted);font-size:14px}.options li{margin:9px 0}.options b{color:var(--ink)}.note{border-left:3px solid var(--gold);padding-left:12px;font-size:13px;color:#e1d8c7;margin:20px 0 0}
+footer{padding-top:32px;color:#829bb6;font-size:12px}footer a{color:#a6cbe8}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.current-description{min-height:0}}@media(max-width:520px){.wrap{padding:15px 12px 34px}header{margin-bottom:26px}.board-head{padding:12px}.court-wrap{padding:0 7px}.board-card,.info-card{border-radius:16px}.info-card{padding:17px}.legend{gap:9px;font-size:11px}.step-buttons button{font-size:11px}.action{flex:1}.lead{margin-bottom:20px}}
+@media(prefers-reduced-motion:reduce){.player,.ball,.trace,.screen-mark,.screen-label{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><span class="brand">BJPARK LAB / BASKETBALL PLAYBOOK</span><a class="site-link" href="/">← 블로그 홈</a></header>
+  <p class="eyebrow">Offense · Horns set · Pin-down entry</p>
+  <h1>혼즈 핀다운 엔트리</h1>
+  <p class="lead">4번이 엘보에서 코너로 내려가 다운스크린 → 2번이 오른쪽 슬롯/탑으로 올라옴 → 1번이 2번에게 패스. 각 단계를 누르거나 자동 재생해 동선을 확인하세요.</p>
+  <main class="layout">
+    <section class="board-card" aria-label="농구 전술판">
+      <div class="board-head"><strong>HALF COURT</strong><span>공격 방향 ↑ · 1~5번은 공격 선수</span></div>
+      <div class="court-wrap">
+        <svg class="court" viewBox="0 0 640 640" role="img" aria-labelledby="court-title court-desc">
+          <title id="court-title">혼즈 핀다운 전술의 단계별 하프코트 위치</title>
+          <desc id="court-desc">탑 1번, 양쪽 엘보 4번과 5번, 양쪽 코너 2번과 3번. 4번이 오른쪽 코너에 핀다운 스크린을 가고 2번은 오른쪽 슬롯으로 올라온 뒤 1번의 패스를 받습니다.</desc>
+          <defs>
+            <marker id="move-tip" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#187fc6"/></marker>
+            <marker id="pass-tip" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#d97725"/></marker>
+          </defs>
+          <rect x="40" y="42" width="560" height="564" fill="#f3dfbc" stroke="#9f7f58" stroke-width="3"/>
+          <g class="wood">
+            <path d="M41 90 H599 M41 152 H599 M41 214 H599 M41 276 H599 M41 338 H599 M41 400 H599 M41 462 H599 M41 524 H599 M41 586 H599"/>
+          </g>
+          <rect class="paint" x="232" y="42" width="176" height="290"/>
+          <path class="court-line" d="M232 42 V332 H408 V42 M232 332 A88 88 0 0 0 408 332 M232 332 A88 88 0 0 1 408 332" stroke-dasharray="0"/>
+          <path d="M232 332 A88 88 0 0 1 408 332" fill="none" stroke="#a4835c" stroke-width="3" stroke-dasharray="8 9"/>
+          <path class="court-line" d="M115 42 V272 C115 433 205 490 320 490 C435 490 525 433 525 272 V42"/>
+          <line x1="291" y1="102" x2="349" y2="102" stroke="#6a4b2d" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="320" cy="125" r="14" fill="none" stroke="#be6d28" stroke-width="4"/>
+          <path class="court-line" d="M275 102 A45 45 0 0 0 365 102" stroke-width="2"/>
+          <path class="trace" id="screen-move" d="M421 335 Q453 307 484 266"/>
+          <path class="trace" id="guard-move" d="M525 178 C534 228 541 265 513 300 C484 350 457 414 445 456"/>
+          <path class="trace pass" id="pass-move" d="M344 523 Q385 507 427 472"/>
+          <line class="screen-mark" id="screen-mark" x1="469" y1="244" x2="502" y2="286"/>
+          <text class="screen-label" id="screen-label" x="459" y="217">SCREEN</text>
+          <g class="player" id="p1" data-n="1" transform="translate(320 537)"><circle r="24"/><text y="8">1</text></g>
+          <g class="player" id="p2" data-n="2" transform="translate(525 178)"><circle r="24"/><text y="8">2</text></g>
+          <g class="player" id="p3" data-n="3" transform="translate(115 178)"><circle r="24"/><text y="8">3</text></g>
+          <g class="player" id="p4" data-n="4" transform="translate(421 335)"><circle r="24"/><text y="8">4</text></g>
+          <g class="player" id="p5" data-n="5" transform="translate(219 335)"><circle r="24"/><text y="8">5</text></g>
+          <circle class="ball" id="ball" cx="343" cy="519" r="9"/>
+        </svg>
+      </div>
+      <div class="legend">
+        <span><b>●</b> 선수</span><span><b class="blue">- - →</b> 이동</span><span><b class="orange">- - →</b> 패스</span><span><b class="red">━</b> 스크린</span>
+      </div>
+    </section>
+    <div class="panel">
+      <section class="info-card" aria-live="polite">
+        <div class="caption" id="step-count">STEP 01 / 04</div>
+        <h2 class="current-title" id="step-title">혼즈 초기 배치</h2>
+        <p class="current-description" id="step-description">1번은 탑에서 공을 가지고, 4번·5번은 양쪽 엘보, 2번·3번은 양쪽 코너에 위치합니다.</p>
+        <div class="step-buttons" role="group" aria-label="전술 단계 선택">
+          <button type="button" data-step="0" class="selected" aria-pressed="true">① 배치</button>
+          <button type="button" data-step="1" aria-pressed="false">② 스크린</button>
+          <button type="button" data-step="2" aria-pressed="false">③ 컷</button>
+          <button type="button" data-step="3" aria-pressed="false">④ 패스</button>
+        </div>
+        <div class="actions">
+          <button type="button" class="action" id="prev">← 이전</button>
+          <button type="button" class="action primary" id="next">다음 단계 →</button>
+          <button type="button" class="action" id="auto">▶ 자동 재생</button>
+        </div>
+        <div class="toggles"><button type="button" class="toggle" id="mirror" aria-pressed="false">⇄ 좌우 반전</button><button type="button" class="toggle" id="restart">↺ 처음부터</button><button type="button" class="toggle" id="copy">링크 복사</button></div>
+        <p class="tip">PC에서는 ← → 키로 단계를 이동할 수 있습니다. 코트의 위치는 개념도이며 실제 스크린 각도는 수비 위치에 맞춰 조정합니다.</p>
+      </section>
+      <section class="info-card">
+        <h2>2번이 공을 받은 뒤</h2>
+        <ul class="options">
+          <li><b>캐치앤슛:</b> 수비가 스크린에 걸렸다면 즉시 3점 시도</li>
+          <li><b>컬 컷:</b> 수비가 강하게 따라붙으면 스크린 안쪽으로 말려 들어가 골밑 공략</li>
+          <li><b>슬립 / 실링:</b> 수비가 스위치하면 4번이 미스매치를 활용</li>
+          <li><b>2대2 연결:</b> 2번이 공을 받은 뒤 4번과 픽앤롤·핸드오프로 전개</li>
+        </ul>
+        <p class="note">코칭 포인트: 4번은 스크린을 움직이지 않고 고정하고, 2번은 수비와 간격을 줄여 스크린을 바짝 타며, 1번은 패스 각도를 확보합니다.</p>
+      </section>
+    </div>
+  </main>
+  <footer>Basketball Playbook · <a href="https://github.com/bjpark-lab/bjpark-lab.github.io">GitHub 저장소</a> · 독립 실행형 HTML / 외부 라이브러리 불필요</footer>
+</div>
+<script>
+(function(){
+  "use strict";
+  var steps=[
+    {title:"혼즈 초기 배치",body:"1번은 탑에서 공을 가지고, 4번·5번은 양쪽 엘보, 2번·3번은 양쪽 코너에 위치합니다."},
+    {title:"4번의 핀다운 스크린",body:"오른쪽 엘보의 4번이 코너 방향으로 이동해 2번 수비수의 진로를 막는 다운스크린을 준비합니다."},
+    {title:"2번이 스크린을 타고 컷",body:"2번은 오른쪽 코너에서 스크린을 바짝 타고 오른쪽 슬롯 또는 탑 방향으로 올라옵니다. 4번은 스크린을 고정합니다."},
+    {title:"1번 → 2번 패스",body:"1번이 올라온 2번에게 패스합니다. 2번은 캐치앤슛을 우선 확인한 뒤 컬 컷, 4번 슬립, 2대2 연결을 읽습니다."}
+  ];
+  var state={step:0,mirror:false,timer:null};
+  function get(id){return document.getElementById(id)}
+  function mx(x){return state.mirror?640-x:x}
+  function pt(x,y){return mx(x)+" "+y}
+  function path(id,d){get(id).setAttribute("d",d)}
+  function at(id,x,y){get(id).setAttribute("transform","translate("+mx(x)+" "+y+")")}
+  function show(id,on){get(id).classList.toggle("shown",on)}
+  function stop(){if(state.timer){clearInterval(state.timer);state.timer=null}get("auto").textContent="▶ 자동 재생"}
+  function render(){
+    var i=state.step,s=steps[i];
+    at("p1",320,537);at("p3",115,178);at("p5",219,335);
+    at("p4",i>=1?484:421,i>=1?266:335);
+    at("p2",i>=2?445:525,i>=2?456:178);
+    get("ball").setAttribute("cx",mx(i>=3?467:343));
+    get("ball").setAttribute("cy",i>=3?440:519);
+    path("screen-move","M"+pt(421,335)+" Q"+pt(453,307)+" "+pt(484,266));
+    path("guard-move","M"+pt(525,178)+" C"+pt(534,228)+" "+pt(541,265)+" "+pt(513,300)+" C"+pt(484,350)+" "+pt(457,414)+" "+pt(445,456));
+    path("pass-move","M"+pt(344,523)+" Q"+pt(385,507)+" "+pt(427,472));
+    get("screen-mark").setAttribute("x1",mx(469));
+    get("screen-mark").setAttribute("x2",mx(502));
+    get("screen-mark").setAttribute("y1","244");
+    get("screen-mark").setAttribute("y2","286");
+    get("screen-label").setAttribute("x",mx(459));
+    show("screen-move",i>=1);show("screen-mark",i>=1);show("screen-label",i>=1);
+    show("guard-move",i>=2);show("pass-move",i>=3);
+    get("step-count").textContent="STEP 0"+(i+1)+" / 04";
+    get("step-title").textContent=s.title;
+    get("step-description").textContent=s.body;
+    document.querySelectorAll("[data-step]").forEach(function(btn){
+      var active=Number(btn.dataset.step)===i;btn.classList.toggle("selected",active);btn.setAttribute("aria-pressed",active?"true":"false");
+    });
+    get("prev").disabled=i===0;get("next").disabled=i===3;
+    get("mirror").setAttribute("aria-pressed",state.mirror?"true":"false");
+    get("mirror").textContent=state.mirror?"⇄ 원래 방향":"⇄ 좌우 반전";
+  }
+  function select(i){state.step=Math.max(0,Math.min(3,i));render()}
+  document.querySelectorAll("[data-step]").forEach(function(btn){btn.addEventListener("click",function(){stop();select(Number(btn.dataset.step))})});
+  get("prev").addEventListener("click",function(){stop();select(state.step-1)});
+  get("next").addEventListener("click",function(){stop();select(state.step+1)});
+  get("restart").addEventListener("click",function(){stop();select(0)});
+  get("mirror").addEventListener("click",function(){state.mirror=!state.mirror;render()});
+  get("auto").addEventListener("click",function(){
+    if(state.timer){stop();return}
+    if(state.step===3)select(0);
+    get("auto").textContent="Ⅱ 일시정지";
+    state.timer=setInterval(function(){select(state.step===3?0:state.step+1)},1900);
+  });
+  get("copy").addEventListener("click",function(){
+    var b=this,old=b.textContent;
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(location.href).then(function(){b.textContent="✓ 복사됨";setTimeout(function(){b.textContent=old},1500)}).catch(function(){b.textContent="주소창 URL을 복사하세요";setTimeout(function(){b.textContent=old},2000)})}
+    else{b.textContent="주소창 URL을 복사하세요";setTimeout(function(){b.textContent=old},2000)}
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.target&&(/INPUT|TEXTAREA|BUTTON|SELECT/.test(e.target.tagName)))return;
+    if(e.key==="ArrowRight"){stop();select(state.step+1);e.preventDefault()}
+    if(e.key==="ArrowLeft"){stop();select(state.step-1);e.preventDefault()}
+  });
+  document.addEventListener("visibilitychange",function(){if(document.hidden)stop()});
+  render();
+})();
+</script>
+</body>
+</html>
