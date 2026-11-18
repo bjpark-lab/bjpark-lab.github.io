@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>엔비디아 실적발표와 어닝콜 간단 정리 · 원문 요약</title>
+  <style>
+    :root { --paper:#f4efe5; --card:#fffdf8; --ink:#171612; --muted:#6d685e; --line:#d9d0c0; --accent:#167457; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+    .article { width:min(820px,calc(100% - 32px)); margin:auto; padding:clamp(40px,8vw,92px) 0; }
+    .article-head { border-top:7px solid var(--accent); border-bottom:2px solid var(--ink); padding:clamp(28px,6vw,58px) 0 clamp(26px,5vw,46px); }
+    .eyebrow { margin:0 0 18px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1,h2 { font-family:Georgia,"Noto Serif KR","Batang",serif; text-wrap:balance; }
+    h1 { margin:0; font-size:clamp(34px,6vw,64px); line-height:1.14; letter-spacing:-.045em; }
+    h2 { margin:0; font-size:clamp(27px,4vw,42px); line-height:1.2; letter-spacing:-.035em; }
+    .date { margin:22px 0 0; color:var(--muted); font-size:14px; }
+    .hero,.gallery-image { margin:0; background:#eee8dc; }
+    .hero { margin-top:30px; }
+    img { display:block; width:100%; height:auto; aspect-ratio:16 / 10; object-fit:contain; }
+    .summary { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:1px solid var(--line); box-shadow:0 18px 50px rgba(47,39,26,.10); }
+    .summary-label { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    .summary-note { margin:16px 0 0; color:var(--muted); font-size:14px; }
+    .summary-note.ai-label { margin:0 0 18px; color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .summary-paragraph { margin:0; padding:22px 0; border-top:1px solid var(--line); font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .summary-paragraph:first-of-type { margin-top:28px; }
+    .tabs { display:flex; gap:8px; margin:0; }
+    .tab-button { appearance:none; border:1px solid var(--line); background:var(--paper); color:var(--muted); padding:10px 18px; font:inherit; font-weight:800; font-size:14px; cursor:pointer; min-height:44px; }
+    .tab-button[aria-selected="true"] { background:var(--accent); border-color:var(--accent); color:white; }
+    .tab-button:focus-visible { outline:3px solid #ef9f38; outline-offset:2px; }
+    .tab-panel[hidden] { display:none; }
+    .gallery { display:grid; gap:18px; margin-top:36px; }
+    .final-comment { margin-top:46px; padding:clamp(24px,5vw,44px); background:var(--card); border:2px solid var(--accent); }
+    .final-comment p:last-child { margin:20px 0 0; font-size:clamp(16px,2.2vw,20px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    .source { margin-top:46px; padding-top:28px; border-top:2px solid var(--ink); }
+    .source p { color:var(--muted); line-height:1.65; }
+    .source-link { display:inline-flex; min-height:48px; align-items:center; padding:0 20px; color:white; background:var(--accent); text-decoration:none; font-weight:800; }
+    .source-link:visited { background:#115841; }
+    .source-link:focus-visible { outline:3px solid #ef9f38; outline-offset:3px; }
+    @media print { body { background:white; } .article { width:auto; padding:0; } .summary { box-shadow:none; } .tabs { display:none; } .tab-panel[hidden] { display:block; } .source-link { color:var(--ink); background:none; border:1px solid var(--ink); } }
+  </style>
+</head>
+<body>
+  <main class="article">
+    <header class="article-head">
+      <p class="eyebrow">메르의 블로그 · 경제/주식/국제정세/사회</p>
+      <h1>엔비디아 실적발표와 어닝콜 간단 정리</h1>
+      <p class="date">2026.11.18 08:30</p>
+      <figure class="hero"><img loading="eager" fetchpriority="high" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMThfNTMg/MDAxNzk0OTU3NTg3NzM2.vfTPVPARNZcRZjpyHPEDLL5FOSzXZufHrquqZygQp8og.JRtWuNvcHPI1xFZjVQVPobDzKPubZTpBd1P09nTpXrMg.JPEG/9pujbcik.jpg?type=w800" alt="원문 대표 이미지"></figure>
+    </header>
+    <section class="summary" aria-labelledby="summary-title">
+      <p class="summary-label">SUMMARY</p>
+      <h2 id="summary-title">요약</h2>
+      <div class="tabs" role="tablist" aria-label="요약 방식 선택">
+        <button type="button" class="tab-button" data-tab="summary" role="tab" aria-selected="true" aria-controls="panel-summary" id="tab-summary">핵심 요약</button>
+        <button type="button" class="tab-button" data-tab="paragraphs" role="tab" aria-selected="false" aria-controls="panel-paragraphs" id="tab-paragraphs">원문 요약</button>
+      </div>
+      <div class="tab-panel" data-tab="summary" role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">
+        <p class="summary-note ai-label">AI 생성 요약 · 원문 링크에서 전체 맥락 확인</p>
+        <p class="summary-paragraph">엔비디아의 최근 실적은 매출 1,158억 달러와 EPS 2.68달러를 기록하며 시장 예상치를 모두 상회했습니다. 매출은 전년 동기 대비 103% 성장했고, 순이익은 653억 달러, 잉여현금흐름은 438억 달러로 집계되었습니다. 다만 재고가 전 분기 대비 증가하고 매출채권 회수 기간이 64일로 늘어난 점은 다소 우려되는 부분인데, 회사 측은 신제품 루빈의 생산 및 출하 영향이라고 설명했습니다.
+
+4분기 매출 전망은 1,300억 달러로 컨센서스를 상회했으나, 마진은 71~72% 수준으로 제시되었습니다. 마진 하락의 원인에 대해 CFO는 신제품 양산 때문이 아니라 기존 주문에 대한 가격 적용 방식 때문이라고 밝혔습니다.
+
+주주 환원 정책도 강화되어 올해 잉여현금의 65%를 주주에게 환원했고, 향후 FY28 말까지 1,500억 달러 규모의 자사주 추가 매입을 진행할 계획입니다. 한편 경영진과 관련해서는 하비 존스 의장이 젠슨 황의 복직 가능성을 일축했으며, 신임 CEO 선임은 외부 헤드헌팅사를 통해 진행 중이라고 언급했습니다.</p>
+      </div>
+      <div class="tab-panel" data-tab="paragraphs" role="tabpanel" id="panel-paragraphs" aria-labelledby="tab-paragraphs" hidden>
+        <p class="summary-paragraph">어닝콜은 들으면서 바로 정리한 것이라 틀릴수 있는점 감안 바랍니다. 엔비디아 실적은 매출1,158억달러, EPS 2.68달러로 예상치(1,087억달러, 2.47달러)를 모두 넘었음. 매출은 전년대비 103% 증가했고, 전분기 대비로는 20%가 늘어남. 마진은 74.8%로 작년 같은 분기보다 1.4%p 올랐지만, 전분기보다는 소폭 하락함.</p><p class="summary-paragraph">순이익은 653억달러가 나왔고, 잉여현금흐름은 438억달러로 전분기 213억달러보다 많이 늘어남. 재고는 전분기 316억달러 대비 397억달러로 늘었고, 매출채권의 회수기간이 60일에서 64일로 늘어난 점이 있음. 거래조건이 조금 나빠진 것으로 볼 수 있는 숫자였음. 이에 대한 회사측 설명이 있었음.</p><p class="summary-paragraph">모두 루빈때문이라는 것임. 재고가 316억달러에서 397억달러로 늘어난 것은 루빈 램프를 대비한 것이라고 답변함. 매출채권 회수기간이 64일로 늘어난 것도 루빈 출하가 분기 후반에 몰린 영향이라고 설명함. 답변을 수용한다면 큰 문제가 아닌 상황임.</p><p class="summary-paragraph">하지만, 매출채권 회수기간이 45일에서 60일, 다시 64일로 두 분기 연속 늘어난 건 지켜볼 부분임. 4분기 예상매출은 1,300억달러로 컨센서스 1,253억달러보다 높았고, 마진은 71~72%를 제시해서 낮아짐. 처음에는 마진이 낮아지는 이유를 루빈 램프 때문이라고 생각했었음. 신제품은 보통 샘플이 나와서 고객 검증을 받고, 양산에 들어가는데 이것을 &#x27; 램프업(ramp-up) &#x27;이라고 부름.</p><p class="summary-paragraph">램프업은 본격적인 양산 및 출하로 물량을 늘리는 단계인데, 생산량이 경사로처럼 올라가는 구간이라는 의미임. 신제품이 양산을 시작하면, 초기에는 수율이 낮은등의 이유로 마진이 일시적으로 낮아질 수 있음. 4분기 마진 71~72%를 램프업으로 본다면 큰 문제가 아닌것임. 그런데, CFO(재무책임자) 크레스는 4분기 마진이 낮아지는 이유로 램프업이 아니라 가격을 언급함.</p><p class="summary-paragraph">이미 받은 고객 주문(PO)은 기존 가격대로 소화하고, 그 뒤에 새 가격을 적용하기 때문이라는 설명임. 직전 분기에 공급 원가가 크게 바뀌었는데, 기존 주문을 옛 가격으로 넘겨야 했다는 것임. 이 설명이 맞다면, 이것도 특별한 문제는 아님. 컨콜에서 가장 주목받은 발언은 하비 존스 의장이 &quot; 젠슨 황을 복직시킬 의사가 없다 &quot;는 것을 재확인 한 것임.</p><p class="summary-paragraph">후임 CEO 선임은 헤드헌팅사인 Heidrick &amp; Struggles에 맡겼다고 함. 3분기에 자사주 매입과 배당으로 281억달러를 주주환원했는데, FY28말까지 1,500억달러의 자사주 추가매입을 끝내겠다고 함. 전략적 용도에 쓰고남은 잉여현금이 생기면 전부 주주에게 환원하겠다는 발언도 있었음. 올해들어 지금까지는 잉여현금의 65%를 주주에게 환원해왔음.</p><p class="summary-paragraph">잉여현금 100% 주주 환원이라...화끈하기는 함.</p>
+        <p class="summary-note">번호가 붙은 원문 항목을 순서대로 문단으로 묶었습니다. 전체 맥락은 원문에서 확인하세요.</p>
+      </div>
+    </section>
+    <section class="gallery" aria-label="원문 이미지"><figure class="gallery-image"><img loading="lazy" referrerpolicy="no-referrer" src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMThfMjUx/MDAxNzk0OTU3ODg4OTg4.pJQP-n4iM9F1z2eE8oMpQP1cTBfEW2XZUapJNXSU8ocg.lW57E0xfO-xP70JbyKdG-bMoQLi-M9mCEwTNZfWDbzQg.PNG/%EC%BF%A0%ED%8C%A1_%EB%AC%BC%EB%A5%98%EC%84%BC%ED%84%B0%EB%A1%9C_%ED%96%A5%ED%95%98%EB%8A%94_%EB%B9%97%EA%B8%B8_%EB%9E%A8%ED%94%84.png?type=w800" alt="원문 이미지"></figure></section>
+    <section class="final-comment" aria-labelledby="comment-title"><p class="summary-label">AUTHOR COMMENT</p><h2 id="comment-title">한줄 코멘트</h2><p>한줄 코멘트. 젠슨 황의 참석없이 처음하는 컨콜이었는데, 실적과 4분기 가이던스 모두 예상을 웃돌았음. 컨콜은 말을 아끼는 경향이 강해서, 젠슨 황을 복직시킬 생각이 없다는 내용외에는 특별한 내용이 없었음. 이사회가 국가안보와 수출통제 준수를 감독하는 위원회를 새로 만든 것 정도가 새로운 소식임.</p></section>
+    <footer class="source">
+      <h2>원문에서 계속 읽기</h2>
+      <p>글 전체 내용과 댓글은 네이버 원문에서 확인할 수 있습니다.</p>
+      <a class="source-link" href="https://blog.naver.com/ranto28/224481516483" target="_blank" rel="noopener">네이버 원문 열기 ↗</a>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.tab-button').forEach(function(button){
+      button.addEventListener('click', function(){
+        var target = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(function(other){ other.setAttribute('aria-selected', String(other === button)); });
+        document.querySelectorAll('.tab-panel').forEach(function(panel){ panel.hidden = panel.dataset.tab !== target; });
+      });
+    });
+  </script>
+</body>
+</html>
