@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1729">
+<meta name="description" content="10개 농구 전술의 선수 배치·이동·패스·슛을 단계별로 확인하는 인터랙티브 전술 플레이북">
+<title>농구 전술 플레이북 · 2026</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1627;--surface:#14273e;--surface2:#1c3450;--line:#34506e;--text:#f1f6fd;--muted:#b6c8dc;--mint:#8fe5d5;--accent:#81bdff;--amber:#ffd180}
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:radial-gradient(ellipse at 10% -12%,#214267 0,transparent 45%),var(--bg);color:var(--text);font:15px/1.58 system-ui,-apple-system,"Segoe UI","Noto Sans KR",sans-serif}
+.wrap{max-width:1200px;margin:auto;padding:28px 24px 56px}.brand{font-size:12px;font-weight:850;color:var(--mint);letter-spacing:.2em}h1{font-size:clamp(31px,4.3vw,55px);line-height:1.13;letter-spacing:-.045em;margin:12px 0 10px}.intro{color:var(--muted);max-width:770px;margin:0 0 24px;font-size:16px}
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr) 290px;gap:16px;align-items:start}.panel{border:1px solid var(--line);border-radius:19px;background:var(--surface);overflow:hidden;box-shadow:0 18px 40px #0002}.sidebar{padding:13px}.section-name{font-weight:800;font-size:13px;letter-spacing:.05em;margin:7px 7px 11px;color:#d8eafa}.play-btn{display:flex;align-items:center;gap:10px;width:100%;padding:11px 11px;border:1px solid transparent;border-radius:11px;background:transparent;color:var(--muted);font:inherit;cursor:pointer;text-align:left;line-height:1.3}.play-btn .count{font:700 11px/1.2 monospace;color:#90add1;min-width:25px}.play-btn:hover{background:#263c55;color:var(--text)}.play-btn.active{background:#d4e9ff;color:#133253;font-weight:800}.play-btn.active .count{color:#3c6185}.extra-link{display:block;margin:15px 6px 5px;padding:12px 13px;border-radius:11px;background:#233e57;color:#e0f0ff;text-decoration:none;font-size:13px}.extra-link:hover{background:#30577c}
+.board{padding:12px}.board-top{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:5px 9px 10px}.board-top strong{font-size:17px}.board-top span{color:var(--muted);font-size:12px}.court-holder{display:flex;align-items:center;justify-content:center;background:#f3e2c1;border-radius:14px;overflow:hidden}.court{display:block;width:100%;height:auto;max-height:640px;aspect-ratio:430/515}.court .court-line{fill:none;stroke:#9c754c;stroke-width:2.6}.court .grain{stroke:#dfc6a5;stroke-width:1}.motion-line{fill:none;stroke-linecap:round;stroke-width:2.45;stroke-dasharray:4.5 4.2}.player{transition:transform .6s ease}.player .solid{fill:#5c9bcc;stroke:#336387;stroke-width:2.4}.player .ghost{fill:#a4f5ea;stroke:#6ca9f3;stroke-width:2.2}.player text{font:700 16px system-ui,sans-serif;fill:#0a2844;text-anchor:middle;dominant-baseline:central;pointer-events:none}.player .ball{fill:#e97b23;stroke:#4c311a;stroke-width:2}.legend{display:flex;align-items:center;justify-content:center;gap:13px;flex-wrap:wrap;margin:11px 0 3px;color:#c8d4e4;font-size:12px}.legend .m{color:#6782ff}.legend .p{color:#ff7d75}.legend .s{color:#ffc94f}
+.side-note{padding:19px}.side-note .eyebrow{color:var(--mint);font-size:11px;font-weight:900;letter-spacing:.16em}.side-note h2{font-size:24px;line-height:1.2;letter-spacing:-.03em;margin:8px 0 10px}.side-note p{color:var(--muted);font-size:14px;margin:0 0 17px}.steps{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}.step{padding:10px 13px;min-width:59px;border-radius:10px;border:1px solid #476481;background:#1e3650;color:#f3f8ff;cursor:pointer;font:700 13px system-ui}.step.selected{background:#e9f2fc;color:#13314b;border-color:#e9f2fc}.controls{display:flex;flex-wrap:wrap;gap:8px}.control{border:1px solid #55728f;background:#26415d;color:white;border-radius:10px;padding:10px 12px;font:700 13px system-ui;cursor:pointer}.control.main{background:#2477b9;border-color:#2477b9}.control:disabled{opacity:.45;cursor:not-allowed}.step:focus-visible,.control:focus-visible,.play-btn:focus-visible{outline:3px solid var(--amber);outline-offset:2px}.video{display:inline-flex;gap:6px;align-items:center;color:#acd4ff;text-decoration:underline;text-underline-offset:3px;margin:13px 0 0;font-size:13px}.meta{border-top:1px solid var(--line);margin:21px -19px 0;padding:15px 19px 0}.meta strong{font-size:13px}.meta p{margin:6px 0 0;font-size:12px}.source{color:#9db4ce;font-size:12px;margin:18px 0 0}.hint{color:#aac0d9;font-size:12px;margin:11px 0 0}
+@media(max-width:1050px){.layout{grid-template-columns:200px minmax(0,1fr)}.side-note{grid-column:2}}@media(max-width:720px){.wrap{padding:17px 12px 40px}.layout{display:flex;flex-direction:column}.sidebar,.board,.side-note{width:100%}.sidebar{display:flex;overflow-x:auto;gap:6px;align-items:center;padding:9px}.sidebar .section-name{display:none}.play-btn{flex:none;width:auto;white-space:nowrap;padding:10px 12px;border:1px solid #31506f}.extra-link{flex:none;margin:0;white-space:nowrap}.board-top{padding:6px 7px 10px}.side-note h2{font-size:22px}.intro{font-size:14px}.panel{border-radius:15px}.court{max-height:560px}}
+@media(prefers-reduced-motion:reduce){.player{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">BASKETBALL / TACTICAL PLAYBOOK</div>
+  <h1>농구 전술 플레이북</h1>
+  <p class="intro">2026 패턴 PPT에 수록된 10개 전술을 전술별·Motion별로 볼 수 있습니다. 파란색은 선수 이동, 빨간색은 패스, 노란색은 슛입니다.</p>
+  <main class="layout">
+    <nav class="panel sidebar" id="plays" aria-label="전술 선택"><div class="section-name">전술 목록 · 10</div></nav>
+    <section class="panel board" aria-label="선택한 전술의 코트 배치">
+      <div class="board-top"><strong id="board-title">전술을 불러오는 중</strong><span>공격 방향 ←</span></div>
+      <div class="court-holder">
+        <svg id="court" class="court" viewBox="-33 -52 422 515" role="img" aria-label="왼쪽 골대를 공격하는 하프코트 농구 전술의 단계별 위치">
+          <defs>
+            <marker id="tipMove" viewBox="0 0 10 10" markerWidth="5" markerHeight="5" refX="9" refY="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#2536ea"/></marker>
+            <marker id="tipPass" viewBox="0 0 10 10" markerWidth="5" markerHeight="5" refX="9" refY="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#ea514a"/></marker>
+            <marker id="tipShot" viewBox="0 0 10 10" markerWidth="5" markerHeight="5" refX="9" refY="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#e4a500"/></marker>
+          </defs>
+          <rect x="0" y="0" width="358" height="413" fill="#f2dec0"/>
+          <path class="grain" d="M0 48 H358 M0 96 H358 M0 144 H358 M0 192 H358 M0 240 H358 M0 288 H358 M0 336 H358 M0 384 H358"/>
+          <path class="court-line" d="M5 3 H353 V410 H5 V3 M5 42 H62 C151 42 227 114 227 205 S151 369 62 369 H5"/>
+          <rect x="5" y="151" width="160" height="108" fill="#f0c897" fill-opacity=".35" stroke="#9c754c" stroke-width="2.6"/>
+          <path class="court-line" d="M165 151 A54 54 0 0 1 165 259"/>
+          <path d="M165 151 A54 54 0 0 0 165 259" fill="none" stroke="#9c754c" stroke-width="2.4" stroke-dasharray="7 7"/>
+          <line x1="15" y1="190" x2="15" y2="220" stroke="#8c653e" stroke-width="4"/>
+          <circle cx="42" cy="205" r="14" stroke="#8c653e" stroke-width="3" fill="none"/>
+          <path class="court-line" d="M353 153 A52 52 0 0 0 353 257"/>
+          <g id="arrows"></g><g id="players-layer"></g>
+        </svg>
+      </div>
+      <div class="legend"><span class="m">➜ 이동</span><span class="p">➜ 패스</span><span class="s">➜ 슛</span><span>◉ 파란색: 선수 · 민트색: 대안 위치</span></div>
+    </section>
+    <aside class="panel side-note">
+      <div class="eyebrow" id="play-index">PLAY 01 / 10</div>
+      <h2 id="title">Base line(기본)</h2>
+      <p id="description">PPT 원본의 Motion별 선수 위치와 동선을 재구성했습니다.</p>
+      <div id="steps" class="steps" role="group" aria-label="Motion 단계 선택"></div>
+      <div class="controls">
+        <button class="control" id="prev" type="button">← 이전</button>
+        <button class="control main" id="next" type="button">다음 →</button>
+        <button class="control" id="autoplay" type="button">▶ 자동 재생</button>
+        <button class="control" id="restart" type="button">↺ 처음</button>
+      </div>
+      <a class="video" id="video" href="#" target="_blank" rel="noopener noreferrer" hidden>▶ PPT 참고 영상 보기</a>
+      <div class="meta"><strong>이용 안내</strong><p>전술 선택 → Motion 단계 이동 → 자동 재생 순서로 사용하세요. 선수는 단계 사이를 이동하지만, PPT에서 정의되지 않은 세부 타이밍은 보간하여 보여줍니다.</p><p>민트색 선수와 두 번째 공 표시는 PPT에 함께 표시된 보조 위치·대안 표현이며, 실제 추가 선수를 뜻하지 않습니다.</p></div>
+      <p class="hint">키보드 ← → 로 단계 변경 · 모바일 가로 스크롤로 전술 선택</p>
+    </aside>
+  </main>
+  <p class="source">자료 기준: 제공된 ‘패턴(2026)_(서초구).pptx’ 1~10페이지 · 원본의 도형 좌표를 바탕으로 다시 그린 전술도입니다. 정확한 스크린 각도·수비 반응은 현장 연습에서 확인하세요.</p>
+</div>
+<script>
+(function(){
+  'use strict';
+  var metadata={
+    1:{description:'Base line 기본 · PPT Motion 1~3의 배치, 선수 이동, 패스 및 슛 선택지',group:'baseline'},
+    2:{description:'Base line 엘리베이터 · PPT Motion 1~2, 두 번째 동작에서 코너 쪽 슛 선택지가 표시됨',group:'baseline',video:'https://youtube.com/shorts/HNoOfC2Y7ac?si=4DpU3zjr6ogNwrgZ'},
+    3:{description:'Horn UP · PPT Motion 1~2, 위·아래 엘보에서 양쪽 외곽으로 이동 후 후속 패스/슛',group:'horns'},
+    4:{description:'Horn Down · PPT Motion 1~2, 코너를 사용하는 이동 패턴과 마무리 옵션',group:'horns'},
+    5:{description:'Horn Swing · PPT Motion 1~2, 반대쪽 연결 패스와 슛 옵션',group:'horns'},
+    6:{description:'Spain Pick & Roll · PPT Motion 1~3, 볼스크린 이후 추가 스크린 및 롤 선택지',group:'pandr',video:'https://youtube.com/shorts/I7T3M8183_U?si=T5gw0Q-0xiPVYLT3'},
+    7:{description:'Horn Zoom · PPT Motion 1~3, 슬라이드에 핸드오프가 명시된 Zoom 전개',group:'horns',video:'https://youtube.com/watch?v=Zwk-c3N8NJ8&si=IUIGVkfh1sa493qc'},
+    8:{description:'Side Line · PPT Motion 1~2, 사이드라인 인바운드 상황에서의 컷과 슛 옵션',group:'inbound',video:'https://youtube.com/shorts/s20Sk7ZwYbE?si=dUYvXh4L3pDTYJdY'},
+    9:{description:'5 out offense option 1 · PPT Motion 2/3의 2:2 play 선택지 포함',group:'five'},
+    10:{description:'5 out offense option 2 · PPT Motion 2의 컷 인과 Motion 3의 2:2 play 선택지 포함',group:'five'}
+  };
+  var plays=[],selected=0,stage=0,timer=null;
+  var NS='http://www.w3.org/2000/svg';
+  function el(tag,attrs){var n=document.createElementNS(NS,tag);Object.keys(attrs||{}).forEach(function(k){n.setAttribute(k,attrs[k])});return n}
+  function txt(id,v){document.getElementById(id).textContent=v}
+  function stop(){if(timer){clearInterval(timer);timer=null}txt('autoplay','▶ 자동 재생')}
+  function colors(hex){return hex==='1302EE'?{stroke:'#2737f0',tip:'url(#tipMove)'}:hex==='FF0000'?{stroke:'#e75047',tip:'url(#tipPass)'}:{stroke:'#e3a400',tip:'url(#tipShot)'}}
+  function renderFrame(){
+    var p=plays[selected],frame=p.frames[stage],arrows=document.getElementById('arrows'),layer=document.getElementById('players-layer');
+    arrows.replaceChildren();
+    frame.lines.forEach(function(v){var co=colors(v[0]);var line=el('line',{x1:v[1],y1:v[2],x2:v[3],y2:v[4],stroke:co.stroke,class:'motion-line'});if(v[5]||v[6])line.setAttribute('marker-end',co.tip);arrows.appendChild(line)});
+    var seen=new Set();frame.players.forEach(function(o){
+      var key=o[0],id='player-'+key.replace('*','ghost'),g=document.getElementById(id);
+      if(!g){g=el('g',{id:id,class:'player'});if(key==='ball'||key==='ball2'){g.appendChild(el('circle',{r:8,class:'ball'}));g.appendChild(el('path',{d:'M-8 0 H8 M0 -8 V8',stroke:'#663510','stroke-width':1,fill:'none'}))}else{g.appendChild(el('circle',{r:19,class:key.endsWith('*')?'ghost':'solid'}));var t=el('text',{x:0,y:0});t.textContent=key.replace('*','');g.appendChild(t)}layer.appendChild(g)}
+      g.setAttribute('transform','translate('+o[1]+' '+o[2]+')');g.style.display='';seen.add(id);
+    });
+    Array.from(layer.children).forEach(function(n){if(!seen.has(n.id))n.style.display='none'});
+    txt('play-index','PLAY '+String(p.id).padStart(2,'0')+' / 10 · MOTION '+(stage+1)+' / '+p.frames.length);
+    txt('board-title',p.title);txt('title',p.title);txt('description',metadata[p.id].description);
+    var steps=document.getElementById('steps');steps.replaceChildren();p.frames.forEach(function(_,i){var b=document.createElement('button');b.type='button';b.className='step'+(i===stage?' selected':'');b.textContent='Motion '+(i+1);b.setAttribute('aria-pressed',i===stage?'true':'false');b.addEventListener('click',function(){stop();stage=i;renderFrame()});steps.appendChild(b)});
+    document.getElementById('prev').disabled=stage===0;document.getElementById('next').disabled=stage===p.frames.length-1;
+    var video=document.getElementById('video');video.hidden=!metadata[p.id].video;if(metadata[p.id].video)video.href=metadata[p.id].video;
+    document.querySelectorAll('.play-btn').forEach(function(b){var is=Number(b.dataset.play)===selected;b.classList.toggle('active',is);b.setAttribute('aria-current',is?'true':'false')});
+  }
+  function goto(n){selected=n;stage=0;document.getElementById('players-layer').replaceChildren();renderFrame()}
+  function change(dir){stage=Math.max(0,Math.min(plays[selected].frames.length-1,stage+dir));renderFrame()}
+  function install(){
+    var nav=document.getElementById('plays');plays.forEach(function(p,i){var b=document.createElement('button');b.type='button';b.className='play-btn';b.dataset.play=i;b.innerHTML='<span class="count">'+String(p.id).padStart(2,'0')+'</span><span></span>';b.querySelector('span:last-child').textContent=p.title;b.addEventListener('click',function(){stop();goto(i)});nav.appendChild(b)});
+    var a=document.createElement('a');a.href='horns-pin-down/';a.className='extra-link';a.textContent='＋ 기존 Horns Pin-Down Entry';nav.appendChild(a);
+    document.getElementById('prev').addEventListener('click',function(){stop();change(-1)});
+    document.getElementById('next').addEventListener('click',function(){stop();change(1)});
+    document.getElementById('restart').addEventListener('click',function(){stop();stage=0;renderFrame()});
+    document.getElementById('autoplay').addEventListener('click',function(){if(timer){stop();return}if(stage===plays[selected].frames.length-1){stage=0;renderFrame()}txt('autoplay','Ⅱ 일시정지');timer=setInterval(function(){stage=(stage+1)%plays[selected].frames.length;renderFrame()},1800)});
+    document.addEventListener('keydown',function(e){if(/INPUT|TEXTAREA|SELECT|BUTTON/.test(e.target.tagName))return;if(e.key==='ArrowRight'){stop();change(1)}else if(e.key==='ArrowLeft'){stop();change(-1)}});
+    document.addEventListener('visibilitychange',function(){if(document.hidden)stop()});goto(0)
+  }
+  fetch('./patterns-2026.json').then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(d){plays=d;install()}).catch(function(e){txt('board-title','전술 데이터를 불러오지 못했습니다');txt('description','새로고침하거나 전술 JSON 파일이 함께 배포되었는지 확인하세요. '+e.message)});
+})();
+</script>
+</body>
+</html>
