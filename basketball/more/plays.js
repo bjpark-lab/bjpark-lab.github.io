@@ -1,5 +1,5 @@
 /* MORE team playbook. Reconstructed concepts follow the team slides; source-only plays are not guessed. */
-window.MORE_PLAYS=[
+window.PLAYBOOK_PLAYS=[
   {
     "id": "pin-down",
     "cat": "기초",
