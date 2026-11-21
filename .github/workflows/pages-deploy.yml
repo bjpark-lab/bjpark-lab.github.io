@@ -83,7 +83,7 @@ jobs:
     name: Verify public basketball pages in Chromium
     needs: deploy
     if: ${{ needs.deploy.result == 'success' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     steps:
