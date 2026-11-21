@@ -1,12 +1,12 @@
 (function(){
 'use strict';
-const ALL=Array.isArray(window.MOER_PLAYS)?window.MOER_PLAYS:[];
+const ALL=Array.isArray(window.MORE_PLAYS)?window.MORE_PLAYS:[];
 const DECK='https://docs.google.com/presentation/d/1rdQghY_RAlO8hHioJV0gkotcctBrjcF-uSgwOM-Pn2k/edit#slide=id.';
 const CATS=[['전체','전체'],['기초','기초 움직임'],['사이드','사이드 패턴'],['엔드','엔드 패턴'],['팀공격','팀 공격']];
 const NS='http://www.w3.org/2000/svg';
 const $=id=>document.getElementById(id);
 const state={id:ALL[0]?ALL[0].id:'',step:0,cat:'전체',search:'',onlyFav:false,flip:false,timer:null,favorites:new Set()};
-try{state.favorites=new Set(JSON.parse(localStorage.getItem('moer-playbook-favorites')||'[]'));}catch(e){}
+try{state.favorites=new Set(JSON.parse(localStorage.getItem('more-playbook-favorites')||localStorage.getItem('moer-playbook-favorites')||'[]'));}catch(e){}
 function el(t,a,txt){
   const x=document.createElementNS(NS,t);
   Object.entries(a||{}).forEach(([k,v])=>x.setAttribute(k,String(v)));
@@ -44,7 +44,7 @@ function starButton(btn,id,isLarge){
 }
 function toggleFav(id){
   if(state.favorites.has(id))state.favorites.delete(id);else state.favorites.add(id);
-  try{localStorage.setItem('moer-playbook-favorites',JSON.stringify([...state.favorites]));}catch(e){}
+  try{localStorage.setItem('more-playbook-favorites',JSON.stringify([...state.favorites]));}catch(e){}
   render();
 }
 function library(){
@@ -78,7 +78,7 @@ function courtLines(){
   e.append(el('line',{x1:226,y1:40,x2:274,y2:40,stroke:'#5f4c38','stroke-width':5,'stroke-linecap':'round'}));
   e.append(el('circle',{cx:250,cy:52,r:8,fill:'none',stroke:'#a95b2e','stroke-width':3}));
   e.append(el('path',{d:'M 190 510 A 60 60 0 0 1 310 510',fill:'none',stroke:'#987953','stroke-width':2.5}));
-  e.append(el('text',{x:252,y:487,fill:'#c2a178','font-size':14,'font-weight':900,'text-anchor':'middle','letter-spacing':4},'MOER'));
+  e.append(el('text',{x:252,y:487,fill:'#c2a178','font-size':14,'font-weight':900,'text-anchor':'middle','letter-spacing':4},'MORE'));
   e.append(el('text',{x:250,y:17,fill:'#986a46','font-size':10,'font-weight':700,'text-anchor':'middle'},'↑'));
 }
 function trimmedLine(a,b,begin=23,end=25){
@@ -217,7 +217,7 @@ function saveSVG(){
   const groups=svg.querySelectorAll('g.player'),st=p.steps[state.step];
   groups.forEach((g,i)=>{const [x,y]=xy(st.pos[i]);g.setAttribute('transform','translate('+x+' '+y+')')});
   const blob=new Blob([new XMLSerializer().serializeToString(svg)],{type:'image/svg+xml;charset=utf-8'});
-  const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='MOER_'+p.id+'_'+(state.step+1)+'.svg';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);
+  const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='MORE_'+p.id+'_'+(state.step+1)+'.svg';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);
 }
 function copyLink(){
   const b=$('copyLink'),label=b.querySelector('span');const old='이 전술 링크 복사';

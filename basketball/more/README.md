@@ -1,6 +1,6 @@
-# MOER 농구팀 전술 라이브러리
+# MORE 농구팀 전술 라이브러리
 
-공개 주소: https://bjpark-lab.github.io/moer/
+공개 주소: https://bjpark-lab.github.io/basketball/more/
 
 모어 농구팀의 「모어 농구 용어 정리」 구글 슬라이드 33장을 출처로 정리한 별도 전술노트입니다.
 원본: https://docs.google.com/presentation/d/1rdQghY_RAlO8hHioJV0gkotcctBrjcF-uSgwOM-Pn2k/edit
@@ -22,4 +22,4 @@
 ## 유지보수
 index.html: 화면 / style.css: 스타일 / plays.js: 전술 데이터 / app.js: 코트와 컨트롤.
 plays.js의 각 단계 pos는 1~5번 선수 좌표, ball은 볼 소유 선수 번호입니다.
-SSIT 사이트는 ../basketball/에 독립적으로 남아 있습니다.
+SSIT 사이트는 ../ssit/에 독립적으로 있습니다. 팀 선택은 ../에서 합니다.

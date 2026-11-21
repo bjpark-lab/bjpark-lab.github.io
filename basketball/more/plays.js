@@ -1,5 +1,5 @@
-/* MOER team playbook. Reconstructed concepts follow the team slides; source-only plays are not guessed. */
-window.MOER_PLAYS=[
+/* MORE team playbook. Reconstructed concepts follow the team slides; source-only plays are not guessed. */
+window.MORE_PLAYS=[
   {
     "id": "pin-down",
     "cat": "기초",
