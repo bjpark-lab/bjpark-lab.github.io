@@ -45,13 +45,34 @@ const sites = [
           assert(firstTitle.trim()===item.first,'first title mismatch '+firstTitle);
           assert(await page.locator('#players .player').count()===5,'initial player count');
           const h = await page.locator('h1').textContent();
-          assert(h.includes(item.team), 'wrong team heading: '+h);
+          const teamBrand = await page.locator('.brand-name strong').textContent();
+          assert(teamBrand.trim()===item.team, 'wrong team brand: '+teamBrand);
+          assert(h.includes(item.team==='MORE'?'모어':'SSIT'), 'wrong team heading: '+h);
           // Confirm local assets were actually served: CSS styles and loaded data.
           const hasStyled = await page.locator('.panel').first().evaluate(el =>
             getComputedStyle(el).borderRadius !== '0px' &&
             getComputedStyle(el).backgroundColor !== 'rgba(0, 0, 0, 0)');
           assert(hasStyled,'stylesheet missing');
           await page.screenshot({path:path.join(ART,mode+'-'+item.team.toLowerCase()+'.png'),fullPage:true});
+          const entries = page.locator('#playlist .play-main');
+          assert(await entries.count()===item.count,'play list count');
+          // Visit every tactic, including source-only diagrams, in the public browser.
+          for(let i=0;i<item.count;i++){
+            await entries.nth(i).click();
+            const active=await page.locator('#playTitle').textContent();
+            assert(active && active.trim().length>0,'empty title for play '+i);
+            const refOnly=await page.locator('#referenceOverlay').isVisible();
+            const playerCount=await page.locator('#players .player').count();
+            assert(refOnly?playerCount===0:playerCount===5,'player count for '+active+': '+playerCount);
+            if(!refOnly){
+              const stageButtons=await page.locator('#timeline button').count();
+              assert(stageButtons>0,'missing timeline for '+active);
+              await page.locator('#timeline button').last().click();
+              assert(await page.locator('#players .player').count()===5,'last stage player count for '+active);
+            }
+          }
+          await entries.first().click();
+          assert((await page.locator('#playTitle').textContent()).trim()===item.first,'cannot restore first play');
           await page.locator('#next').click();
           const moved = await page.locator('#stepTitle').textContent();
           assert(moved && moved.length>0,'next step missing');
@@ -78,7 +99,7 @@ const sites = [
           }
           assert(pageErrors.length===0, 'JS errors: '+pageErrors.join(' | '));
           assert(responseErrors.length===0, 'HTTP asset errors: '+responseErrors.join(' | '));
-          record(mode+' '+item.team, true,'HTTP 200; '+item.count+' plays; first='+firstTitle+'; next, mirror, reset, autoplay, favorite');
+          record(mode+' '+item.team, true,'HTTP 200; '+item.count+' plays individually checked; first='+firstTitle+'; next, mirror, reset, autoplay, favorite');
         } catch (e) {
           record(mode+' '+item.team, false,e.stack || e.message);
           try{await page.screenshot({path:path.join(ART,mode+'-'+item.team.toLowerCase()+'-failure.png'),fullPage:true});}catch(_) {}
