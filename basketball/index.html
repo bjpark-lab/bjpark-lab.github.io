@@ -73,7 +73,7 @@ const richPlays={
 };
 playbook.find(p=>p.id==='horn-up').title='혼즈 업';
 playbook.find(p=>p.id==='post-split').title='스플릿 액션';
-const filters=[['all','전체'],['basic','기본'],['horn','Horns'],['post','포스트'],['post','포스트'],['screen','스크린'],['inbound','인바운드'],['five','5-Out'],['special','기타']];
+const filters=[['all','전체'],['basic','베이스 패턴'],['horn','Horns'],['post','포스트'],['post','포스트'],['screen','스크린'],['inbound','사이드 패턴'],['five','5-Out'],['special','기타']];
 const info={basic:['basic','베이스라인 기본 패턴. PPT에 수록된 세 가지 Motion 도면을 차례로 확인합니다.'],elevator:['basic','베이스라인 E(엘리베이터) 패턴. 두 Motion을 비교합니다.'], 'horn-up':['horn','Horn UP 패턴. 양쪽 엘보와 컷의 변화에 주목하세요.'], 'horn-down':['horn','Horn Down 패턴. 다운 방향 선수 이동과 후속 패스를 확인하세요.'], 'horn-swing':['horn','Horn Swing 패턴. 볼 이동과 반대쪽 움직임을 확인하세요.'], 'post-split':['post','2번(45도)→5번(로우포스트) 엔트리 패스 후, 2번이 탑 1번에게 스크린. 5번은 1번의 45도 3점 또는 2번의 골밑 다이브를 읽습니다.'], 'spain-pnr':['screen','Spain Pick & Roll의 세 Motion과 스크린·롤 동선을 확인하세요.'], 'horn-zoom':['horn','Horn Zoom 패턴. PPT에 핸드오프라고 표시된 도면이 포함됩니다.'], 'side-line':['inbound','사이드라인 인바운드 패턴. 1번은 사이드라인 밖에서 패스를 시작합니다.'], 'fiveout-one':['five','5-Out 공격 Option 1. Motion 2·3은 옵션으로 제시되었습니다.'], 'fiveout-two':['five','5-Out 공격 Option 2. 컷 인과 2:2 play 표시를 확인하세요.']};
 const sourceNoteOriginal=document.querySelector('.source-note').innerHTML;
 Object.assign(info,{
