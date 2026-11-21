@@ -20,6 +20,6 @@
 영상·그림에만 상세 동선이 있는 BD, TR, ZL, SH는 확인되지 않은 움직임을 만들지 않고 원본 링크로 연결합니다.
 
 ## 유지보수
-index.html: 화면 / style.css: 스타일 / plays.js: 전술 데이터 / app.js: 코트와 컨트롤.
+index.html: 팀 메타 및 화면 / plays.js: 전술 데이터 / ../shared/playbook.css: 공통 스타일 / ../shared/playbook.js: 공통 코트와 컨트롤.
 plays.js의 각 단계 pos는 1~5번 선수 좌표, ball은 볼 소유 선수 번호입니다.
 SSIT 사이트는 ../ssit/에 독립적으로 있습니다. 팀 선택은 ../에서 합니다.
