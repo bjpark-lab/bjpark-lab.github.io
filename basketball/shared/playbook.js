@@ -22,7 +22,7 @@ function catName(cat){return CATS.find(x=>x[0]===cat)?.[1]||cat}
 function cancelMotion(){state.serial++;if(state.raf!==null){cancelAnimationFrame(state.raf);state.raf=null;}}
 function pause(){if(state.timer!==null){clearInterval(state.timer);state.timer=null;}const a=$('autoplay');if(a)a.textContent='▶ 자동 재생';}
 function sourceIndex(p,step){const st=p.steps[step];if(st?.branchFrom!==undefined)return st.branchFrom;return Math.max(0,step-1);}
-function branchNext(p,step){const st=p.steps[step];if(st?.branch)return null;const next=step+1;return next<p.steps.length?next:null;}
+function branchNext(p,step){const st=p.steps[step];if(st?.branch)return null;const next=step+1;return next<p.steps.length&&!p.steps[next]?.branch?next:null;}
 function prevStep(p,step){const st=p.steps[step];return st?.branchFrom!==undefined?st.branchFrom:Math.max(0,step-1);}
 function layoutCategories(){
  const el=$('categories');clear(el);
@@ -156,6 +156,7 @@ function showNotes(p){
  $('videoLink').hidden=!p.video;if(p.video)$('videoLink').href=p.video;
  const ref=!!p.referenceOnly;
  $('referenceOverlay').hidden=!ref;
+ $('branchNote').hidden=true;
  $('overlaySource').href=source(p);
  $('transport').hidden=ref;$('timeline').hidden=ref;$('stepBox').hidden=ref;
  if(ref){pause();return;}
