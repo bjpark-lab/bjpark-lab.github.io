@@ -78,3 +78,33 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  browser-smoke:
+    name: Verify public basketball pages in Chromium
+    needs: deploy
+    if: ${{ needs.deploy.result == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout test files
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install isolated Playwright
+        run: |
+          npm install --prefix "$RUNNER_TEMP/basketball-browser" playwright@1.58.2 --no-save --no-audit --no-fund
+          "$RUNNER_TEMP/basketball-browser/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Test live SSIT and MORE pages
+        env:
+          NODE_PATH: ${{ runner.temp }}/basketball-browser/node_modules
+        run: node basketball/tests/browser-smoke.cjs
+      - name: Upload screenshots and failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: basketball-browser-screenshots
+          path: basketball-smoke-artifacts/
+          if-no-files-found: ignore
