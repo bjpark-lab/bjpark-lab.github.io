@@ -1,4 +1,4 @@
-/* SSIT tactical library: original PPT frames are static snapshots with independent source ball marks. Rich plays are animated concepts. */
+/* SSIT tactical library: PPT frames remain independent snapshots with semantic screen annotations; rich plays are animated sequences. */
 window.PLAYBOOK_PLAYS=[
   {
     "id": "basic",
@@ -312,14 +312,14 @@ window.PLAYBOOK_PLAYS=[
     "title": "엘리베이터",
     "call": "E",
     "summary": "엔드라인 인바운드에서 출발하는 엘리베이터 패턴",
-    "tip": "PPT 원본 도면별 위치와 화살표를 옮긴 자료입니다. 도면 간 움직임을 임의로 연결하지 않았습니다.",
+    "tip": "4번과 5번이 슈터가 통과한 뒤 간격을 닫는 엘리베이터 스크린입니다. 원본 PPT는 정적인 위치 도면입니다.",
     "sourceUrl": "/basketball/ssit/patterns-2026.json",
     "sourceLabel": "SSIT 원본 패턴 자료",
     "video": "https://youtube.com/shorts/HNoOfC2Y7ac",
     "steps": [
       {
         "label": "도면 1",
-        "detail": "1번은 엔드라인 밖에서 패스를 넣는 선수입니다. PPT 도면의 이동·패스·슛 화살표를 확인하세요.",
+        "detail": "4번과 5번이 연달아 스크린 위치를 잡고 슈터가 사이를 통과할 길을 엽니다. 원본 PPT 선수 배치는 그대로 두었습니다.",
         "pos": [
           [
             336,
@@ -401,7 +401,10 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [],
+        "screen": [
+          4,
+          5
+        ],
         "snapshot": true,
         "outside": [
           1
@@ -409,11 +412,19 @@ window.PLAYBOOK_PLAYS=[
         "ballPosition": [
           294,
           4
-        ]
+        ],
+        "screenAngles": {
+          "4": 30,
+          "5": -30
+        },
+        "screenLabels": {
+          "4": "4번 스크린",
+          "5": "5번 스크린"
+        }
       },
       {
         "label": "도면 2",
-        "detail": "1번은 엔드라인 밖에서 패스를 넣는 선수입니다. PPT 도면의 이동·패스·슛 화살표를 확인하세요.",
+        "detail": "4·5번 엘리베이터 스크린을 타고 슈터가 외곽으로 나오며 패스와 슛을 노립니다. 실제 두 스크리너 간 간격은 팀에서 맞춰야 합니다.",
         "pos": [
           [
             313,
@@ -462,7 +473,10 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [],
+        "screen": [
+          4,
+          5
+        ],
         "snapshot": true,
         "outside": [
           1
@@ -470,7 +484,15 @@ window.PLAYBOOK_PLAYS=[
         "ballPosition": [
           338,
           15
-        ]
+        ],
+        "screenAngles": {
+          "4": 30,
+          "5": -30
+        },
+        "screenLabels": {
+          "4": "4번 스크린",
+          "5": "5번 스크린"
+        }
       }
     ],
     "reviewStatus": "source-snapshot-audited"
@@ -481,13 +503,13 @@ window.PLAYBOOK_PLAYS=[
     "title": "혼즈 다운",
     "call": "HORN DOWN",
     "summary": "혼즈에서 다운 방향 컷과 후속 공격",
-    "tip": "PPT 원본 도면별 위치와 화살표를 옮긴 자료입니다. 도면 간 움직임을 임의로 연결하지 않았습니다.",
+    "tip": "4·5번 다운스크린을 타고 양 코너 가드가 올라옵니다. 스크린 각도는 상대 수비 위치에 맞춥니다.",
     "sourceUrl": "/basketball/ssit/patterns-2026.json",
     "sourceLabel": "SSIT 원본 패턴 자료",
     "steps": [
       {
         "label": "도면 1",
-        "detail": "원본 PPT의 1번째 도면입니다. 여러 화살표는 동시에 가능한 움직임이나 마무리 선택지일 수 있습니다.",
+        "detail": "혼즈 양 엘보에서 4·5번이 코너 가드의 업컷을 위한 다운스크린을 준비합니다.",
         "pos": [
           [
             250,
@@ -580,16 +602,27 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [],
+        "screen": [
+          4,
+          5
+        ],
         "snapshot": true,
         "ballPosition": [
           218,
           335
-        ]
+        ],
+        "screenAngles": {
+          "4": 45,
+          "5": -45
+        },
+        "screenLabels": {
+          "4": "4번 다운스크린",
+          "5": "5번 다운스크린"
+        }
       },
       {
         "label": "도면 2",
-        "detail": "원본 PPT의 2번째 도면입니다. 여러 화살표는 동시에 가능한 움직임이나 마무리 선택지일 수 있습니다.",
+        "detail": "2·3번이 코너에서 윙 방향으로 올라온 후 패스·슛을 선택합니다. 스크린 접촉 지점은 앞 도면에서 준비된 구도로 이해하세요.",
         "pos": [
           [
             245,
@@ -660,12 +693,23 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [],
+        "screen": [
+          4,
+          5
+        ],
         "snapshot": true,
         "ballPosition": [
           245,
           319
-        ]
+        ],
+        "screenAngles": {
+          "4": 30,
+          "5": -30
+        },
+        "screenLabels": {
+          "4": "4번 스크린",
+          "5": "5번 스크린"
+        }
       }
     ],
     "reviewStatus": "source-snapshot-audited"
@@ -838,14 +882,14 @@ window.PLAYBOOK_PLAYS=[
     "title": "스페인 픽앤롤",
     "call": "SPAIN",
     "summary": "온볼 스크린과 백스크린으로 골밑 찬스",
-    "tip": "PPT 원본 도면별 위치와 화살표를 옮긴 자료입니다. 도면 간 움직임을 임의로 연결하지 않았습니다.",
+    "tip": "5번 온볼 스크린 → 2번의 롤맨 수비 백스크린 → 5번 롤과 2번 팝 순서가 핵심입니다.",
     "sourceUrl": "/basketball/ssit/patterns-2026.json",
     "sourceLabel": "SSIT 원본 패턴 자료",
     "video": "https://youtube.com/shorts/I7T3M8183_U",
     "steps": [
       {
         "label": "도면 1",
-        "detail": "원본 PPT의 1번째 도면입니다. 여러 화살표는 동시에 가능한 움직임이나 마무리 선택지일 수 있습니다.",
+        "detail": "5번이 1번의 온볼 스크린을 준비하고, 2번은 롤맨 수비에게 백스크린을 걸 수 있는 위치를 잡습니다.",
         "pos": [
           [
             260,
@@ -914,7 +958,7 @@ window.PLAYBOOK_PLAYS=[
       },
       {
         "label": "도면 2",
-        "detail": "원본 PPT의 2번째 도면입니다. 여러 화살표는 동시에 가능한 움직임이나 마무리 선택지일 수 있습니다.",
+        "detail": "5번의 첫 온볼 스크린을 이용해 1번이 공격 방향을 바꾸고, 5번은 롤을 시작합니다.",
         "pos": [
           [
             171,
@@ -985,16 +1029,24 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [],
+        "screen": [
+          5
+        ],
         "snapshot": true,
         "ballPosition": [
           145,
           288
-        ]
+        ],
+        "screenAngles": {
+          "5": 75
+        },
+        "screenLabels": {
+          "5": "5→1 온볼"
+        }
       },
       {
         "label": "도면 3",
-        "detail": "원본 PPT의 3번째 도면입니다. 여러 화살표는 동시에 가능한 움직임이나 마무리 선택지일 수 있습니다.",
+        "detail": "5번이 롤하면서 2번이 5번 수비에게 백스크린을 걸고 외곽으로 팝합니다. 롤맨 골밑과 팝 3점을 읽습니다.",
         "pos": [
           [
             154,
@@ -1076,12 +1128,20 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [],
+        "screen": [
+          2
+        ],
         "snapshot": true,
         "ballPosition": [
           170,
           310
-        ]
+        ],
+        "screenAngles": {
+          "2": 90
+        },
+        "screenLabels": {
+          "2": "2→5 백스크린"
+        }
       }
     ],
     "reviewStatus": "source-snapshot-audited"
@@ -1091,15 +1151,15 @@ window.PLAYBOOK_PLAYS=[
     "cat": "혼즈",
     "title": "혼즈 줌",
     "call": "HORN ZOOM",
-    "summary": "혼즈에서 핀다운과 핸드오프 연계",
-    "tip": "PPT 원본 도면별 위치와 화살표를 옮긴 자료입니다. 도면 간 움직임을 임의로 연결하지 않았습니다.",
+    "summary": "4번 핀다운으로 올라온 2번이 3번에게 DHO를 받아 슛·돌파를 노리는 줌 액션",
+    "tip": "4번 → 2번 핀다운, 이어서 3번 → 2번 DHO 스크린. 실제 접촉 타이밍은 원본 영상과 팀 약속을 기준으로 맞춥니다.",
     "sourceUrl": "/basketball/ssit/patterns-2026.json",
     "sourceLabel": "SSIT 원본 패턴 자료",
     "video": "https://youtube.com/watch?v=Zwk-c3N8NJ8",
     "steps": [
       {
         "label": "도면 1",
-        "detail": "원본 PPT의 1번째 도면입니다. 여러 화살표는 동시에 가능한 움직임이나 마무리 선택지일 수 있습니다.",
+        "detail": "4번이 2번에게 핀다운 스크린을 걸어 업컷 길을 만듭니다. 이 도면은 선수별 이동 방향을 함께 보여주는 원본 스냅샷입니다.",
         "pos": [
           [
             250,
@@ -1214,16 +1274,24 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [],
+        "screen": [
+          4
+        ],
         "snapshot": true,
         "ballPosition": [
           271,
           326
-        ]
+        ],
+        "screenAngles": {
+          "4": 50
+        },
+        "screenLabels": {
+          "4": "4→2 핀다운"
+        }
       },
       {
         "label": "도면 2",
-        "detail": "원본 PPT의 2번째 도면입니다. 여러 화살표는 동시에 가능한 움직임이나 마무리 선택지일 수 있습니다.",
+        "detail": "2번이 4번 스크린을 타고 올라오면, 볼을 가진 3번이 2번에게 핸드오프를 주면서 몸으로 2번 수비를 막습니다. 3번의 DHO 스크린을 표시했습니다.",
         "pos": [
           [
             467,
@@ -1261,16 +1329,24 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [],
+        "screen": [
+          3
+        ],
         "snapshot": true,
         "ballPosition": [
           161,
           266
-        ]
+        ],
+        "screenAngles": {
+          "3": 75
+        },
+        "screenLabels": {
+          "3": "3→2 DHO"
+        }
       },
       {
         "label": "도면 3",
-        "detail": "원본 PPT의 3번째 도면입니다. 여러 화살표는 동시에 가능한 움직임이나 마무리 선택지일 수 있습니다.",
+        "detail": "2번이 DHO를 받아 3점 또는 돌파를 노립니다. 이 도면은 앞 도면과 완전히 연속된 프레임이 아니라 원본의 별도 마무리 구도입니다.",
         "pos": [
           [
             464,
@@ -1715,7 +1791,7 @@ window.PLAYBOOK_PLAYS=[
       },
       {
         "label": "도면 3",
-        "detail": "원본 PPT의 3번째 도면입니다. 여러 화살표는 동시에 가능한 움직임이나 마무리 선택지일 수 있습니다.",
+        "detail": "원본 PPT에 '2:2 play'가 표시돼 있지만 스크리너 번호와 정확한 접점은 확인되지 않습니다. 임의로 스크린 마커를 추가하지 않았습니다.",
         "pos": [
           [
             32,
@@ -1981,7 +2057,7 @@ window.PLAYBOOK_PLAYS=[
       },
       {
         "label": "도면 3",
-        "detail": "원본 PPT의 3번째 도면입니다. 여러 화살표는 동시에 가능한 움직임이나 마무리 선택지일 수 있습니다.",
+        "detail": "원본 PPT에 '2:2 play'가 표시돼 있지만 어떤 선수가 스크린을 거는지 확정하기 어렵습니다. 2대2 준비 구도로 보세요.",
         "pos": [
           [
             88,
