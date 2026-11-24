@@ -59,5 +59,38 @@ for(const [id,num,side] of corners){
 const source=fs.readFileSync(path.join(root,'shared/playbook.js'),'utf8');
 assert(source.includes('!st.legacy&&!prior.legacy'),'PPT frames should not animate a movement between diagrams');
 assert(source.includes('st.ballPosition'),'Independent original PPT ball marks lost');
+
+// Screens that are explicitly specified by the SSIT play definitions must be visible.
+// Generic movement diagrams without verified screener roles must NOT gain invented screens.
+const requiredScreens=[
+ ['horn-zoom',0,4,'4→2 핀다운'],
+ ['horn-zoom',1,3,'3→2 DHO'],
+ ['elevator',0,4,'4번 스크린'],
+ ['elevator',0,5,'5번 스크린'],
+ ['elevator',1,4,'4번 스크린'],
+ ['elevator',1,5,'5번 스크린'],
+ ['horn-down',0,4,'4번 다운스크린'],
+ ['horn-down',0,5,'5번 다운스크린'],
+ ['horn-down',1,4,'4번 스크린'],
+ ['horn-down',1,5,'5번 스크린'],
+ ['spain-pnr',1,5,'5→1 온볼'],
+ ['spain-pnr',2,2,'2→5 백스크린']
+];
+for(const [id,index,no,text] of requiredScreens){
+ const step=plays.find(p=>p.id===id)?.steps[index];
+ assert(!!step,'Missing documented screen stage '+id+'/'+index);
+ if(step){
+   assert(step.screen?.includes(no),'Missing screener '+id+'/'+index+'/'+no);
+   assert(step.screenLabels?.[no]===text,'Missing screen label '+id+'/'+index+'/'+no);
+   assert(Number.isFinite(step.screenAngles?.[no]),'Missing screen angle '+id+'/'+index+'/'+no);
+ }
+}
+const unconfirmed=['basic','horn-swing','side-line','fiveout-one','fiveout-two'];
+for(const id of unconfirmed){
+ const p=plays.find(x=>x.id===id);
+ assert(!!p&&p.steps.every(s=>(s.screen||[]).length===0),'Unconfirmed screen was invented for '+id);
+}
+assert(source.includes('st.screenLabels?.[n]'),'Visual renderer must draw screen labels');
+
 console.log('SSIT GEOMETRY AUDIT',JSON.stringify({plays:plays.length,originalPpt:nPpt,detailed:nRich,stages:nFrames,issues:errors}));
 if(errors.length)process.exit(1);

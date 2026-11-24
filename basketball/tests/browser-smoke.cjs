@@ -133,6 +133,33 @@ const sites = [
         record('direct '+item.team,true,heading+' '+progress);
       }catch(e){record('direct '+item.team,false,e.message);}
     }
+
+    // Explicit public DOM and screenshot checks for the previously missing screen marks.
+    const screenChecks=[
+      {play:'horn-zoom',step:1,labels:['4→2 핀다운'],count:1},
+      {play:'horn-zoom',step:2,labels:['3→2 DHO'],count:1},
+      {play:'elevator',step:1,labels:['4번 스크린','5번 스크린'],count:2},
+      {play:'horn-down',step:1,labels:['4번 다운스크린','5번 다운스크린'],count:2},
+      {play:'spain-pnr',step:2,labels:['5→1 온볼'],count:1},
+      {play:'spain-pnr',step:3,labels:['2→5 백스크린'],count:1}
+    ];
+    for(const check of screenChecks){
+      try{
+        const r=await page.goto(BASE+'ssit/?play='+check.play+'&step='+check.step,{waitUntil:'load',timeout:45000});
+        assert(r?.status()===200,'status '+r?.status());
+        await page.waitForSelector('#players .player');
+        const labels=await page.locator('#screens .screen-label text').allTextContents();
+        const markers=await page.locator('#screens path.screen-line').count();
+        assert(markers>=check.count,'screen bars missing '+JSON.stringify({check,markers}));
+        for(const required of check.labels)assert(labels.includes(required),'label missing '+required+' in '+labels);
+        await page.locator('.court-wrap').screenshot({
+          path:path.join(ART,'ssit-screen-'+check.play+'-'+check.step+'.png'),
+          animations:'disabled'
+        });
+        record('screen '+check.play+' step '+check.step,true,labels.join(' / '));
+      }catch(e){record('screen '+check.play+' step '+check.step,false,e.message);}
+    }
+
     try {
       await page.goto(BASE+'ssit/plays/horns-up/',{waitUntil:'load',timeout:45000});
       await page.waitForURL('**/basketball/ssit/?play=horn-up**',{timeout:20000});
