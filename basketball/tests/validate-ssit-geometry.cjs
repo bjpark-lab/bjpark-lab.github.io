@@ -90,7 +90,9 @@ for(const id of unconfirmed){
  const p=plays.find(x=>x.id===id);
  assert(!!p&&p.steps.every(s=>(s.screen||[]).length===0),'Unconfirmed screen was invented for '+id);
 }
-assert(source.includes('st.screenLabels?.[n]'),'Visual renderer must draw screen labels');
+const screenGeometry=fs.readFileSync(path.join(root,'shared/screen-geometry.js'),'utf8');
+assert(source.includes('window.PlaybookScreenGeometry?.layoutScreens'),'Visual renderer must use the shared screen layout');
+assert(screenGeometry.includes('stage.screenLabels?.[no]'),'Shared geometry must render screen labels');
 
 console.log('SSIT GEOMETRY AUDIT',JSON.stringify({plays:plays.length,originalPpt:nPpt,detailed:nRich,stages:nFrames,issues:errors}));
 if(errors.length)process.exit(1);
