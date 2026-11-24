@@ -1,4 +1,4 @@
-/* MORE team tactics. FIBA half-court (500x510), basket at top. Plays are conceptual reconstructions; not exact video frame tracing. */
+/* MORE tactical library: screens target explicit teammates. */
 window.PLAYBOOK_PLAYS=[
   {
     "id": "pin-down",
@@ -70,6 +70,12 @@ window.PLAYBOOK_PLAYS=[
         "kind": "",
         "screenAngles": {
           "5": 30
+        },
+        "screenTargets": {
+          "5": 2
+        },
+        "screenLabels": {
+          "5": "5→2 핀다운"
         }
       },
       {
@@ -174,6 +180,12 @@ window.PLAYBOOK_PLAYS=[
         "kind": "",
         "screenAngles": {
           "4": 55
+        },
+        "screenTargets": {
+          "4": 2
+        },
+        "screenLabels": {
+          "4": "4→2 립"
         }
       },
       {
@@ -278,6 +290,12 @@ window.PLAYBOOK_PLAYS=[
         "kind": "",
         "screenAngles": {
           "5": 45
+        },
+        "screenTargets": {
+          "5": 2
+        },
+        "screenLabels": {
+          "5": "5→2 플레어"
         }
       },
       {
@@ -412,6 +430,12 @@ window.PLAYBOOK_PLAYS=[
         "kind": "",
         "screenAngles": {
           "2": 85
+        },
+        "screenTargets": {
+          "2": 1
+        },
+        "screenLabels": {
+          "2": "2→1 DHO"
         }
       },
       {
@@ -545,6 +569,12 @@ window.PLAYBOOK_PLAYS=[
         "kind": "",
         "screenAngles": {
           "4": 55
+        },
+        "screenTargets": {
+          "4": 3
+        },
+        "screenLabels": {
+          "4": "4→3 해머"
         }
       },
       {
@@ -650,6 +680,12 @@ window.PLAYBOOK_PLAYS=[
         "kind": "",
         "screenAngles": {
           "5": 80
+        },
+        "screenTargets": {
+          "5": 1
+        },
+        "screenLabels": {
+          "5": "5→1 온볼"
         }
       },
       {
@@ -684,6 +720,12 @@ window.PLAYBOOK_PLAYS=[
         "kind": "",
         "screenAngles": {
           "2": 95
+        },
+        "screenTargets": {
+          "2": 5
+        },
+        "screenLabels": {
+          "2": "2→5 백스크린"
         }
       },
       {
@@ -788,6 +830,14 @@ window.PLAYBOOK_PLAYS=[
         "screenAngles": {
           "4": 80,
           "5": 85
+        },
+        "screenTargets": {
+          "4": 1,
+          "5": 1
+        },
+        "screenLabels": {
+          "4": "4→1 온볼",
+          "5": "5→1 온볼"
         }
       },
       {
@@ -951,6 +1001,12 @@ window.PLAYBOOK_PLAYS=[
         "kind": "",
         "screenAngles": {
           "5": 78
+        },
+        "screenTargets": {
+          "5": 1
+        },
+        "screenLabels": {
+          "5": "5→1 온볼"
         }
       },
       {
@@ -985,6 +1041,12 @@ window.PLAYBOOK_PLAYS=[
         "kind": "",
         "screenAngles": {
           "5": -70
+        },
+        "screenTargets": {
+          "5": 1
+        },
+        "screenLabels": {
+          "5": "5→1 온볼"
         }
       },
       {
@@ -1091,6 +1153,14 @@ window.PLAYBOOK_PLAYS=[
         "screenAngles": {
           "4": 35,
           "5": 40
+        },
+        "screenTargets": {
+          "4": 2,
+          "5": 2
+        },
+        "screenLabels": {
+          "4": "4→2 스태거",
+          "5": "5→2 스태거"
         }
       },
       {
@@ -1225,6 +1295,12 @@ window.PLAYBOOK_PLAYS=[
         "kind": "",
         "screenAngles": {
           "5": 35
+        },
+        "screenTargets": {
+          "5": 2
+        },
+        "screenLabels": {
+          "5": "5→2 핀다운"
         }
       },
       {
@@ -1259,6 +1335,12 @@ window.PLAYBOOK_PLAYS=[
         "kind": "",
         "screenAngles": {
           "1": 65
+        },
+        "screenTargets": {
+          "1": 2
+        },
+        "screenLabels": {
+          "1": "1→2 DHO"
         }
       },
       {
@@ -1361,7 +1443,15 @@ window.PLAYBOOK_PLAYS=[
           4,
           5
         ],
-        "kind": ""
+        "kind": "",
+        "screenTargets": {
+          "4": 2,
+          "5": 2
+        },
+        "screenLabels": {
+          "4": "4→2 엘보",
+          "5": "5→2 엘보"
+        }
       },
       {
         "label": "2번 패스",
@@ -1392,7 +1482,13 @@ window.PLAYBOOK_PLAYS=[
         "screen": [
           5
         ],
-        "kind": ""
+        "kind": "",
+        "screenTargets": {
+          "5": 4
+        },
+        "screenLabels": {
+          "5": "5→4 엘보"
+        }
       },
       {
         "label": "빅맨 2대2",
@@ -1423,7 +1519,13 @@ window.PLAYBOOK_PLAYS=[
         "screen": [
           4
         ],
-        "kind": ""
+        "kind": "",
+        "screenTargets": {
+          "4": 2
+        },
+        "screenLabels": {
+          "4": "4→2 엘보"
+        }
       }
     ],
     "reviewStatus": "positions-audited"
@@ -1496,7 +1598,15 @@ window.PLAYBOOK_PLAYS=[
           4,
           5
         ],
-        "kind": ""
+        "kind": "",
+        "screenTargets": {
+          "4": 2,
+          "5": 2
+        },
+        "screenLabels": {
+          "4": "4→2 엘보",
+          "5": "5→2 엘보"
+        }
       },
       {
         "label": "옵션 A: 백도어",
@@ -1563,6 +1673,12 @@ window.PLAYBOOK_PLAYS=[
         "branchFrom": 1,
         "screenAngles": {
           "3": 40
+        },
+        "screenTargets": {
+          "3": 4
+        },
+        "screenLabels": {
+          "3": "3→4 핀다운"
         }
       }
     ],
@@ -1636,7 +1752,15 @@ window.PLAYBOOK_PLAYS=[
           4,
           5
         ],
-        "kind": ""
+        "kind": "",
+        "screenTargets": {
+          "4": 2,
+          "5": 2
+        },
+        "screenLabels": {
+          "4": "4→2 엘보",
+          "5": "5→2 엘보"
+        }
       },
       {
         "label": "4번 엔트리",
@@ -1696,7 +1820,13 @@ window.PLAYBOOK_PLAYS=[
         "screen": [
           5
         ],
-        "kind": ""
+        "kind": "",
+        "screenTargets": {
+          "5": 2
+        },
+        "screenLabels": {
+          "5": "5→2 엘보"
+        }
       }
     ],
     "reviewStatus": "positions-audited"
@@ -1768,7 +1898,13 @@ window.PLAYBOOK_PLAYS=[
         "screen": [
           4
         ],
-        "kind": ""
+        "kind": "",
+        "screenTargets": {
+          "4": 2
+        },
+        "screenLabels": {
+          "4": "4→2 플렉스"
+        }
       },
       {
         "label": "스크리너 스크린",
@@ -1799,7 +1935,13 @@ window.PLAYBOOK_PLAYS=[
         "screen": [
           3
         ],
-        "kind": ""
+        "kind": "",
+        "screenTargets": {
+          "3": 4
+        },
+        "screenLabels": {
+          "3": "3→4 플렉스"
+        }
       },
       {
         "label": "연속 공격",
@@ -1930,7 +2072,13 @@ window.PLAYBOOK_PLAYS=[
           5
         ],
         "branch": "B",
-        "branchFrom": 0
+        "branchFrom": 0,
+        "screenTargets": {
+          "5": 4
+        },
+        "screenLabels": {
+          "5": "5→4 핀다운"
+        }
       },
       {
         "label": "2차: 인바운더 백도어",
@@ -2023,7 +2171,13 @@ window.PLAYBOOK_PLAYS=[
         "screenAngles": {
           "4": 85
         },
-        "continueFrom": 4
+        "continueFrom": 4,
+        "screenTargets": {
+          "4": 2
+        },
+        "screenLabels": {
+          "4": "4→2 DHO"
+        }
       }
     ],
     "reviewStatus": "positions-audited"
@@ -2140,7 +2294,15 @@ window.PLAYBOOK_PLAYS=[
         "screen": [
           4,
           5
-        ]
+        ],
+        "screenTargets": {
+          "4": 2,
+          "5": 2
+        },
+        "screenLabels": {
+          "4": "4→2 스태거",
+          "5": "5→2 스태거"
+        }
       },
       {
         "label": "스크린 이동",
@@ -2199,7 +2361,15 @@ window.PLAYBOOK_PLAYS=[
         "screen": [
           4,
           5
-        ]
+        ],
+        "screenTargets": {
+          "4": 3,
+          "5": 3
+        },
+        "screenLabels": {
+          "4": "4→3 스태거",
+          "5": "5→3 스태거"
+        }
       },
       {
         "label": "옵션 A: 3점",
@@ -2362,7 +2532,15 @@ window.PLAYBOOK_PLAYS=[
           4,
           5
         ],
-        "kind": ""
+        "kind": "",
+        "screenTargets": {
+          "4": 2,
+          "5": 2
+        },
+        "screenLabels": {
+          "4": "4→2 스태거",
+          "5": "5→2 스태거"
+        }
       },
       {
         "label": "스페인 준비",
@@ -2394,7 +2572,15 @@ window.PLAYBOOK_PLAYS=[
           2,
           5
         ],
-        "kind": ""
+        "kind": "",
+        "screenTargets": {
+          "2": 5,
+          "5": 1
+        },
+        "screenLabels": {
+          "2": "2→5 백스크린",
+          "5": "5→1 온볼"
+        }
       }
     ],
     "reviewStatus": "positions-audited"
@@ -2466,7 +2652,13 @@ window.PLAYBOOK_PLAYS=[
         "screen": [
           4
         ],
-        "kind": ""
+        "kind": "",
+        "screenTargets": {
+          "4": 5
+        },
+        "screenLabels": {
+          "4": "4→5 스크린"
+        }
       },
       {
         "label": "하이로우",

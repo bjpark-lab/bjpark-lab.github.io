@@ -1,4 +1,4 @@
-/* SSIT tactical library: PPT frames remain independent snapshots with semantic screen annotations; rich plays are animated sequences. */
+/* SSIT tactical library: 4->2/3->2 and all other screen pairings are explicit. */
 window.PLAYBOOK_PLAYS=[
   {
     "id": "basic",
@@ -420,6 +420,10 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4번 스크린",
           "5": "5번 스크린"
+        },
+        "screenTargets": {
+          "4": 3,
+          "5": 3
         }
       },
       {
@@ -492,6 +496,10 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4번 스크린",
           "5": "5번 스크린"
+        },
+        "screenTargets": {
+          "4": 3,
+          "5": 3
         }
       }
     ],
@@ -618,6 +626,10 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4번 다운스크린",
           "5": "5번 다운스크린"
+        },
+        "screenTargets": {
+          "4": 3,
+          "5": 2
         }
       },
       {
@@ -709,6 +721,10 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4번 스크린",
           "5": "5번 스크린"
+        },
+        "screenTargets": {
+          "4": 3,
+          "5": 2
         }
       }
     ],
@@ -1042,6 +1058,9 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "5": "5→1 온볼"
+        },
+        "screenTargets": {
+          "5": 1
         }
       },
       {
@@ -1141,6 +1160,9 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "2": "2→5 백스크린"
+        },
+        "screenTargets": {
+          "2": 5
         }
       }
     ],
@@ -1287,6 +1309,9 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "4": "4→2 핀다운"
+        },
+        "screenTargets": {
+          "4": 2
         }
       },
       {
@@ -1342,6 +1367,9 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "3": "3→2 DHO"
+        },
+        "screenTargets": {
+          "3": 2
         }
       },
       {
@@ -2231,6 +2259,9 @@ window.PLAYBOOK_PLAYS=[
         ],
         "screenAngles": {
           "1": 50
+        },
+        "screenTargets": {
+          "1": 4
         }
       },
       {
@@ -2421,6 +2452,9 @@ window.PLAYBOOK_PLAYS=[
         ],
         "screenAngles": {
           "4": 55
+        },
+        "screenTargets": {
+          "4": 1
         }
       },
       {
@@ -2454,6 +2488,15 @@ window.PLAYBOOK_PLAYS=[
         ],
         "screenAngles": {
           "4": 55
+        },
+        "screenTargets": {
+          "4": 1
+        },
+        "screenTargetAt": {
+          "4": [
+            250,
+            327
+          ]
         }
       },
       {
@@ -2641,6 +2684,9 @@ window.PLAYBOOK_PLAYS=[
         ],
         "screenAngles": {
           "4": 60
+        },
+        "screenTargets": {
+          "4": 2
         }
       },
       {
@@ -2674,6 +2720,15 @@ window.PLAYBOOK_PLAYS=[
         ],
         "screenAngles": {
           "4": 60
+        },
+        "screenTargets": {
+          "4": 2
+        },
+        "screenTargetAt": {
+          "4": [
+            414,
+            262
+          ]
         }
       },
       {
@@ -2832,6 +2887,9 @@ window.PLAYBOOK_PLAYS=[
         ],
         "screenAngles": {
           "2": 65
+        },
+        "screenTargets": {
+          "2": 1
         }
       },
       {
@@ -2870,6 +2928,15 @@ window.PLAYBOOK_PLAYS=[
           "2": [
             284,
             307
+          ]
+        },
+        "screenTargets": {
+          "2": 1
+        },
+        "screenTargetAt": {
+          "2": [
+            250,
+            330
           ]
         }
       },
@@ -3117,6 +3184,9 @@ window.PLAYBOOK_PLAYS=[
         ],
         "screenAngles": {
           "5": 55
+        },
+        "screenTargets": {
+          "5": 2
         }
       },
       {
@@ -3155,6 +3225,15 @@ window.PLAYBOOK_PLAYS=[
           "5": [
             447,
             60
+          ]
+        },
+        "screenTargets": {
+          "5": 2
+        },
+        "screenTargetAt": {
+          "5": [
+            477,
+            34
           ]
         }
       },
@@ -3290,6 +3369,9 @@ window.PLAYBOOK_PLAYS=[
         ],
         "screenAngles": {
           "4": 68
+        },
+        "screenTargets": {
+          "4": 2
         }
       },
       {
@@ -3323,6 +3405,9 @@ window.PLAYBOOK_PLAYS=[
         ],
         "screenAngles": {
           "4": 68
+        },
+        "screenTargets": {
+          "4": 2
         }
       },
       {
