@@ -53,6 +53,9 @@ jobs:
       - name: Validate Stanford study data
         run: python3 tools/validate_stanford_study.py
 
+      - name: Validate MORE tactical geometry
+        run: node basketball/tests/validate-more-geometry.cjs
+
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
