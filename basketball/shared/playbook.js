@@ -120,6 +120,16 @@ function draw(p){
   const dx=Math.cos(radians)*21,dy=Math.sin(radians)*21;
   const d='M '+(cx-dx).toFixed(2)+' '+(cy-dy).toFixed(2)+' L '+(cx+dx).toFixed(2)+' '+(cy+dy).toFixed(2);
   screens.append(svg('path',{d,class:'screen-line'}));
+  const label=st.screenLabels?.[n];
+  if(label){
+   const textX=Math.min(375,Math.max(8,cx+17));
+   const textY=Math.min(480,Math.max(20,cy-21));
+   const width=Math.min(118,Math.max(70,label.length*9+16));
+   const g=svg('g',{class:'screen-label'});
+   g.append(svg('rect',{x:textX,y:textY-14,width,height:20,rx:5,fill:'#fffaf1','fill-opacity':0.96,stroke:'#a68bc3','stroke-width':1}));
+   g.append(svg('text',{x:textX+6,y:textY,'font-size':11,'font-weight':800,fill:'#603c86'},label));
+   screens.append(g);
+  }
  }
  // Animated player transforms use one scale, one timing and one jersey design in both teams.
  const shouldAnimate=!st.legacy&&!prior.legacy&&state.fromStep!==null&&state.fromStep===from&&window.matchMedia('(prefers-reduced-motion:reduce)').matches===false;
