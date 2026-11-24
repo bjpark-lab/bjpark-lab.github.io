@@ -111,7 +111,7 @@ function draw(p){
   screens.append(svg('path',{d:'M '+x1+' '+y1+' L '+x2+' '+y2,class:'screen-line'}));
  }
  for(const n of st.screen||[]){
-  const [x,y]=mirror(st.pos[n-1]);
+  const [x,y]=mirror(st.screenAt?.[n]??st.pos[n-1]);
   // Show the screener's facing angle with a short perpendicular bar beside the jersey.
   // The angle is mirrored alongside the offensive alignment.
   const degrees=Number(st.screenAngles?.[n]??0)*(state.flip?-1:1);
@@ -122,7 +122,7 @@ function draw(p){
   screens.append(svg('path',{d,class:'screen-line'}));
  }
  // Animated player transforms use one scale, one timing and one jersey design in both teams.
- const shouldAnimate=state.fromStep!==null&&state.fromStep===from&&window.matchMedia('(prefers-reduced-motion:reduce)').matches===false;
+ const shouldAnimate=!st.legacy&&!prior.legacy&&state.fromStep!==null&&state.fromStep===from&&window.matchMedia('(prefers-reduced-motion:reduce)').matches===false;
  const fromPositions=shouldAnimate?prior.pos:st.pos;
  const serial=state.serial;
  for(let i=0;i<5;i++){
