@@ -1,5 +1,5 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
-const root=path.resolve(__dirname,'../..'),target=path.join(root,'ssit/plays.js');
+const root=path.resolve(__dirname,'..'),target=path.join(root,'ssit/plays.js');
 const environment={window:{}};
 vm.runInNewContext(fs.readFileSync(target,'utf8'),environment,{filename:target,timeout:3000});
 const plays=environment.window.PLAYBOOK_PLAYS||[];
