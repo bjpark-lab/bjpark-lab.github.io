@@ -69,6 +69,13 @@ const sites = [
               assert(stageButtons>0,'missing timeline for '+active);
               await page.locator('#timeline button').last().click();
               assert(await page.locator('#players .player').count()===5,'last stage player count for '+active);
+              if(mode==='desktop'&&item.team==='MORE'){
+                const label=String(i+1).padStart(2,'0');
+                await page.locator('.court-wrap').screenshot({
+                  path:path.join(ART,'more-play-'+label+'-final.png'),
+                  animations:'disabled'
+                });
+              }
             }
           }
           await entries.first().click();
