@@ -160,6 +160,79 @@ const sites = [
       }catch(e){record('screen '+check.play+' step '+check.step,false,e.message);}
     }
 
+
+    // Inspect every screen annotation on the actual public SVG. Positions are
+    // measured from rendered paths/labels rather than relying on the layout helper.
+    const allScreens = [];
+    let allScreensExpected=0;
+    for (const team of ['ssit','more']) {
+      await page.goto(BASE+team+'/',{waitUntil:'load',timeout:45000});
+      const targets=await page.evaluate(()=>window.PLAYBOOK_PLAYS.flatMap(play=>
+        play.steps.flatMap((st,i)=>st.screen?.length?[{id:play.id,index:i,screenCount:st.screen.length}]:[])));
+      allScreensExpected+=targets.length;
+      for (const target of targets) {
+        const url=BASE+team+'/?play='+encodeURIComponent(target.id)+'&step='+(target.index+1);
+        try {
+          const response=await page.goto(url,{waitUntil:'load',timeout:45000});
+          assert(response?.status()===200,'HTTP '+response?.status());
+          await page.waitForSelector('#players g.player');
+          const result=await page.evaluate(()=>{
+            const p=window.PLAYBOOK_PLAYS.find(p=>p.id===new URL(location.href).searchParams.get('play'));
+            const stage=p.steps[Number(new URL(location.href).searchParams.get('step')||'1')-1];
+            const lines=[...document.querySelectorAll('#screens path.screen-line')];
+            const labels=[...document.querySelectorAll('#screens g.screen-label')];
+            const issue=[];
+            if(lines.length!==(stage.screen?.length||0))issue.push('wrong number of purple bars '+lines.length+'/'+stage.screen?.length);
+            if(labels.length!==(stage.screen?.length||0))issue.push('wrong number of label boxes '+labels.length+'/'+stage.screen?.length);
+            for(const no of stage.screen||[]){
+              const target=Number(stage.screenTargets?.[no]);
+              const line=lines.find(el=>Number(el.dataset.screener)===no);
+              const label=labels.find(el=>Number(el.dataset.screener)===no);
+              const s=stage.screenAt?.[no]||stage.pos[no-1];
+              const t=stage.screenTargetAt?.[no]||stage.pos[target-1];
+              if(!line||!label||!t){issue.push('missing line / target / label '+no);continue;}
+              if(Number(line.dataset.target)!==target||Number(label.dataset.target)!==target)issue.push('wrong linked receiver '+no);
+              const total=line.getTotalLength(),a=line.getPointAtLength(0),b=line.getPointAtLength(total);
+              const vx=t[0]-s[0],vy=t[1]-s[1],lx=b.x-a.x,ly=b.y-a.y;
+              const d=Math.hypot(vx,vy),l=Math.hypot(lx,ly);
+              if(d<2||l<35||l>46||Math.abs((vx*lx+vy*ly)/(d*l))>.025)issue.push('bar not perpendicular '+no);
+              const mx=(a.x+b.x)/2,my=(a.y+b.y)/2;
+              const proj=((mx-s[0])*vx+(my-s[1])*vy)/(d*d);
+              if(proj<-.03||proj>.53)issue.push('bar not in front of screener '+no);
+              const rect=label.querySelector('rect'),txt=label.querySelector('text');
+              if(!rect||!txt){issue.push('label contents missing '+no);continue;}
+              const x=Number(rect.getAttribute('x')),y=Number(rect.getAttribute('y'));
+              const w=Number(rect.getAttribute('width')),h=Number(rect.getAttribute('height'));
+              const cx=x+w/2,cy=y+h/2,mid=[(s[0]+t[0])/2,(s[1]+t[1])/2];
+              if(Math.hypot(cx-mid[0],cy-mid[1])>70)issue.push('label far from pair midpoint '+no);
+              if(x<-1||y<-1||x+w>501||y+h>511)issue.push('label clipped '+no);
+              if(txt.textContent.trim().length===0)issue.push('empty label '+no);
+              const style=getComputedStyle(line);
+              if(style.stroke==='none'||parseFloat(style.strokeWidth)<5||style.display==='none')issue.push('invisible purple bar '+no);
+              for(let n=0;n<stage.pos.length;n++){
+                const c=stage.pos[n];
+                const dx=Math.max(0,Math.abs(c[0]-cx)-w/2);
+                const dy=Math.max(0,Math.abs(c[1]-cy)-h/2);
+                if(Math.hypot(dx,dy)<18.5)issue.push('label covers player '+(n+1)+' for screen '+no);
+              }
+            }
+            return {errors:issue,barCount:lines.length};
+          });
+          assert(result.errors.length===0,JSON.stringify({team,target,errors:result.errors}));
+          const dir=path.join(ART,'screen-audit',team);
+          fs.mkdirSync(dir,{recursive:true});
+          await page.locator('.court-wrap').screenshot({
+            path:path.join(dir,target.id+'-'+String(target.index+1).padStart(2,'0')+'.png'),animations:'disabled'
+          });
+          allScreens.push({team,id:target.id,step:target.index+1,bars:result.barCount});
+        } catch(e) {
+          record('screen layout '+team+' '+target.id+' '+(target.index+1),false,e.message);
+        }
+      }
+    }
+    record('all screen layouts',allScreens.length===allScreensExpected,
+      allScreens.length+' checked diagrams, '+allScreens.reduce((n,s)=>n+s.bars,0)+' screen bars');
+
     try {
       await page.goto(BASE+'ssit/plays/horns-up/',{waitUntil:'load',timeout:45000});
       await page.waitForURL('**/basketball/ssit/?play=horn-up**',{timeout:20000});
