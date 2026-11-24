@@ -54,7 +54,7 @@
       const source=mirror(stage.screenAt?.[no]||stage.pos[no-1],flip);
       const targetNo=Number(stage.screenTargets?.[no]);
       const hasTarget=Number.isInteger(targetNo)&&targetNo>=1&&targetNo<=5&&targetNo!==no;
-      const target=hasTarget?mirror(stage.screenTargetAt?.[no]||stage.pos[targetNo-1],flip):null;
+      const target=hasTarget?mirror(stage.screenApproach?.[no]||stage.screenTargetAt?.[no]||stage.pos[targetNo-1],flip):null;
       if(!finitePoint(source))continue;
       let unit,normal,mid,bar;
       if(target&&finitePoint(target)&&distance(source,target)>2){
@@ -62,7 +62,7 @@
         unit=[(target[0]-source[0])/len,(target[1]-source[1])/len];
         normal=[-unit[1],unit[0]];
         mid=[(source[0]+target[0])/2,(source[1]+target[1])/2];
-        const ahead=Math.min(len/2,31);
+        const ahead=Math.min(len/2,28);
         bar=[source[0]+unit[0]*ahead,source[1]+unit[1]*ahead];
       }else{
         // Only for older play data that lack a receiver; the standard data specifies one.

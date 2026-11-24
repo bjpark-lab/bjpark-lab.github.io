@@ -110,6 +110,25 @@ function draw(p){
   const [x1,y1]=mirror(st.screenLine.from),[x2,y2]=mirror(st.screenLine.to);
   screens.append(svg('path',{d:'M '+x1+' '+y1+' L '+x2+' '+y2,class:'screen-line'}));
  }
+ // Source PPT screen lines preserve the exact original endpoints (no arrowhead).
+ const sourceLabels=[];
+ for(const mark of st.sourceScreenLines||[]){
+  const a=mirror(mark.from),b=mirror(mark.to),mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2;
+  const d='M '+a.join(' ')+' L '+b.join(' ');
+  const attr={d,'data-source-screen':'1','data-screener':mark.s||'','data-target':mark.t||''};
+  screens.append(svg('path',{...attr,class:'screen-outline'}));
+  screens.append(svg('path',{...attr,class:mark.inferred?'screen-line screen-example':'screen-line',...(mark.inferred?{'stroke-dasharray':'5 4'}:{})}));
+  if(mark.label){
+   const w=Math.min(154,Math.max(65,mark.label.length*10+12)),h=21;
+   const dx=b[0]-a[0],dy=b[1]-a[1],len=Math.hypot(dx,dy)||1;
+   const candidates=[24,-24,43,-43,63,-63].map(n=>[Math.max(w/2+7,Math.min(493-w/2,mx-dy/len*n)),Math.max(15,Math.min(495,my+dx/len*n))]);
+   const score=pt=>st.pos.reduce((n,p)=>{const q=mirror(p),gx=Math.max(0,Math.abs(pt[0]-q[0])-w/2),gy=Math.max(0,Math.abs(pt[1]-q[1])-h/2);return n+Math.max(0,25-Math.hypot(gx,gy))*100;},0)+sourceLabels.reduce((n,q)=>n+(Math.abs(pt[0]-q[0])<(w+q[2])/2+4&&Math.abs(pt[1]-q[1])<25?2000:0),0)+Math.hypot(pt[0]-mx,pt[1]-my);
+   candidates.sort((a,b)=>score(a)-score(b));const [x,y]=candidates[0];sourceLabels.push([x,y,w]);
+   const g=svg('g',{class:'screen-label','data-source-screen':'1','data-screener':mark.s||'','data-target':mark.t||''});
+   g.append(svg('rect',{x:x-w/2,y:y-h/2,width:w,height:h,rx:7}));
+   g.append(svg('text',{x,y:y+.2},mark.label));screens.append(g);
+  }
+ }
  const screenMarks=window.PlaybookScreenGeometry?.layoutScreens(st,{flip:state.flip})||[];
  for(const mark of screenMarks){
   const from=mark.from,to=mark.to;

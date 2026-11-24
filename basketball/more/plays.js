@@ -1,4 +1,3 @@
-/* MORE tactical library: screens target explicit teammates. */
 window.PLAYBOOK_PLAYS=[
   {
     "id": "pin-down",
@@ -76,6 +75,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "5": "5→2 핀다운"
+        },
+        "screenApproach": {
+          "5": [
+            475,
+            100
+          ]
+        },
+        "screenVia": {
+          "5": [
+            463,
+            178
+          ]
         }
       },
       {
@@ -186,6 +197,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "4": "4→2 립"
+        },
+        "screenApproach": {
+          "4": [
+            405,
+            275
+          ]
+        },
+        "screenVia": {
+          "4": [
+            343,
+            155
+          ]
         }
       },
       {
@@ -250,8 +273,8 @@ window.PLAYBOOK_PLAYS=[
             100
           ],
           [
-            390,
-            208
+            400,
+            267
           ]
         ],
         "ball": 1,
@@ -279,8 +302,8 @@ window.PLAYBOOK_PLAYS=[
             100
           ],
           [
-            390,
-            208
+            400,
+            267
           ]
         ],
         "ball": 1,
@@ -296,6 +319,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "5": "5→2 플레어"
+        },
+        "screenApproach": {
+          "5": [
+            359,
+            268
+          ]
+        },
+        "screenVia": {
+          "5": [
+            406,
+            309
+          ]
         }
       },
       {
@@ -319,8 +354,8 @@ window.PLAYBOOK_PLAYS=[
             100
           ],
           [
-            390,
-            208
+            400,
+            267
           ]
         ],
         "ball": 2,
@@ -436,6 +471,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "2": "2→1 DHO"
+        },
+        "screenApproach": {
+          "2": [
+            365,
+            280
+          ]
+        },
+        "screenVia": {
+          "2": [
+            365,
+            280
+          ]
         }
       },
       {
@@ -575,6 +622,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "4": "4→3 해머"
+        },
+        "screenApproach": {
+          "4": [
+            110,
+            277
+          ]
+        },
+        "screenVia": {
+          "4": [
+            49,
+            171
+          ]
         }
       },
       {
@@ -686,6 +745,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "5": "5→1 온볼"
+        },
+        "screenApproach": {
+          "5": [
+            250,
+            362
+          ]
+        },
+        "screenVia": {
+          "5": [
+            306,
+            359
+          ]
         }
       },
       {
@@ -726,6 +797,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "2": "2→5 백스크린"
+        },
+        "screenApproach": {
+          "2": [
+            294,
+            320
+          ]
+        },
+        "screenVia": {
+          "2": [
+            286,
+            216
+          ]
         }
       },
       {
@@ -838,6 +921,26 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4→1 온볼",
           "5": "5→1 온볼"
+        },
+        "screenApproach": {
+          "4": [
+            212,
+            371
+          ],
+          "5": [
+            261,
+            362
+          ]
+        },
+        "screenVia": {
+          "4": [
+            261,
+            362
+          ],
+          "5": [
+            328,
+            341
+          ]
         }
       },
       {
@@ -1007,6 +1110,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "5": "5→1 온볼"
+        },
+        "screenApproach": {
+          "5": [
+            250,
+            362
+          ]
+        },
+        "screenVia": {
+          "5": [
+            318,
+            367
+          ]
         }
       },
       {
@@ -1047,6 +1162,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "5": "5→1 온볼"
+        },
+        "screenApproach": {
+          "5": [
+            358,
+            307
+          ]
+        },
+        "screenVia": {
+          "5": [
+            358,
+            307
+          ]
         }
       },
       {
@@ -1161,6 +1288,26 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4→2 스태거",
           "5": "5→2 스태거"
+        },
+        "screenApproach": {
+          "4": [
+            475,
+            100
+          ],
+          "5": [
+            455,
+            168
+          ]
+        },
+        "screenVia": {
+          "4": [
+            455,
+            168
+          ],
+          "5": [
+            425,
+            232
+          ]
         }
       },
       {
@@ -1301,6 +1448,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "5": "5→2 핀다운"
+        },
+        "screenApproach": {
+          "5": [
+            475,
+            100
+          ]
+        },
+        "screenVia": {
+          "5": [
+            458,
+            186
+          ]
         }
       },
       {
@@ -1341,6 +1500,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "1": "1→2 DHO"
+        },
+        "screenApproach": {
+          "1": [
+            413,
+            259
+          ]
+        },
+        "screenVia": {
+          "1": [
+            413,
+            259
+          ]
         }
       },
       {
@@ -1451,6 +1622,26 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4→2 엘보",
           "5": "5→2 엘보"
+        },
+        "screenApproach": {
+          "4": [
+            105,
+            275
+          ],
+          "5": [
+            183,
+            259
+          ]
+        },
+        "screenVia": {
+          "4": [
+            183,
+            259
+          ],
+          "5": [
+            316,
+            259
+          ]
         }
       },
       {
@@ -1488,6 +1679,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "5": "5→4 엘보"
+        },
+        "screenApproach": {
+          "5": [
+            183,
+            218
+          ]
+        },
+        "screenVia": {
+          "5": [
+            275,
+            218
+          ]
         }
       },
       {
@@ -1525,6 +1728,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "4": "4→2 엘보"
+        },
+        "screenApproach": {
+          "4": [
+            375,
+            280
+          ]
+        },
+        "screenVia": {
+          "4": [
+            375,
+            280
+          ]
         }
       }
     ],
@@ -1606,6 +1821,26 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4→2 엘보",
           "5": "5→2 엘보"
+        },
+        "screenApproach": {
+          "4": [
+            105,
+            274
+          ],
+          "5": [
+            184,
+            258
+          ]
+        },
+        "screenVia": {
+          "4": [
+            184,
+            258
+          ],
+          "5": [
+            316,
+            258
+          ]
         }
       },
       {
@@ -1679,6 +1914,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "3": "3→4 핀다운"
+        },
+        "screenApproach": {
+          "3": [
+            247,
+            248
+          ]
+        },
+        "screenVia": {
+          "3": [
+            247,
+            248
+          ]
         }
       }
     ],
@@ -1760,6 +2007,26 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4→2 엘보",
           "5": "5→2 엘보"
+        },
+        "screenApproach": {
+          "4": [
+            105,
+            275
+          ],
+          "5": [
+            183,
+            259
+          ]
+        },
+        "screenVia": {
+          "4": [
+            183,
+            259
+          ],
+          "5": [
+            316,
+            259
+          ]
         }
       },
       {
@@ -1826,6 +2093,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "5": "5→2 엘보"
+        },
+        "screenApproach": {
+          "5": [
+            404,
+            273
+          ]
+        },
+        "screenVia": {
+          "5": [
+            355,
+            218
+          ]
         }
       }
     ],
@@ -1904,6 +2183,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "4": "4→2 플렉스"
+        },
+        "screenApproach": {
+          "4": [
+            405,
+            275
+          ]
+        },
+        "screenVia": {
+          "4": [
+            330,
+            143
+          ]
         }
       },
       {
@@ -1941,6 +2232,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "3": "3→4 플렉스"
+        },
+        "screenApproach": {
+          "3": [
+            302,
+            174
+          ]
+        },
+        "screenVia": {
+          "3": [
+            218,
+            245
+          ]
         }
       },
       {
@@ -2078,6 +2381,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "5": "5→4 핀다운"
+        },
+        "screenApproach": {
+          "5": [
+            280,
+            175
+          ]
+        },
+        "screenVia": {
+          "5": [
+            361,
+            184
+          ]
         }
       },
       {
@@ -2177,6 +2492,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "4": "4→2 DHO"
+        },
+        "screenApproach": {
+          "4": [
+            417,
+            258
+          ]
+        },
+        "screenVia": {
+          "4": [
+            417,
+            258
+          ]
         }
       }
     ],
@@ -2302,6 +2629,26 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4→2 스태거",
           "5": "5→2 스태거"
+        },
+        "screenApproach": {
+          "4": [
+            475,
+            100
+          ],
+          "5": [
+            464,
+            172
+          ]
+        },
+        "screenVia": {
+          "4": [
+            464,
+            172
+          ],
+          "5": [
+            434,
+            239
+          ]
         }
       },
       {
@@ -2369,6 +2716,26 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4→3 스태거",
           "5": "5→3 스태거"
+        },
+        "screenApproach": {
+          "4": [
+            25,
+            100
+          ],
+          "5": [
+            50,
+            187
+          ]
+        },
+        "screenVia": {
+          "4": [
+            50,
+            187
+          ],
+          "5": [
+            85,
+            244
+          ]
         }
       },
       {
@@ -2540,11 +2907,31 @@ window.PLAYBOOK_PLAYS=[
         "screenLabels": {
           "4": "4→2 스태거",
           "5": "5→2 스태거"
+        },
+        "screenApproach": {
+          "4": [
+            475,
+            100
+          ],
+          "5": [
+            430,
+            173
+          ]
+        },
+        "screenVia": {
+          "4": [
+            430,
+            173
+          ],
+          "5": [
+            415,
+            241
+          ]
         }
       },
       {
         "label": "스페인 준비",
-        "detail": "1번은 볼을 잡고, 5번은 온볼 롤, 2번은 롤맨 백스크린으로 스페인 액션을 준비합니다.",
+        "detail": "스페인 액션 준비 구도입니다. 5번은 1번에게 올라와 온볼 스크린을 걸고, 2번은 롤맨 수비에게 백스크린을 세워야 합니다. 아직 접촉 순간은 아닙니다.",
         "pos": [
           [
             338,
@@ -2568,19 +2955,8 @@ window.PLAYBOOK_PLAYS=[
           ]
         ],
         "ball": 1,
-        "screen": [
-          2,
-          5
-        ],
-        "kind": "",
-        "screenTargets": {
-          "2": 5,
-          "5": 1
-        },
-        "screenLabels": {
-          "2": "2→5 백스크린",
-          "5": "5→1 온볼"
-        }
+        "screen": [],
+        "kind": ""
       }
     ],
     "reviewStatus": "positions-audited"
@@ -2658,6 +3034,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenLabels": {
           "4": "4→5 스크린"
+        },
+        "screenApproach": {
+          "4": [
+            205,
+            245
+          ]
+        },
+        "screenVia": {
+          "4": [
+            221,
+            209
+          ]
         }
       },
       {

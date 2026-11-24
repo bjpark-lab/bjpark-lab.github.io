@@ -1,4 +1,3 @@
-/* SSIT tactical library: 4->2/3->2 and all other screen pairings are explicit. */
 window.PLAYBOOK_PLAYS=[
   {
     "id": "basic",
@@ -12,7 +11,7 @@ window.PLAYBOOK_PLAYS=[
     "steps": [
       {
         "label": "도면 1",
-        "detail": "1번은 엔드라인 밖에서 패스를 넣는 선수입니다. PPT 도면의 이동·패스·슛 화살표를 확인하세요.",
+        "detail": "4·5번이 각각 3·2번을 위한 다운스크린을 세웁니다. 보라색 선은 원본 PPT의 접점 위치입니다.",
         "pos": [
           [
             336,
@@ -52,17 +51,6 @@ window.PLAYBOOK_PLAYS=[
           {
             "kind": "move",
             "from": [
-              152,
-              183
-            ],
-            "to": [
-              188,
-              184
-            ]
-          },
-          {
-            "kind": "move",
-            "from": [
               154,
               193
             ],
@@ -85,17 +73,6 @@ window.PLAYBOOK_PLAYS=[
           {
             "kind": "move",
             "from": [
-              309,
-              176
-            ],
-            "to": [
-              345,
-              178
-            ]
-          },
-          {
-            "kind": "move",
-            "from": [
               343,
               190
             ],
@@ -113,6 +90,36 @@ window.PLAYBOOK_PLAYS=[
         "ballPosition": [
           294,
           4
+        ],
+        "sourceScreenLines": [
+          {
+            "from": [
+              152,
+              183
+            ],
+            "to": [
+              188,
+              184
+            ],
+            "s": 4,
+            "t": 3,
+            "label": "4→3 다운스크린",
+            "sourceLine": 1
+          },
+          {
+            "from": [
+              309,
+              176
+            ],
+            "to": [
+              345,
+              178
+            ],
+            "s": 5,
+            "t": 2,
+            "label": "5→2 다운스크린",
+            "sourceLine": 4
+          }
         ]
       },
       {
@@ -319,7 +326,7 @@ window.PLAYBOOK_PLAYS=[
     "steps": [
       {
         "label": "도면 1",
-        "detail": "4번과 5번이 연달아 스크린 위치를 잡고 슈터가 사이를 통과할 길을 엽니다. 원본 PPT 선수 배치는 그대로 두었습니다.",
+        "detail": "원본 도면의 두 스크린 위치를 보라색 선으로 표시했습니다. 3번의 이동 동선과 두 스크리너가 닫는 위치를 확인하세요. 스크리너 번호는 원본에서 확정하지 못했습니다.",
         "pos": [
           [
             336,
@@ -370,17 +377,6 @@ window.PLAYBOOK_PLAYS=[
           {
             "kind": "move",
             "from": [
-              330,
-              141
-            ],
-            "to": [
-              305,
-              181
-            ]
-          },
-          {
-            "kind": "move",
-            "from": [
               327,
               104
             ],
@@ -388,23 +384,9 @@ window.PLAYBOOK_PLAYS=[
               311,
               127
             ]
-          },
-          {
-            "kind": "move",
-            "from": [
-              290,
-              111
-            ],
-            "to": [
-              321,
-              147
-            ]
           }
         ],
-        "screen": [
-          4,
-          5
-        ],
+        "screen": [],
         "snapshot": true,
         "outside": [
           1
@@ -413,22 +395,36 @@ window.PLAYBOOK_PLAYS=[
           294,
           4
         ],
-        "screenAngles": {
-          "4": 30,
-          "5": -30
-        },
-        "screenLabels": {
-          "4": "4번 스크린",
-          "5": "5번 스크린"
-        },
-        "screenTargets": {
-          "4": 3,
-          "5": 3
-        }
+        "sourceScreenLines": [
+          {
+            "from": [
+              330,
+              141
+            ],
+            "to": [
+              305,
+              181
+            ],
+            "label": "엘리베이터 스크린",
+            "sourceLine": 2
+          },
+          {
+            "from": [
+              290,
+              111
+            ],
+            "to": [
+              321,
+              147
+            ],
+            "label": "엘리베이터 스크린",
+            "sourceLine": 4
+          }
+        ]
       },
       {
         "label": "도면 2",
-        "detail": "4·5번 엘리베이터 스크린을 타고 슈터가 외곽으로 나오며 패스와 슛을 노립니다. 실제 두 스크리너 간 간격은 팀에서 맞춰야 합니다.",
+        "detail": "스크린을 통과한 슈터에게 인바운드 패스를 넣어 슛을 노립니다. 접점 표시는 앞 도면에 있습니다.",
         "pos": [
           [
             313,
@@ -477,10 +473,7 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [
-          4,
-          5
-        ],
+        "screen": [],
         "snapshot": true,
         "outside": [
           1
@@ -488,19 +481,7 @@ window.PLAYBOOK_PLAYS=[
         "ballPosition": [
           338,
           15
-        ],
-        "screenAngles": {
-          "4": 30,
-          "5": -30
-        },
-        "screenLabels": {
-          "4": "4번 스크린",
-          "5": "5번 스크린"
-        },
-        "screenTargets": {
-          "4": 3,
-          "5": 3
-        }
+        ]
       }
     ],
     "reviewStatus": "source-snapshot-audited"
@@ -517,7 +498,7 @@ window.PLAYBOOK_PLAYS=[
     "steps": [
       {
         "label": "도면 1",
-        "detail": "혼즈 양 엘보에서 4·5번이 코너 가드의 업컷을 위한 다운스크린을 준비합니다.",
+        "detail": "4번은 왼쪽, 5번은 오른쪽 코너로 내려가 가드의 업컷 동선을 열어 줍니다. 보라색 선은 원본 다운스크린 접점입니다.",
         "pos": [
           [
             250,
@@ -568,28 +549,6 @@ window.PLAYBOOK_PLAYS=[
           {
             "kind": "move",
             "from": [
-              423,
-              62
-            ],
-            "to": [
-              456,
-              95
-            ]
-          },
-          {
-            "kind": "move",
-            "from": [
-              73,
-              61
-            ],
-            "to": [
-              48,
-              101
-            ]
-          },
-          {
-            "kind": "move",
-            "from": [
               29,
               71
             ],
@@ -610,31 +569,46 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [
-          4,
-          5
-        ],
+        "screen": [],
         "snapshot": true,
         "ballPosition": [
           218,
           335
         ],
-        "screenAngles": {
-          "4": 45,
-          "5": -45
-        },
-        "screenLabels": {
-          "4": "4번 다운스크린",
-          "5": "5번 다운스크린"
-        },
-        "screenTargets": {
-          "4": 3,
-          "5": 2
-        }
+        "sourceScreenLines": [
+          {
+            "from": [
+              423,
+              62
+            ],
+            "to": [
+              456,
+              95
+            ],
+            "s": 5,
+            "t": 2,
+            "label": "5→2 다운스크린",
+            "sourceLine": 2
+          },
+          {
+            "from": [
+              73,
+              61
+            ],
+            "to": [
+              48,
+              101
+            ],
+            "s": 4,
+            "t": 3,
+            "label": "4→3 다운스크린",
+            "sourceLine": 3
+          }
+        ]
       },
       {
         "label": "도면 2",
-        "detail": "2·3번이 코너에서 윙 방향으로 올라온 후 패스·슛을 선택합니다. 스크린 접촉 지점은 앞 도면에서 준비된 구도로 이해하세요.",
+        "detail": "2·3번이 윙으로 올라오면 1번이 패스합니다. 4·5번은 코너에 남습니다.",
         "pos": [
           [
             245,
@@ -705,27 +679,12 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [
-          4,
-          5
-        ],
+        "screen": [],
         "snapshot": true,
         "ballPosition": [
           245,
           319
-        ],
-        "screenAngles": {
-          "4": 30,
-          "5": -30
-        },
-        "screenLabels": {
-          "4": "4번 스크린",
-          "5": "5번 스크린"
-        },
-        "screenTargets": {
-          "4": 3,
-          "5": 2
-        }
+        ]
       }
     ],
     "reviewStatus": "source-snapshot-audited"
@@ -905,7 +864,7 @@ window.PLAYBOOK_PLAYS=[
     "steps": [
       {
         "label": "도면 1",
-        "detail": "5번이 1번의 온볼 스크린을 준비하고, 2번은 롤맨 수비에게 백스크린을 걸 수 있는 위치를 잡습니다.",
+        "detail": "5번이 1번의 진행 방향에 온볼 스크린을 세웁니다. 보라색 선은 원본 PPT의 첫 스크린 접점입니다.",
         "pos": [
           [
             260,
@@ -934,17 +893,6 @@ window.PLAYBOOK_PLAYS=[
           {
             "kind": "move",
             "from": [
-              237,
-              333
-            ],
-            "to": [
-              266,
-              341
-            ]
-          },
-          {
-            "kind": "move",
-            "from": [
               213,
               350
             ],
@@ -970,11 +918,27 @@ window.PLAYBOOK_PLAYS=[
         "ballPosition": [
           233,
           358
+        ],
+        "sourceScreenLines": [
+          {
+            "from": [
+              237,
+              333
+            ],
+            "to": [
+              266,
+              341
+            ],
+            "s": 5,
+            "t": 1,
+            "label": "5→1 온볼",
+            "sourceLine": 0
+          }
         ]
       },
       {
         "label": "도면 2",
-        "detail": "5번의 첫 온볼 스크린을 이용해 1번이 공격 방향을 바꾸고, 5번은 롤을 시작합니다.",
+        "detail": "5번이 롤할 때 2번이 롤맨 수비에게 백스크린을 세웁니다. 보라색 선은 원본의 두 번째 접점입니다.",
         "pos": [
           [
             171,
@@ -1025,17 +989,6 @@ window.PLAYBOOK_PLAYS=[
           {
             "kind": "move",
             "from": [
-              238,
-              244
-            ],
-            "to": [
-              268,
-              252
-            ]
-          },
-          {
-            "kind": "move",
-            "from": [
               316,
               184
             ],
@@ -1045,27 +998,32 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [
-          5
-        ],
+        "screen": [],
         "snapshot": true,
         "ballPosition": [
           145,
           288
         ],
-        "screenAngles": {
-          "5": 75
-        },
-        "screenLabels": {
-          "5": "5→1 온볼"
-        },
-        "screenTargets": {
-          "5": 1
-        }
+        "sourceScreenLines": [
+          {
+            "from": [
+              238,
+              244
+            ],
+            "to": [
+              268,
+              252
+            ],
+            "s": 2,
+            "t": 5,
+            "label": "2→5 백스크린",
+            "sourceLine": 2
+          }
+        ]
       },
       {
         "label": "도면 3",
-        "detail": "5번이 롤하면서 2번이 5번 수비에게 백스크린을 걸고 외곽으로 팝합니다. 롤맨 골밑과 팝 3점을 읽습니다.",
+        "detail": "백스크린을 이용한 5번의 골밑 롤과 2번의 외곽 팝 중 열린 찬스를 봅니다.",
         "pos": [
           [
             154,
@@ -1147,23 +1105,12 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [
-          2
-        ],
+        "screen": [],
         "snapshot": true,
         "ballPosition": [
           170,
           310
-        ],
-        "screenAngles": {
-          "2": 90
-        },
-        "screenLabels": {
-          "2": "2→5 백스크린"
-        },
-        "screenTargets": {
-          "2": 5
-        }
+        ]
       }
     ],
     "reviewStatus": "source-snapshot-audited"
@@ -1181,7 +1128,7 @@ window.PLAYBOOK_PLAYS=[
     "steps": [
       {
         "label": "도면 1",
-        "detail": "4번이 2번에게 핀다운 스크린을 걸어 업컷 길을 만듭니다. 이 도면은 선수별 이동 방향을 함께 보여주는 원본 스냅샷입니다.",
+        "detail": "4번이 왼쪽 코너 쪽으로 내려가 2번 업컷 동선에 핀다운을 세웁니다. 보라색 선은 원본 PPT의 실제 표시 위치입니다.",
         "pos": [
           [
             250,
@@ -1216,17 +1163,6 @@ window.PLAYBOOK_PLAYS=[
             "to": [
               87,
               158
-            ]
-          },
-          {
-            "kind": "move",
-            "from": [
-              98,
-              139
-            ],
-            "to": [
-              74,
-              179
             ]
           },
           {
@@ -1296,27 +1232,32 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [
-          4
-        ],
+        "screen": [],
         "snapshot": true,
         "ballPosition": [
           271,
           326
         ],
-        "screenAngles": {
-          "4": 50
-        },
-        "screenLabels": {
-          "4": "4→2 핀다운"
-        },
-        "screenTargets": {
-          "4": 2
-        }
+        "sourceScreenLines": [
+          {
+            "from": [
+              98,
+              139
+            ],
+            "to": [
+              74,
+              179
+            ],
+            "s": 4,
+            "t": 2,
+            "label": "4→2 핀다운",
+            "sourceLine": 1
+          }
+        ]
       },
       {
         "label": "도면 2",
-        "detail": "2번이 4번 스크린을 타고 올라오면, 볼을 가진 3번이 2번에게 핸드오프를 주면서 몸으로 2번 수비를 막습니다. 3번의 DHO 스크린을 표시했습니다.",
+        "detail": "2번이 업컷한 뒤 3번에게 핸드오프를 받습니다. 원본의 2·3번과 공 좌표를 보존하고, 두 선수가 만나야 할 DHO 접점의 예시를 점선으로 표시합니다.",
         "pos": [
           [
             467,
@@ -1354,23 +1295,28 @@ window.PLAYBOOK_PLAYS=[
             ]
           }
         ],
-        "screen": [
-          3
-        ],
+        "screen": [],
         "snapshot": true,
         "ballPosition": [
           161,
           266
         ],
-        "screenAngles": {
-          "3": 75
-        },
-        "screenLabels": {
-          "3": "3→2 DHO"
-        },
-        "screenTargets": {
-          "3": 2
-        }
+        "sourceScreenLines": [
+          {
+            "from": [
+              150,
+              245
+            ],
+            "to": [
+              171,
+              285
+            ],
+            "s": 3,
+            "t": 2,
+            "label": "3→2 DHO (예시)",
+            "inferred": true
+          }
+        ]
       },
       {
         "label": "도면 3",
@@ -1457,7 +1403,7 @@ window.PLAYBOOK_PLAYS=[
     "steps": [
       {
         "label": "도면 1",
-        "detail": "1번은 왼쪽 사이드라인 밖에 있습니다. 인바운드 패스와 후속 컷 동선을 확인하세요.",
+        "detail": "4번이 2번의 컷을 위한 스크린을 세우는 원본 도면입니다. 보라색 선은 원본의 접점입니다.",
         "pos": [
           [
             -13,
@@ -1497,17 +1443,6 @@ window.PLAYBOOK_PLAYS=[
           {
             "kind": "move",
             "from": [
-              396,
-              78
-            ],
-            "to": [
-              429,
-              110
-            ]
-          },
-          {
-            "kind": "move",
-            "from": [
               463,
               80
             ],
@@ -1536,11 +1471,27 @@ window.PLAYBOOK_PLAYS=[
         "ballPosition": [
           4,
           259
+        ],
+        "sourceScreenLines": [
+          {
+            "from": [
+              396,
+              78
+            ],
+            "to": [
+              429,
+              110
+            ],
+            "s": 4,
+            "t": 2,
+            "label": "4→2 스크린",
+            "sourceLine": 1
+          }
         ]
       },
       {
         "label": "도면 2",
-        "detail": "1번은 왼쪽 사이드라인 밖에 있습니다. 인바운드 패스와 후속 컷 동선을 확인하세요.",
+        "detail": "원본의 후속 스크린 접점을 보라색으로 복원했습니다. 이 도면의 정확한 스크리너 번호는 팀 약속 확인이 필요합니다.",
         "pos": [
           [
             -13,
@@ -1602,17 +1553,6 @@ window.PLAYBOOK_PLAYS=[
           {
             "kind": "move",
             "from": [
-              185,
-              173
-            ],
-            "to": [
-              218,
-              205
-            ]
-          },
-          {
-            "kind": "move",
-            "from": [
               230,
               160
             ],
@@ -1630,6 +1570,20 @@ window.PLAYBOOK_PLAYS=[
         "ballPosition": [
           14,
           239
+        ],
+        "sourceScreenLines": [
+          {
+            "from": [
+              185,
+              173
+            ],
+            "to": [
+              218,
+              205
+            ],
+            "label": "후속 스크린",
+            "sourceLine": 3
+          }
         ]
       }
     ],
@@ -2262,6 +2216,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenTargets": {
           "1": 4
+        },
+        "screenApproach": {
+          "1": [
+            167,
+            210
+          ]
+        },
+        "screenVia": {
+          "1": [
+            191,
+            140
+          ]
         }
       },
       {
@@ -2455,6 +2421,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenTargets": {
           "4": 1
+        },
+        "screenApproach": {
+          "4": [
+            250,
+            327
+          ]
+        },
+        "screenVia": {
+          "4": [
+            158,
+            311
+          ]
         }
       },
       {
@@ -2496,6 +2474,18 @@ window.PLAYBOOK_PLAYS=[
           "4": [
             250,
             327
+          ]
+        },
+        "screenApproach": {
+          "4": [
+            250,
+            327
+          ]
+        },
+        "screenVia": {
+          "4": [
+            158,
+            311
           ]
         }
       },
@@ -2687,6 +2677,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenTargets": {
           "4": 2
+        },
+        "screenApproach": {
+          "4": [
+            414,
+            262
+          ]
+        },
+        "screenVia": {
+          "4": [
+            365,
+            306
+          ]
         }
       },
       {
@@ -2728,6 +2730,18 @@ window.PLAYBOOK_PLAYS=[
           "4": [
             414,
             262
+          ]
+        },
+        "screenApproach": {
+          "4": [
+            414,
+            262
+          ]
+        },
+        "screenVia": {
+          "4": [
+            365,
+            306
           ]
         }
       },
@@ -2890,6 +2904,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenTargets": {
           "2": 1
+        },
+        "screenApproach": {
+          "2": [
+            250,
+            330
+          ]
+        },
+        "screenVia": {
+          "2": [
+            299,
+            353
+          ]
         }
       },
       {
@@ -2937,6 +2963,18 @@ window.PLAYBOOK_PLAYS=[
           "2": [
             250,
             330
+          ]
+        },
+        "screenApproach": {
+          "2": [
+            250,
+            330
+          ]
+        },
+        "screenVia": {
+          "2": [
+            299,
+            353
           ]
         }
       },
@@ -3187,6 +3225,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenTargets": {
           "5": 2
+        },
+        "screenApproach": {
+          "5": [
+            477,
+            34
+          ]
+        },
+        "screenVia": {
+          "5": [
+            481,
+            93
+          ]
         }
       },
       {
@@ -3234,6 +3284,18 @@ window.PLAYBOOK_PLAYS=[
           "5": [
             477,
             34
+          ]
+        },
+        "screenApproach": {
+          "5": [
+            477,
+            34
+          ]
+        },
+        "screenVia": {
+          "5": [
+            481,
+            93
           ]
         }
       },
@@ -3372,6 +3434,18 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenTargets": {
           "4": 2
+        },
+        "screenApproach": {
+          "4": [
+            475,
+            95
+          ]
+        },
+        "screenVia": {
+          "4": [
+            464,
+            191
+          ]
         }
       },
       {
@@ -3408,6 +3482,24 @@ window.PLAYBOOK_PLAYS=[
         },
         "screenTargets": {
           "4": 2
+        },
+        "screenApproach": {
+          "4": [
+            475,
+            95
+          ]
+        },
+        "screenVia": {
+          "4": [
+            464,
+            191
+          ]
+        },
+        "screenTargetAt": {
+          "4": [
+            475,
+            95
+          ]
         }
       },
       {

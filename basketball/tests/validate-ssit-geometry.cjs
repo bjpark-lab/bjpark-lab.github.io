@@ -62,34 +62,20 @@ assert(source.includes('st.ballPosition'),'Independent original PPT ball marks l
 
 // Screens that are explicitly specified by the SSIT play definitions must be visible.
 // Generic movement diagrams without verified screener roles must NOT gain invented screens.
-const requiredScreens=[
- ['horn-zoom',0,4,'4→2 핀다운'],
- ['horn-zoom',1,3,'3→2 DHO'],
- ['elevator',0,4,'4번 스크린'],
- ['elevator',0,5,'5번 스크린'],
- ['elevator',1,4,'4번 스크린'],
- ['elevator',1,5,'5번 스크린'],
- ['horn-down',0,4,'4번 다운스크린'],
- ['horn-down',0,5,'5번 다운스크린'],
- ['horn-down',1,4,'4번 스크린'],
- ['horn-down',1,5,'5번 스크린'],
- ['spain-pnr',1,5,'5→1 온볼'],
- ['spain-pnr',2,2,'2→5 백스크린']
-];
-for(const [id,index,no,text] of requiredScreens){
- const step=plays.find(p=>p.id===id)?.steps[index];
- assert(!!step,'Missing documented screen stage '+id+'/'+index);
- if(step){
-   assert(step.screen?.includes(no),'Missing screener '+id+'/'+index+'/'+no);
-   assert(step.screenLabels?.[no]===text,'Missing screen label '+id+'/'+index+'/'+no);
-   assert(Number.isFinite(step.screenAngles?.[no]),'Missing screen angle '+id+'/'+index+'/'+no);
- }
+const requiredSource={
+ basic:[2,0,0],elevator:[2,0],"horn-down":[2,0],"spain-pnr":[1,1,0],"horn-zoom":[1,1,0],"side-line":[1,1]
+};
+let restored=0;
+for(const [id,counts] of Object.entries(requiredSource)){
+ const p=plays.find(p=>p.id===id);
+ counts.forEach((n,i)=>{
+  const lines=p.steps[i].sourceScreenLines||[];
+  assert(lines.length===n,'Source screen count '+id+'/'+i);
+  for(const l of lines){assert(l.from?.length===2&&l.to?.length===2,'Missing source endpoints '+id+'/'+i);if(!l.inferred)restored++;}
+ });
 }
-const unconfirmed=['basic','horn-swing','side-line','fiveout-one','fiveout-two'];
-for(const id of unconfirmed){
- const p=plays.find(x=>x.id===id);
- assert(!!p&&p.steps.every(s=>(s.screen||[]).length===0),'Unconfirmed screen was invented for '+id);
-}
+assert(restored===11,'Expected 11 recovered PPT screen bars');
+assert(plays.find(p=>p.id==='horn-zoom').steps[1].sourceScreenLines[0].inferred===true,'DHO inferred contact must be distinguished');
 const screenGeometry=fs.readFileSync(path.join(root,'shared/screen-geometry.js'),'utf8');
 assert(source.includes('window.PlaybookScreenGeometry?.layoutScreens'),'Visual renderer must use the shared screen layout');
 assert(screenGeometry.includes('stage.screenLabels?.[no]'),'Shared geometry must render screen labels');
