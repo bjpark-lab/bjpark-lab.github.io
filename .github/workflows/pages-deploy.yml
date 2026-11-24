@@ -59,6 +59,9 @@ jobs:
       - name: Validate SSIT tactical geometry
         run: node basketball/tests/validate-ssit-geometry.cjs
 
+      - name: Validate both teams screen layout
+        run: node basketball/tests/validate-screen-layout.cjs
+
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:

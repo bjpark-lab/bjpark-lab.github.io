@@ -110,26 +110,28 @@ function draw(p){
   const [x1,y1]=mirror(st.screenLine.from),[x2,y2]=mirror(st.screenLine.to);
   screens.append(svg('path',{d:'M '+x1+' '+y1+' L '+x2+' '+y2,class:'screen-line'}));
  }
- for(const n of st.screen||[]){
-  const [x,y]=mirror(st.screenAt?.[n]??st.pos[n-1]);
-  // Show the screener's facing angle with a short perpendicular bar beside the jersey.
-  // The angle is mirrored alongside the offensive alignment.
-  const degrees=Number(st.screenAngles?.[n]??0)*(state.flip?-1:1);
-  const radians=degrees*Math.PI/180;
-  const cx=x+Math.sin(radians)*25,cy=y+Math.cos(radians)*25;
-  const dx=Math.cos(radians)*21,dy=Math.sin(radians)*21;
-  const d='M '+(cx-dx).toFixed(2)+' '+(cy-dy).toFixed(2)+' L '+(cx+dx).toFixed(2)+' '+(cy+dy).toFixed(2);
-  screens.append(svg('path',{d,class:'screen-line'}));
-  const label=st.screenLabels?.[n];
-  if(label){
-   const textX=Math.min(375,Math.max(8,cx+17));
-   const textY=Math.min(480,Math.max(20,cy-21));
-   const width=Math.min(118,Math.max(70,label.length*9+16));
-   const g=svg('g',{class:'screen-label'});
-   g.append(svg('rect',{x:textX,y:textY-14,width,height:20,rx:5,fill:'#fffaf1','fill-opacity':0.96,stroke:'#a68bc3','stroke-width':1}));
-   g.append(svg('text',{x:textX+6,y:textY,'font-size':11,'font-weight':800,fill:'#603c86'},label));
-   screens.append(g);
+ const screenMarks=window.PlaybookScreenGeometry?.layoutScreens(st,{flip:state.flip})||[];
+ for(const mark of screenMarks){
+  const from=mark.from,to=mark.to;
+  const d='M '+from[0].toFixed(2)+' '+from[1].toFixed(2)+' L '+to[0].toFixed(2)+' '+to[1].toFixed(2);
+  const attrs={d,'data-screener':mark.screener,'data-target':mark.target||''};
+  screens.append(svg('path',{...attrs,class:'screen-outline'}));
+  screens.append(svg('path',{...attrs,class:'screen-line'}));
+  const label=mark.label;
+  if(!label.text)continue;
+  const g=svg('g',{class:'screen-label','data-screener':mark.screener,'data-target':mark.target||'',
+    'data-mid-x':mark.midpoint[0].toFixed(2),'data-mid-y':mark.midpoint[1].toFixed(2)});
+  if(mark.linkDistance>27){
+   const ux=(label.x-mark.midpoint[0])/mark.linkDistance,uy=(label.y-mark.midpoint[1])/mark.linkDistance;
+   const gap=13;
+   const x2=label.x-ux*gap,y2=label.y-uy*gap;
+   g.append(svg('path',{d:'M '+mark.midpoint[0].toFixed(2)+' '+mark.midpoint[1].toFixed(2)+
+      ' L '+x2.toFixed(2)+' '+y2.toFixed(2),class:'screen-label-leader'}));
   }
+  g.append(svg('rect',{x:(label.x-label.width/2).toFixed(2),y:(label.y-label.height/2).toFixed(2),
+    width:label.width.toFixed(2),height:label.height,rx:8}));
+  g.append(svg('text',{x:label.x.toFixed(2),y:(label.y+.2).toFixed(2)},label.text));
+  screens.append(g);
  }
  // Animated player transforms use one scale, one timing and one jersey design in both teams.
  const shouldAnimate=!st.legacy&&!prior.legacy&&state.fromStep!==null&&state.fromStep===from&&window.matchMedia('(prefers-reduced-motion:reduce)').matches===false;
@@ -235,7 +237,7 @@ function saveSvg(){
  const p=selectPlay();if(p.referenceOnly)return;
  const copy=$('court').cloneNode(true),st=p.steps[state.step];
  copy.setAttribute('xmlns',NS);copy.setAttribute('width','1000');copy.setAttribute('height','1018');
- const style=svg('style',{},'.movement{fill:none;stroke:#286baf;stroke-width:3.7;marker-end:url(#cutHead)} .passing{fill:none;stroke:#d4554c;stroke-width:3.4;stroke-dasharray:8 6;marker-end:url(#passHead)} .shooting{fill:none;stroke:#c89429;stroke-width:3.6;stroke-dasharray:3 6;marker-end:url(#shotHead)} .screen-line{fill:none;stroke:#7045a2;stroke-width:6;stroke-linecap:round} .player .base{fill:#285f94;stroke:#fff7e6;stroke-width:3.3}.player text{font-size:20px;font-weight:850;fill:white;text-anchor:middle;dominant-baseline:middle}.ball-circle{fill:#ee9d33;stroke:#75471a;stroke-width:2}');
+ const style=svg('style',{},'.movement{fill:none;stroke:#286baf;stroke-width:3.7;marker-end:url(#cutHead)} .passing{fill:none;stroke:#d4554c;stroke-width:3.4;stroke-dasharray:8 6;marker-end:url(#passHead)} .shooting{fill:none;stroke:#c89429;stroke-width:3.6;stroke-dasharray:3 6;marker-end:url(#shotHead)} .screen-outline{fill:none;stroke:#fff5e3;stroke-width:12;stroke-linecap:round} .screen-line{fill:none;stroke:#7439af;stroke-width:7;stroke-linecap:round} .screen-label-leader{fill:none;stroke:#885ba7;stroke-width:1.4;stroke-dasharray:2 3} .screen-label rect{fill:#63408d;stroke:#fff9ec;stroke-width:1.5} .screen-label text{font-size:11px;font-weight:800;fill:#fff;dominant-baseline:middle;text-anchor:middle} .player .base{fill:#285f94;stroke:#fff7e6;stroke-width:3.3}.player text{font-size:20px;font-weight:850;fill:white;text-anchor:middle;dominant-baseline:middle}.ball-circle{fill:#ee9d33;stroke:#75471a;stroke-width:2}');
  copy.insertBefore(style,copy.firstChild);
  copy.querySelectorAll('g.player').forEach((g,i)=>{const [x,y]=mirror(st.pos[i]);g.setAttribute('transform','translate('+x+' '+y+')');});
  const blob=new Blob([new XMLSerializer().serializeToString(copy)],{type:'image/svg+xml;charset=utf-8'});
