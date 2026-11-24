@@ -130,7 +130,7 @@ function draw(p){
   const g=svg('g',{class:'player',transform:'translate('+sx+' '+sy+')'});
   g.append(svg('circle',{class:'base',cx:0,cy:0,r:20.5}));
   g.append(svg('text',{x:0,y:1},String(i+1)));
-  if(st.ball===i+1){
+  if(!st.ballPosition&&st.ball===i+1){
    g.append(svg('circle',{class:'ball-circle',cx:17,cy:-17,r:8}));
    g.append(svg('path',{d:'M 11 -17 H 23 M 17 -23 V -11',stroke:'#8d4c19','stroke-width':1.15}));
   }
@@ -138,6 +138,13 @@ function draw(p){
   if(shouldAnimate&&(Math.abs(sx-x)+Math.abs(sy-y)>1)){
    state.raf=requestAnimationFrame(()=>{if(serial!==state.serial)return;requestAnimationFrame(()=>{if(serial===state.serial)g.setAttribute('transform','translate('+x+' '+y+')');});});
   }
+ }
+ if(st.ballPosition){
+  const [bx,by]=mirror(st.ballPosition);
+  const ball=svg('g',{class:'ball-marker',transform:'translate('+bx+' '+by+')'});
+  ball.append(svg('circle',{cx:0,cy:0,r:9,fill:'#ee9d33',stroke:'#75471a','stroke-width':2}));
+  ball.append(svg('path',{d:'M -7 0 H 7 M 0 -7 V 7 M -5 -5 Q 0 0 -5 5 M 5 -5 Q 0 0 5 5',fill:'none',stroke:'#75471a','stroke-width':1.15}));
+  players.append(ball);
  }
  state.fromStep=null;
 }

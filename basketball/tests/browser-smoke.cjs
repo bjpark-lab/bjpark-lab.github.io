@@ -61,6 +61,7 @@ const sites = [
             await entries.nth(i).click();
             const active=await page.locator('#playTitle').textContent();
             assert(active && active.trim().length>0,'empty title for play '+i);
+            if(mode==='desktop'&&item.team==='SSIT')await page.locator('.court-wrap').screenshot({path:path.join(ART,'ssit-play-'+String(i+1).padStart(2,'0')+'-start.png'),animations:'disabled'});
             const refOnly=await page.locator('#referenceOverlay').isVisible();
             const playerCount=await page.locator('#players .player').count();
             assert(refOnly?playerCount===0:playerCount===5,'player count for '+active+': '+playerCount);
@@ -69,6 +70,9 @@ const sites = [
               assert(stageButtons>0,'missing timeline for '+active);
               await page.locator('#timeline button').last().click();
               assert(await page.locator('#players .player').count()===5,'last stage player count for '+active);
+              if(mode==='desktop'&&item.team==='SSIT'){
+                await page.locator('.court-wrap').screenshot({path:path.join(ART,'ssit-play-'+String(i+1).padStart(2,'0')+'-last.png'),animations:'disabled'});
+              }
               if(mode==='desktop'&&item.team==='MORE'){
                 const label=String(i+1).padStart(2,'0');
                 await page.locator('.court-wrap').screenshot({

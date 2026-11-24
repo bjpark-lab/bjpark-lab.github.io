@@ -1,4 +1,4 @@
-/* SSIT tactics. Old PPT frames are independent source snapshots; advanced plays are step-by-step concepts. Basket at upper y=52.5. */
+/* SSIT tactical library: original PPT frames are static snapshots with independent source ball marks. Rich plays are animated concepts. */
 window.PLAYBOOK_PLAYS=[
   {
     "id": "basic",
@@ -109,6 +109,10 @@ window.PLAYBOOK_PLAYS=[
         "snapshot": true,
         "outside": [
           1
+        ],
+        "ballPosition": [
+          294,
+          4
         ]
       },
       {
@@ -210,6 +214,10 @@ window.PLAYBOOK_PLAYS=[
         "snapshot": true,
         "outside": [
           1
+        ],
+        "ballPosition": [
+          269,
+          0
         ]
       },
       {
@@ -289,6 +297,10 @@ window.PLAYBOOK_PLAYS=[
         "snapshot": true,
         "outside": [
           1
+        ],
+        "ballPosition": [
+          265,
+          -2
         ]
       }
     ],
@@ -393,6 +405,10 @@ window.PLAYBOOK_PLAYS=[
         "snapshot": true,
         "outside": [
           1
+        ],
+        "ballPosition": [
+          294,
+          4
         ]
       },
       {
@@ -450,6 +466,10 @@ window.PLAYBOOK_PLAYS=[
         "snapshot": true,
         "outside": [
           1
+        ],
+        "ballPosition": [
+          338,
+          15
         ]
       }
     ],
@@ -561,7 +581,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          218,
+          335
+        ]
       },
       {
         "label": "도면 2",
@@ -637,7 +661,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          245,
+          319
+        ]
       }
     ],
     "reviewStatus": "source-snapshot-audited"
@@ -715,7 +743,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          218,
+          335
+        ]
       },
       {
         "label": "도면 2",
@@ -791,7 +823,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          66,
+          214
+        ]
       }
     ],
     "reviewStatus": "source-snapshot-audited"
@@ -870,7 +906,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          233,
+          358
+        ]
       },
       {
         "label": "도면 2",
@@ -946,7 +986,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          145,
+          288
+        ]
       },
       {
         "label": "도면 3",
@@ -1033,7 +1077,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          170,
+          310
+        ]
       }
     ],
     "reviewStatus": "source-snapshot-audited"
@@ -1167,7 +1215,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          271,
+          326
+        ]
       },
       {
         "label": "도면 2",
@@ -1210,7 +1262,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          161,
+          266
+        ]
       },
       {
         "label": "도면 3",
@@ -1275,7 +1331,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          207,
+          308
+        ]
       }
     ],
     "reviewStatus": "source-snapshot-audited"
@@ -1368,6 +1428,10 @@ window.PLAYBOOK_PLAYS=[
         "snapshot": true,
         "outside": [
           1
+        ],
+        "ballPosition": [
+          4,
+          259
         ]
       },
       {
@@ -1458,6 +1522,10 @@ window.PLAYBOOK_PLAYS=[
         "snapshot": true,
         "outside": [
           1
+        ],
+        "ballPosition": [
+          14,
+          239
         ]
       }
     ],
@@ -1558,7 +1626,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          218,
+          335
+        ]
       },
       {
         "label": "도면 2",
@@ -1635,7 +1707,11 @@ window.PLAYBOOK_PLAYS=[
         ],
         "option": true,
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          63,
+          77
+        ]
       },
       {
         "label": "도면 3",
@@ -1679,7 +1755,11 @@ window.PLAYBOOK_PLAYS=[
         ],
         "option": true,
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          66,
+          86
+        ]
       }
     ],
     "reviewStatus": "source-snapshot-audited"
@@ -1779,7 +1859,11 @@ window.PLAYBOOK_PLAYS=[
           }
         ],
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          218,
+          335
+        ]
       },
       {
         "label": "도면 2",
@@ -1889,7 +1973,11 @@ window.PLAYBOOK_PLAYS=[
         ],
         "option": true,
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          294,
+          82
+        ]
       },
       {
         "label": "도면 3",
@@ -1933,7 +2021,11 @@ window.PLAYBOOK_PLAYS=[
         ],
         "option": true,
         "screen": [],
-        "snapshot": true
+        "snapshot": true,
+        "ballPosition": [
+          440,
+          72
+        ]
       }
     ],
     "reviewStatus": "source-snapshot-audited"
