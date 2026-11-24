@@ -2228,7 +2228,8 @@ window.PLAYBOOK_PLAYS=[
             191,
             140
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "다이브·팝",
@@ -2433,7 +2434,8 @@ window.PLAYBOOK_PLAYS=[
             158,
             311
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "1번 플레어 컷",
@@ -2487,7 +2489,8 @@ window.PLAYBOOK_PLAYS=[
             158,
             311
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "리턴 패스",
@@ -2689,7 +2692,8 @@ window.PLAYBOOK_PLAYS=[
             365,
             306
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "2번 탑 컷",
@@ -2743,7 +2747,8 @@ window.PLAYBOOK_PLAYS=[
             365,
             306
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "리턴 패스",
@@ -2916,7 +2921,8 @@ window.PLAYBOOK_PLAYS=[
             299,
             353
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "플레어와 슬립",
@@ -2976,7 +2982,8 @@ window.PLAYBOOK_PLAYS=[
             299,
             353
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "옵션 A: 골밑",
@@ -3237,7 +3244,8 @@ window.PLAYBOOK_PLAYS=[
             481,
             93
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "스크린과 다이브",
@@ -3297,7 +3305,8 @@ window.PLAYBOOK_PLAYS=[
             481,
             93
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "옵션 A: 2번",
@@ -3446,7 +3455,8 @@ window.PLAYBOOK_PLAYS=[
             464,
             191
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "2번 업컷",
@@ -3500,7 +3510,8 @@ window.PLAYBOOK_PLAYS=[
             475,
             95
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "패스·외곽 찬스",

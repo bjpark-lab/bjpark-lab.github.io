@@ -100,7 +100,19 @@ function draw(p){
   for(const arrow of st.arrows){const a=drawArrow(arrow.from,arrow.to,arrow.kind);if(a)lines.append(a);}
  }else if(showImplicit){
   // This stage is a snapshot after the action, so render the action taken from the previous state.
-  st.pos.forEach((pt,i)=>{const before=prior.pos[i];if(Math.hypot(before[0]-pt[0],before[1]-pt[1])>21){const a=drawArrow(before,pt,'move');if(a)lines.append(a);}});
+  st.pos.forEach((pt,i)=>{
+   const before=prior.pos[i];
+   if(Math.hypot(before[0]-pt[0],before[1]-pt[1])<=21)return;
+   const via=(st.screen||[]).filter(n=>Number(st.screenTargets?.[n])===i+1).map(n=>st.screenVia?.[n]).filter(v=>v&&Math.hypot(v[0]-before[0],v[1]-before[1])>16&&Math.hypot(v[0]-pt[0],v[1]-pt[1])>16);
+   if(!via.length){const a=drawArrow(before,pt,'move');if(a)lines.append(a);return;}
+   const pts=[before,...via,pt].map(mirror);
+   const first=pts[0],second=pts[1],last=pts[pts.length-1],penultimate=pts[pts.length-2];
+   const d1=Math.hypot(second[0]-first[0],second[1]-first[1])||1,d2=Math.hypot(last[0]-penultimate[0],last[1]-penultimate[1])||1;
+   const begin=[first[0]+(second[0]-first[0])*Math.min(.35,16/d1),first[1]+(second[1]-first[1])*Math.min(.35,16/d1)];
+   const end=[last[0]-(last[0]-penultimate[0])*Math.min(.35,21/d2),last[1]-(last[1]-penultimate[1])*Math.min(.35,21/d2)];
+   const d='M '+begin.join(' ')+' '+pts.slice(1,-1).map(p=>'L '+p.join(' ')).join(' ')+' L '+end.join(' ');
+   lines.append(svg('path',{d,class:'movement','data-screen-cut':i+1}));
+  });
   if(prior.ball!==st.ball){const a=drawArrow(prior.pos[prior.ball-1],st.pos[st.ball-1],'pass');if(a)lines.append(a);}
  }
  if(st.shot){

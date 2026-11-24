@@ -87,7 +87,8 @@ window.PLAYBOOK_PLAYS=[
             463,
             178
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "외곽 찬스",
@@ -209,7 +210,8 @@ window.PLAYBOOK_PLAYS=[
             343,
             155
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "골밑 패스",
@@ -331,7 +333,8 @@ window.PLAYBOOK_PLAYS=[
             406,
             309
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "패스·슛",
@@ -483,7 +486,8 @@ window.PLAYBOOK_PLAYS=[
             365,
             280
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "2대2 공격",
@@ -634,7 +638,8 @@ window.PLAYBOOK_PLAYS=[
             49,
             171
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "코너 킥아웃",
@@ -757,7 +762,8 @@ window.PLAYBOOK_PLAYS=[
             306,
             359
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "백스크린",
@@ -809,7 +815,8 @@ window.PLAYBOOK_PLAYS=[
             286,
             216
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "롤·팝",
@@ -941,7 +948,8 @@ window.PLAYBOOK_PLAYS=[
             328,
             341
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "팝·롤",
@@ -1122,7 +1130,8 @@ window.PLAYBOOK_PLAYS=[
             318,
             367
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "리스크린",
@@ -1174,7 +1183,8 @@ window.PLAYBOOK_PLAYS=[
             358,
             307
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "반대 방향 공격",
@@ -1308,7 +1318,8 @@ window.PLAYBOOK_PLAYS=[
             425,
             232
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "슈터 찬스",
@@ -1460,7 +1471,8 @@ window.PLAYBOOK_PLAYS=[
             458,
             186
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "DHO",
@@ -1512,7 +1524,8 @@ window.PLAYBOOK_PLAYS=[
             413,
             259
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "공격 선택",
@@ -1642,7 +1655,8 @@ window.PLAYBOOK_PLAYS=[
             316,
             259
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "2번 패스",
@@ -1691,7 +1705,8 @@ window.PLAYBOOK_PLAYS=[
             275,
             218
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "빅맨 2대2",
@@ -1740,7 +1755,8 @@ window.PLAYBOOK_PLAYS=[
             375,
             280
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       }
     ],
     "reviewStatus": "positions-audited"
@@ -1841,7 +1857,8 @@ window.PLAYBOOK_PLAYS=[
             316,
             258
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "옵션 A: 백도어",
@@ -1926,7 +1943,8 @@ window.PLAYBOOK_PLAYS=[
             247,
             248
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       }
     ],
     "reviewStatus": "positions-audited"
@@ -2027,7 +2045,8 @@ window.PLAYBOOK_PLAYS=[
             316,
             259
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "4번 엔트리",
@@ -2105,7 +2124,8 @@ window.PLAYBOOK_PLAYS=[
             355,
             218
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       }
     ],
     "reviewStatus": "positions-audited"
@@ -2195,7 +2215,8 @@ window.PLAYBOOK_PLAYS=[
             330,
             143
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "스크리너 스크린",
@@ -2244,7 +2265,8 @@ window.PLAYBOOK_PLAYS=[
             218,
             245
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "연속 공격",
@@ -2393,7 +2415,8 @@ window.PLAYBOOK_PLAYS=[
             361,
             184
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "2차: 인바운더 백도어",
@@ -2504,7 +2527,8 @@ window.PLAYBOOK_PLAYS=[
             417,
             258
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       }
     ],
     "reviewStatus": "positions-audited"
@@ -2649,7 +2673,8 @@ window.PLAYBOOK_PLAYS=[
             434,
             239
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "스크린 이동",
@@ -2736,7 +2761,8 @@ window.PLAYBOOK_PLAYS=[
             85,
             244
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "옵션 A: 3점",
@@ -2927,7 +2953,8 @@ window.PLAYBOOK_PLAYS=[
             415,
             241
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "스페인 준비",
@@ -3046,7 +3073,8 @@ window.PLAYBOOK_PLAYS=[
             221,
             209
           ]
-        }
+        },
+        "screenContactStatus": "reconstructed"
       },
       {
         "label": "하이로우",

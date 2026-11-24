@@ -136,12 +136,15 @@ const sites = [
 
     // Explicit public DOM and screenshot checks for the previously missing screen marks.
     const screenChecks=[
+      {play:'basic',step:1,labels:['4→3 다운스크린','5→2 다운스크린'],count:2},
       {play:'horn-zoom',step:1,labels:['4→2 핀다운'],count:1},
-      {play:'horn-zoom',step:2,labels:['3→2 DHO'],count:1},
-      {play:'elevator',step:1,labels:['4번 스크린','5번 스크린'],count:2},
-      {play:'horn-down',step:1,labels:['4번 다운스크린','5번 다운스크린'],count:2},
-      {play:'spain-pnr',step:2,labels:['5→1 온볼'],count:1},
-      {play:'spain-pnr',step:3,labels:['2→5 백스크린'],count:1}
+      {play:'horn-zoom',step:2,labels:['3→2 DHO (예시)'],count:1},
+      {play:'elevator',step:1,labels:['엘리베이터 스크린'],count:2},
+      {play:'horn-down',step:1,labels:['4→3 다운스크린','5→2 다운스크린'],count:2},
+      {play:'spain-pnr',step:1,labels:['5→1 온볼'],count:1},
+      {play:'spain-pnr',step:2,labels:['2→5 백스크린'],count:1},
+      {play:'side-line',step:1,labels:['4→2 스크린'],count:1},
+      {play:'side-line',step:2,labels:['후속 스크린'],count:1}
     ];
     for(const check of screenChecks){
       try{
@@ -168,7 +171,7 @@ const sites = [
     for (const team of ['ssit','more']) {
       await page.goto(BASE+team+'/',{waitUntil:'load',timeout:45000});
       const targets=await page.evaluate(()=>window.PLAYBOOK_PLAYS.flatMap(play=>
-        play.steps.flatMap((st,i)=>st.screen?.length?[{id:play.id,index:i,screenCount:st.screen.length}]:[])));
+        play.steps.flatMap((st,i)=>(st.screen?.length||st.sourceScreenLines?.length)?[{id:play.id,index:i}]:[])));
       allScreensExpected+=targets.length;
       for (const target of targets) {
         const url=BASE+team+'/?play='+encodeURIComponent(target.id)+'&step='+(target.index+1);
@@ -182,14 +185,24 @@ const sites = [
             const lines=[...document.querySelectorAll('#screens path.screen-line')];
             const labels=[...document.querySelectorAll('#screens g.screen-label')];
             const issue=[];
-            if(lines.length!==(stage.screen?.length||0))issue.push('wrong number of purple bars '+lines.length+'/'+stage.screen?.length);
-            if(labels.length!==(stage.screen?.length||0))issue.push('wrong number of label boxes '+labels.length+'/'+stage.screen?.length);
+            const expected=(stage.screen?.length||0)+(stage.sourceScreenLines?.length||0);
+            if(lines.length!==expected)issue.push('wrong number of purple bars '+lines.length+'/'+stage.screen?.length);
+            if(labels.length!==expected)issue.push('wrong number of label boxes '+labels.length+'/'+stage.screen?.length);
+            const sourceLines=lines.filter(el=>el.dataset.sourceScreen==='1');
+            if(sourceLines.length!==(stage.sourceScreenLines?.length||0))issue.push('source count mismatch');
+            for(let i=0;i<(stage.sourceScreenLines?.length||0);i++){
+              const mark=stage.sourceScreenLines[i],el=sourceLines[i];
+              if(!el)continue;
+              const a=el.getPointAtLength(0),b=el.getPointAtLength(el.getTotalLength());
+              if(Math.hypot(a.x-mark.from[0],a.y-mark.from[1])>.05||Math.hypot(b.x-mark.to[0],b.y-mark.to[1])>.05)issue.push('original screen endpoints changed '+i);
+              if(!!mark.inferred!==el.classList.contains('screen-example'))issue.push('inferred screen distinction lost '+i);
+            }
             for(const no of stage.screen||[]){
               const target=Number(stage.screenTargets?.[no]);
               const line=lines.find(el=>Number(el.dataset.screener)===no);
               const label=labels.find(el=>Number(el.dataset.screener)===no);
               const s=stage.screenAt?.[no]||stage.pos[no-1];
-              const t=stage.screenTargetAt?.[no]||stage.pos[target-1];
+              const t=stage.screenApproach?.[no]||stage.screenTargetAt?.[no]||stage.pos[target-1];
               if(!line||!label||!t){issue.push('missing line / target / label '+no);continue;}
               if(Number(line.dataset.target)!==target||Number(label.dataset.target)!==target)issue.push('wrong linked receiver '+no);
               const total=line.getTotalLength(),a=line.getPointAtLength(0),b=line.getPointAtLength(total);

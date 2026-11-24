@@ -3,7 +3,7 @@ const path=require('node:path'),fs=require('node:fs'),vm=require('node:vm');
 const geom=require('../shared/screen-geometry.js');
 const errors=[];
 const check=(v,msg)=>{if(!v)errors.push(msg)};
-let total=0;
+let total=0,sourceTotal=0;
 for(const team of ['ssit','more']){
  const sandbox={window:{}};
  const file=path.join(__dirname,'..',team,'plays.js');
@@ -11,6 +11,8 @@ for(const team of ['ssit','more']){
  for(const play of sandbox.window.PLAYBOOK_PLAYS){
   for(let i=0;i<play.steps.length;i++){
    const stage=play.steps[i],count=stage.screen?.length||0;
+   for(const l of stage.sourceScreenLines||[]){sourceTotal++;check([l.from,l.to].every(pt=>pt?.length===2&&pt.every(Number.isFinite)),team+'/'+play.id+' invalid original screen coordinates');}
+   for(const n of stage.screen||[])check(stage.screenApproach?.[n]?.length===2,team+'/'+play.id+' missing approach direction');
    for(const flip of [false,true]){
     const marks=geom.layoutScreens(stage,{flip});
     check(marks.length===count,team+'/'+play.id+' step '+i+' screen count');
@@ -43,5 +45,5 @@ for(const team of ['ssit','more']){
   }
  }
 }
-console.log('SCREEN LAYOUT AUDIT',JSON.stringify({teams:['ssit','more'],markersPerOrientation:total/2,checkedOrientations:2,errors}));
+console.log('SCREEN LAYOUT AUDIT',JSON.stringify({teams:['ssit','more'],markersPerOrientation:total/2,sourceAndExampleBars:sourceTotal,checkedOrientations:2,errors}));
 if(errors.length)process.exit(1);
