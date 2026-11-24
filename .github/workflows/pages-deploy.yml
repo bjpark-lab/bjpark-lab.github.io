@@ -99,7 +99,7 @@ jobs:
       - name: Install isolated Playwright
         run: |
           npm install --prefix "$RUNNER_TEMP/basketball-browser" playwright@1.58.2 --no-save --no-audit --no-fund
-          "$RUNNER_TEMP/basketball-browser/node_modules/.bin/playwright" install --with-deps chromium
+          "$RUNNER_TEMP/basketball-browser/node_modules/.bin/playwright" install chromium
       - name: Test live SSIT and MORE pages
         env:
           NODE_PATH: ${{ runner.temp }}/basketball-browser/node_modules
