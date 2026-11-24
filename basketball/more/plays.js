@@ -1933,6 +1933,35 @@ window.PLAYBOOK_PLAYS=[
         "branchFrom": 0
       },
       {
+        "label": "2차: 인바운더 백도어",
+        "detail": "4번에게 패스한 뒤 인바운더 1번이 골밑으로 백도어 컷합니다.",
+        "pos": [
+          [
+            250,
+            122
+          ],
+          [
+            475,
+            100
+          ],
+          [
+            107,
+            275
+          ],
+          [
+            373,
+            267
+          ],
+          [
+            330,
+            211
+          ]
+        ],
+        "ball": 4,
+        "screen": [],
+        "continueFrom": 2
+      },
+      {
         "label": "3차: DHO 준비",
         "detail": "4번에게 인바운드하고 2번 핸드오프 준비",
         "pos": [
@@ -1993,7 +2022,8 @@ window.PLAYBOOK_PLAYS=[
         ],
         "screenAngles": {
           "4": 85
-        }
+        },
+        "continueFrom": 4
       }
     ],
     "reviewStatus": "positions-audited"
