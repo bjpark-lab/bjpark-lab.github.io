@@ -6,7 +6,7 @@ const plays=environment.window.PLAYBOOK_PLAYS||[];
 const errors=[],ids=new Set();
 let nFrames=0,nPpt=0,nRich=0;
 const assert=(ok,msg)=>{if(!ok)errors.push(msg)};
-assert(plays.length===15,'SSIT expected 15 tactics');
+assert(plays.length===16,'SSIT expected 16 tactics');
 for(const p of plays){
  assert(!ids.has(p.id),'Duplicate ID '+p.id);ids.add(p.id);
  const snapshot=!!p.steps[0]?.legacy;snapshot?nPpt++:nRich++;
@@ -50,12 +50,19 @@ for(const p of plays.filter(p=>p.steps[0].legacy)){
  if(['basic','elevator'].includes(p.id))assert(p.steps.every(s=>s.outside?.includes(1)&&s.pos[0][1]<0),'Inbounder outside baseline '+p.id);
  if(p.id==='side-line')assert(p.steps.every(s=>s.outside?.includes(1)&&s.pos[0][0]<0),'Inbounder outside sideline');
 }
-const corners=[['horn-up',2,'left'],['horn-up',3,'right'],['horns-flare',2,'left'],['horns-flare',3,'right'],['horns-pin-down',2,'right'],['horns-pin-down',3,'left'],['post-flare',3,'left'],['horn-down',2,'right'],['horn-down',3,'left'],['fiveout-one',4,'left'],['fiveout-one',5,'right'],['fiveout-two',4,'left'],['fiveout-two',5,'right']];
+const corners=[['horn-up-ppt',4,'left'],['horn-up-ppt',5,'right'],['horn-up',2,'left'],['horn-up',3,'right'],['horns-flare',2,'left'],['horns-flare',3,'right'],['horns-pin-down',2,'right'],['horns-pin-down',3,'left'],['post-flare',3,'left'],['horn-down',2,'right'],['horn-down',3,'left'],['fiveout-one',4,'left'],['fiveout-one',5,'right'],['fiveout-two',4,'left'],['fiveout-two',5,'right']];
 for(const [id,num,side] of corners){
  const play=plays.find(x=>x.id===id);
  const [x,y]=play.steps[0].pos[num-1];
  assert((side==='left'?x<=30:x>=470)&&y>=25&&y<=130,'Corner must be beyond 3 point line '+id+' '+num+' '+x+','+y);
 }
+// Preserve the distinct original PPT and detailed HTML versions.
+const pptUp=plays.find(p=>p.id==='horn-up-ppt'),htmlUp=plays.find(p=>p.id==='horn-up');
+assert(pptUp?.steps.length===2&&pptUp.steps.every(s=>s.legacy&&s.snapshot),'Original PPT Horn UP missing');
+assert(htmlUp?.steps.length===7&&htmlUp.steps.every(s=>!s.legacy),'Detailed HTML Horn UP missing');
+assert(pptUp?.steps[0].pos[3][0]===28&&pptUp?.steps[0].pos[4][0]===471,'PPT Horn UP original corner players changed');
+assert(pptUp?.steps[0].arrows.length===2&&pptUp?.steps[1].arrows.length===4,'PPT Horn UP original arrows changed');
+assert(nPpt===10&&nRich===6&&nFrames===64,'Unexpected SSIT library composition');
 const source=fs.readFileSync(path.join(root,'shared/playbook.js'),'utf8');
 assert(source.includes('!st.legacy&&!prior.legacy'),'PPT frames should not animate a movement between diagrams');
 assert(source.includes('st.ballPosition'),'Independent original PPT ball marks lost');

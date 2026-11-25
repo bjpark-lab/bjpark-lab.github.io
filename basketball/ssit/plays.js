@@ -487,6 +487,157 @@ window.PLAYBOOK_PLAYS=[
     "reviewStatus": "source-snapshot-audited"
   },
   {
+    "id": "horn-up-ppt",
+    "cat": "혼즈",
+    "title": "혼즈 업 (PPT)",
+    "call": "HORN UP",
+    "summary": "2·3번이 양 엘보에서 윙으로 올라와 패스와 슛을 노리는 기존 PPT 패턴",
+    "tip": "HTML 버전과 다른 전술입니다. 2·3번이 엘보에서 시작하고 4·5번은 양 코너에 위치합니다.",
+    "sourceUrl": "/basketball/ssit/patterns-2026.json",
+    "sourceLabel": "SSIT 원본 패턴 자료 (PPT 3번)",
+    "reviewStatus": "source-snapshot-audited",
+    "steps": [
+      {
+        "label": "도면 1",
+        "detail": "1번은 탑, 2·3번은 엘보, 4·5번은 양 코너에서 시작합니다. 2·3번이 각자 바깥쪽으로 올라갑니다.",
+        "pos": [
+          [
+            250,
+            346
+          ],
+          [
+            312,
+            207
+          ],
+          [
+            186,
+            211
+          ],
+          [
+            28,
+            35
+          ],
+          [
+            471,
+            41
+          ]
+        ],
+        "ball": 1,
+        "legacy": true,
+        "arrows": [
+          {
+            "kind": "move",
+            "from": [
+              161,
+              223
+            ],
+            "to": [
+              89,
+              238
+            ]
+          },
+          {
+            "kind": "move",
+            "from": [
+              338,
+              218
+            ],
+            "to": [
+              414,
+              238
+            ]
+          }
+        ],
+        "screen": [],
+        "snapshot": true,
+        "ballPosition": [
+          218,
+          335
+        ]
+      },
+      {
+        "label": "도면 2",
+        "detail": "1번이 윙으로 나온 2번 또는 3번에게 패스해 슛 찬스를 봅니다. 두 방향은 선택지입니다.",
+        "pos": [
+          [
+            245,
+            363
+          ],
+          [
+            419,
+            262
+          ],
+          [
+            66,
+            239
+          ],
+          [
+            27,
+            38
+          ],
+          [
+            470,
+            44
+          ]
+        ],
+        "ball": 1,
+        "legacy": true,
+        "arrows": [
+          {
+            "kind": "pass",
+            "from": [
+              269,
+              342
+            ],
+            "to": [
+              395,
+              279
+            ]
+          },
+          {
+            "kind": "pass",
+            "from": [
+              220,
+              346
+            ],
+            "to": [
+              96,
+              265
+            ]
+          },
+          {
+            "kind": "shot",
+            "from": [
+              91,
+              208
+            ],
+            "to": [
+              222,
+              72
+            ]
+          },
+          {
+            "kind": "shot",
+            "from": [
+              402,
+              239
+            ],
+            "to": [
+              269,
+              86
+            ]
+          }
+        ],
+        "screen": [],
+        "snapshot": true,
+        "ballPosition": [
+          245,
+          319
+        ]
+      }
+    ]
+  },
+  {
     "id": "horn-down",
     "cat": "혼즈",
     "title": "혼즈 다운",
@@ -2091,12 +2242,12 @@ window.PLAYBOOK_PLAYS=[
   {
     "id": "horn-up",
     "cat": "혼즈",
-    "title": "혼즈 업",
+    "title": "혼즈 업 (HTML)",
     "call": "HORN UP",
     "summary": "엘보 패스 뒤 백스크린, 다이브와 팝을 노리는 혼즈 공격",
     "tip": "골밑 패스와 팝 패스는 서로 다른 마무리 옵션입니다.",
     "sourceUrl": "/basketball/ssit/original/plays/horns-up/",
-    "sourceLabel": "기존 상세 애니메이션",
+    "sourceLabel": "기존 상세 애니메이션 (HTML)",
     "steps": [
       {
         "label": "혼즈 세팅",

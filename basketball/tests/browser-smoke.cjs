@@ -13,7 +13,7 @@ const record = (name, ok, detail = '') => {
 };
 const assert = (v, label) => { if (!v) throw new Error(label); };
 const sites = [
-  { team: 'SSIT', route: 'ssit/', count: 15, first: '베이스 패턴', firstId: 'basic', deep: 'post-split' },
+  { team: 'SSIT', route: 'ssit/', count: 16, first: '베이스 패턴', firstId: 'basic', deep: 'post-split' },
   { team: 'MORE', route: 'more/', count: 22, first: '핀다운', firstId: 'pin-down', deep: 'spain' }
 ];
 (async () => {
@@ -246,6 +246,17 @@ const sites = [
     record('all screen layouts',allScreens.length===allScreensExpected,
       allScreens.length+' checked diagrams, '+allScreens.reduce((n,s)=>n+s.bars,0)+' screen bars');
 
+    for(const item of [{id:'horn-up-ppt',title:'혼즈 업 (PPT)',count:2},{id:'horn-up',title:'혼즈 업 (HTML)',count:7}]){
+      try{
+        const response=await page.goto(BASE+'ssit/?play='+item.id,{waitUntil:'load',timeout:45000});
+        assert(response?.status()===200,'HTTP error');
+        assert((await page.locator('#playTitle').textContent()).trim()===item.title,'wrong Horn UP version');
+        assert(await page.locator('#timeline button').count()===item.count,'wrong Horn UP stages');
+        assert(await page.locator('#players .player').count()===5,'wrong player count');
+        await page.locator('.court-wrap').screenshot({path:path.join(ART,item.id+'-version.png'),animations:'disabled'});
+        record('SSIT '+item.title,true,item.count+' stages');
+      }catch(e){record('SSIT '+item.title,false,e.message);}
+    }
     try {
       await page.goto(BASE+'ssit/plays/horns-up/',{waitUntil:'load',timeout:45000});
       await page.waitForURL('**/basketball/ssit/?play=horn-up**',{timeout:20000});
